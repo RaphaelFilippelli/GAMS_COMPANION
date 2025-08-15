@@ -1,0 +1,1469 @@
+<!-- modified HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Documentation-->
+<title>Control</title>
+<!--<link href="./style/tabs.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="./style/jquery.js"></script>
+<script type="text/javascript" src="./style/jquery.highlight.js"></script>
+<script type="text/javascript" src="./style/dynsections.js"></script>
+<script type="text/javascript" src="./style/resize.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="./style/MathJax/es5/tex-svg.js"></script>
+<script type="text/javascript" language="javascript" src="./style/prism.js"></script>
+<link href="./style/prism.css" rel="stylesheet" type="text/css" />
+<link href="./style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="./style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="./style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="./style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="./style/toc-highlight.js"></script>
+<script type="text/javascript" src="./style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="./style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!-- -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div> 
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div>  
+        <a id="keyword" href="keyword.html" class="menu">Index</a>
+        <a id="help" href="./style/../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Control</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#PY_CONTROL_IMPORT">Recommended Import</a>
+    <ul>
+      <li class="level2">
+        <a href="#PY_SYSTEMDIRECTORY">Specifying a GAMS System Directory</a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#PY_IMPORTANT_CLASSES">Important Classes of the API</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_TUTORIAL_EXAMPLES">How to use the API</a>
+    <ul>
+      <li class="level2">
+        <a href="#PY_IMPORT_PACKAGES_MODULES_FROM_API">How to import packages/modules from the GAMS control API (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_CHOOSE_GAMS_SYSTEM">How to choose the GAMS system (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSDATABASE_GDX_EXPORT">How to export data to GDX (transport_gdx.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSDATABASE_GDX_IMPORT">How to import data from GDX (transport_gdx.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RUN_JOB_FROM_FILE">How to run a GamsJob from file (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RETRIEVE_SOLUTION_FROM_OUTPUT_DB">How to retrieve a solution from an output database (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_SPECIFY_SOLVER_OPTIONS">How to specify the solver using GamsOptions (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RUN_JOB_SOLVER_OPTION_FILE">How to run a job with a solver option file and capture its log output (transport1.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_USE_INCLUDE_FILES">How to use include files (transport2.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_READ_DATA_FROM_STRING_AND_GDX_EXPORT">How to read data from string and export to GDX (transport3.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RUN_JOB_GDX_DATA">How to run a job using data from GDX (transport3.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RUN_JOB_IMPLICIT_DB_COMMUNICATION">How to run a job using implicit database communication (transport3.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_DEFINE_DATA_PY_DATA_STRUCTURES">How to define data using Python data structures (transport4.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_PREPARE_DB_FROM_PY_DATA_STRUCTURES">How to prepare a GamsDatabase from Python data structures (transport4.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_INIT_CHECKPOINT_RUNNING_JOB">How to initialize a GamsCheckpoint by running a GamsJob (transport5.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_INIT_JOB_FROM_CHECKPOINT">How to initialize a GamsJob from a GamsCheckpoint (transport5.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_RUN_MULTIPLE_JOBS_IN_PARALLEL_CHECKPOINT">How to run multiple GamsJobs in parallel using a GamsCheckpoint (transport6.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_CREATE_MODELINSTANCE_FROM_CHECKPPOINT">How to create a GamsModelInstance from a GamsCheckpoint (transport7.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_MODIFY_PARAMETER_USING_MODIFIER">How to modify a parameter of a GamsModelInstance using GamsModifier (transport7.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_MODIFY_VAR_USING_MODIFIER">How to modify a variable of a GamsModelInstance using GamsModifier (transport7.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_USE_QUE_SOLVE_MULTIPLE_MODEL_INSTANCE">How to use a queue to solve multiple GamsModelInstances in parallel (transport8.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_FILL_DB_READING_MSACCESS">How to fill a GamsDatabase by reading from MS Access (transport9.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_FILL_DB_READING_MSEXCEL">How to fill a GamsDatabase by reading from MS Excel (transport10.py)</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_CREATE_USE_SAVE_RESTART">How to create and use a save/restart file (transport11.py)</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>GAMS <code>control</code> is a sub-module of the Python API that allows for full control over the GAMS system (data, model instances, and solving). It can be used in conjunction with other Python API sub-modules (<code>numpy</code> and <code>transfer</code>) to boost performance when pushing/pulling data to/from a GAMS model. The <code>gams.control</code> package provides objects to interact with the General Algebraic Modeling System (GAMS). Objects in this package allow convenient exchange of input data and model results (<code>GamsDatabase</code>), help to create and run GAMS models (<code>GamsJob</code>), that can be customized by GAMS options (<code>GamsOptions</code>). Furthermore, it introduces a way to solve a sequence of closely related model instances in the most efficient way (<code>GamsModelInstance</code>).</p>
+<p>A GAMS program can include other source files (e.g. $include), load data from GDX files (e.g. $GDXIN or execute_load), and create PUT files. All these files can be specified with a (relative) path and therefore an anchor into the file system is required. The base class GamsWorkspace manages the anchor to the file system. If external file communication is not an issue in a particular Python application, temporary directories and files will be managed by objects in the namespace.</p>
+<p>With the exception of GamsWorkspace the objects in the <code>gams.control</code> package cannot be accessed across different threads unless the instance is locked. The classes themself are thread safe and multiple objects of the class can be used from different threads (see below for restrictions on solvers that are not thread safe within the GamsModelInstance class).</p>
+<dl class="section note"><dt>Note</dt><dd>If you use multiple instances of the GamsWorkspace in parallel, you should avoid using the same working directory. Otherwise you may end up with conflicting file names.</dd></dl>
+<p>The GAMS <code>control</code> Python API lacks support for the following GAMS components: Acronyms, support for GAMS compilation/execution errors (GamsJob.run just throws an exception), structured access to listing file, and proper support for solver options.</p>
+<p>Currently only Cplex, Gurobi, and SoPlex fully utilize the power of solving GamsModelInstances. Some solvers will not even work in a multi-threaded application using GamsModelInstances. For some solvers this is unavoidable because the solver library is not thread safe (e.g. MINOS), other solvers are in principle thread safe but the GAMS link is not (e.g. SNOPT). Moreover, GamsModelInstances are not available for quadratic model types (QCP, MIQCP, RMIQCP).</p>
+<h1><a class="anchor" id="PY_CONTROL_IMPORT"></a>
+Recommended Import</h1>
+<p>GAMS <code>control</code> is available with the following import statement once the API has been installed:</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>>>> </font><font color=ghostwhite>import gams</font>
+</pre>
+</p>
+<p>Other sub-modules must be imported with separate import statements.</p>
+<h2><a class="anchor" id="PY_SYSTEMDIRECTORY"></a>
+Specifying a GAMS System Directory</h2>
+<p>There are several ways to specify which system directory should be used. On all platforms, the system directory can be specified in the GamsWorkspace constructor. If no system directory is specified by the user, The API tries to find one automatically:</p>
+<ul>
+<li>Windows: Try to find a system directory in the Windows registry.</li>
+<li>Linux: Try to find a system directory in the <code>PATH</code> first. If none was found, search <code>LD_LIBRARY_PATH</code>.</li>
+<li>OS X: Try to find a system directory in the <code>PATH</code> first. If none was found, search <code>DYLD_LIBRARY_PATH</code>.</li>
+</ul>
+<p>The environment variable <code>PATH</code> can be set as follows on Linux and macOS:</p>
+<div class="fragment"><div class="line"><span class="keyword">export</span> PATH=&lt;Path/To/<a class="code hl_namespaceRef" href="apis/dotnet/namespaceGAMS.html">GAMS</a>&gt;:$PATH </div>
+<div class="ttc" id="anamespaceGAMS_html"><div class="ttname"><a href="apis/dotnet/namespaceGAMS.html">GAMS</a></div></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>On Linux and macOS it is recommended to specify the <code>PATH</code> only instead of <code>(DY)LD_LIBRARY_PATH</code> since this might cause problems loading the correct version of certain modules (e.g. gdx).</dd></dl>
+<h1><a class="anchor" id="PY_IMPORTANT_CLASSES"></a>
+Important Classes of the API</h1>
+<p>This section provides a quick overview of some fundamental classes of the GAMS <code>control</code> API. Their usage is demonstrated by an extensive set of examples in the <a class="el" href="#PY_TUTORIAL_EXAMPLES">How to use the API</a> section.</p>
+<ul>
+<li><a class="elRef" href="apis/python/classgams_1_1control_1_1workspace_1_1GamsWorkspace.html">gams::control::workspace::GamsWorkspace</a> Class</li>
+<li><a class="elRef" href="apis/python/classgams_1_1control_1_1execution_1_1GamsJob.html">gams::control::execution::GamsJob</a> Class</li>
+<li><a class="elRef" href="apis/python/classgams_1_1control_1_1database_1_1GamsDatabase.html">gams::control::database::GamsDatabase</a> Class</li>
+<li><a class="elRef" href="apis/python/classgams_1_1control_1_1options_1_1GamsOptions.html">gams::control::options::GamsOptions</a> Class</li>
+<li><a class="elRef" href="apis/python/classgams_1_1control_1_1execution_1_1GamsModelInstance.html">gams::control::execution::GamsModelInstance</a> Class</li>
+</ul>
+<h1><a class="anchor" id="PY_TUTORIAL_EXAMPLES"></a>
+How to use the API</h1>
+<p>The GAMS distribution provides several examples that illustrate the usage of the API. <code>[GAMSDIR]\api\python\examples\control</code> contains multiple examples dealing with the well-known <a target="_blank" href="https://www.gams.com/products/gams/gams-language/#the-gams-language-at-a-glance">transportation problem</a>. In further course of this tutorial we discuss these examples step by step and introduce new elements of the API in detail.</p>
+<p>We recommend to open the aforementioned files to gain a complete overview of the examples. Down below we explain the examples with the help of selected code snippets.</p>
+<ul>
+<li><a class="el" href="#PY_IMPORT_PACKAGES_MODULES_FROM_API">How to import packages/modules from the GAMS control API (transport1.py)</a></li>
+<li><a class="el" href="#PY_CHOOSE_GAMS_SYSTEM">How to choose the GAMS system (transport1.py)</a></li>
+<li><a class="el" href="#PY_GAMSDATABASE_GDX_EXPORT">How to export data to GDX (transport_gdx.py)</a></li>
+<li><a class="el" href="#PY_GAMSDATABASE_GDX_IMPORT">How to import data from GDX (transport_gdx.py)</a></li>
+<li><a class="el" href="#PY_RUN_JOB_FROM_FILE">How to run a GamsJob from file (transport1.py)</a></li>
+<li><a class="el" href="#PY_RETRIEVE_SOLUTION_FROM_OUTPUT_DB">How to retrieve a solution from an output database (transport1.py)</a></li>
+<li><a class="el" href="#PY_SPECIFY_SOLVER_OPTIONS">How to specify the solver using GamsOptions (transport1.py)</a></li>
+<li><a class="el" href="#PY_RUN_JOB_SOLVER_OPTION_FILE">How to run a job with a solver option file and capture its log output (transport1.py)</a></li>
+<li><a class="el" href="#PY_USE_INCLUDE_FILES">How to use include files (transport2.py)</a></li>
+<li><a class="el" href="#PY_READ_DATA_FROM_STRING_AND_GDX_EXPORT">How to read data from string and export to GDX (transport3.py)</a></li>
+<li><a class="el" href="#PY_RUN_JOB_GDX_DATA">How to run a job using data from GDX (transport3.py)</a></li>
+<li><a class="el" href="#PY_RUN_JOB_IMPLICIT_DB_COMMUNICATION">How to run a job using implicit database communication (transport3.py)</a></li>
+<li><a class="el" href="#PY_DEFINE_DATA_PY_DATA_STRUCTURES">How to define data using Python data structures (transport4.py)</a></li>
+<li><a class="el" href="#PY_PREPARE_DB_FROM_PY_DATA_STRUCTURES">How to prepare a GamsDatabase from Python data structures (transport4.py)</a></li>
+<li><a class="el" href="#PY_INIT_CHECKPOINT_RUNNING_JOB">How to initialize a GamsCheckpoint by running a GamsJob (transport5.py)</a></li>
+<li><a class="el" href="#PY_INIT_JOB_FROM_CHECKPOINT">How to initialize a GamsJob from a GamsCheckpoint (transport5.py)</a></li>
+<li><a class="el" href="#PY_RUN_MULTIPLE_JOBS_IN_PARALLEL_CHECKPOINT">How to run multiple GamsJobs in parallel using a GamsCheckpoint (transport6.py)</a></li>
+<li><a class="el" href="#PY_CREATE_MODELINSTANCE_FROM_CHECKPPOINT">How to create a GamsModelInstance from a GamsCheckpoint (transport7.py)</a></li>
+<li><a class="el" href="#PY_MODIFY_PARAMETER_USING_MODIFIER">How to modify a parameter of a GamsModelInstance using GamsModifier (transport7.py)</a></li>
+<li><a class="el" href="#PY_MODIFY_VAR_USING_MODIFIER">How to modify a variable of a GamsModelInstance using GamsModifier (transport7.py)</a></li>
+<li><a class="el" href="#PY_USE_QUE_SOLVE_MULTIPLE_MODEL_INSTANCE">How to use a queue to solve multiple GamsModelInstances in parallel (transport8.py)</a></li>
+<li><a class="el" href="#PY_FILL_DB_READING_MSACCESS">How to fill a GamsDatabase by reading from MS Access (transport9.py)</a></li>
+<li><a class="el" href="#PY_FILL_DB_READING_MSEXCEL">How to fill a GamsDatabase by reading from MS Excel (transport10.py)</a></li>
+<li><a class="el" href="#PY_CREATE_USE_SAVE_RESTART">How to create and use a save/restart file (transport11.py)</a></li>
+</ul>
+<h2><a class="anchor" id="PY_IMPORT_PACKAGES_MODULES_FROM_API"></a>
+How to import packages/modules from the GAMS control API (transport1.py)</h2>
+<p>Before we can start using the GAMS <code>control</code> API, it needs to be installed by following the instructions from the <a class="el" href="API_PY_GETTING_STARTED.html">Getting Started</a> section. Afterwards we can use the API by importing the <code>GamsWorkspace</code> class like this:</p>
+<div class="fragment"><div class="line"><span class="keyword">from</span> gams <span class="keyword">import</span> GamsWorkspace</div>
+</div><!-- fragment --><p>Conventional Python packages/modules can by imported like that:</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> os</div>
+<div class="line"><span class="keyword">import</span> sys</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_CHOOSE_GAMS_SYSTEM"></a>
+How to choose the GAMS system (transport1.py)</h2>
+<p>By default the GAMS system is determined automatically. In case of having multiple GAMS systems on your machine, the desired system can be specified via an additional argument when the workspace is created. If we type <code>python transport1.py</code> C:/GAMS/42 we use <code>GAMS 42</code> to run <code>transport1.py</code> even if our default GAMS system might be a different one. This is managed by the following code:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">sys_dir = sys.argv[1] <span class="keywordflow">if</span> len(sys.argv) &gt; 1 <span class="keywordflow">else</span> <span class="keywordtype">None</span></div>
+<div class="line">ws = GamsWorkspace(system_directory=sys_dir)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_GAMSDATABASE_GDX_EXPORT"></a>
+How to export data to GDX (transport_gdx.py)</h2>
+<p>Although the GAMS <code>control</code> Python API offers much more than exchanging data between Python and GDX, a common use case is the export and import of GDX files. The central class for this purpose is GamsDatabase. We assume that the data to be exported is available in Python data structures.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    plants = [<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;San-Diego&quot;</span>]</div>
+<div class="line">    markets = [<span class="stringliteral">&quot;New-York&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>]</div>
+<div class="line">    capacity = {<span class="stringliteral">&quot;Seattle&quot;</span>: 350.0, <span class="stringliteral">&quot;San-Diego&quot;</span>: 600.0}</div>
+<div class="line">    demand = {<span class="stringliteral">&quot;New-York&quot;</span>: 325.0, <span class="stringliteral">&quot;Chicago&quot;</span>: 300.0, <span class="stringliteral">&quot;Topeka&quot;</span>: 275.0}</div>
+<div class="line">    distance = {</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;New-York&quot;</span>): 2.5,</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>): 1.7,</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>): 1.8,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;New-York&quot;</span>): 2.5,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>): 1.8,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>): 1.4,</div>
+<div class="line">    }</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Different GAMS symbols are represented using different Python data structures. The data for the GAMS sets is represented using Python lists of strings (e.g. <code>plants</code> and <code>markets</code>). On the other hand, GAMS parameters are represented by Python dictionaries (e.g. <code>capacity</code> and <code>demand</code>). Note that the representation of the two dimensional parameter <code>distance</code> uses Python tuples for storing the keys. The choice of data structures can also be different, but the used structures in this example fit well for representing GAMS data with standard Python data structures.</p>
+<p>A new GamsDatabase instance can be created using GamsWorkspace.add_database.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># create new GamsDatabase instance</span></div>
+<div class="line">    db = ws.add_database()</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>We start adding GAMS sets using the method GamsDatabase.add_set which takes the name and the dimension as arguments. The third argument is an optional explanatory text. A for-loop iterates through <code>plants</code> and adds new records to the recently created GamsSet instance <code>i</code> using GamsSet.add_record.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># add 1-dimensional set &#39;i&#39; with explanatory text &#39;canning plants&#39; to the GamsDatabase</span></div>
+<div class="line">    i = db.add_set(<span class="stringliteral">&quot;i&quot;</span>, 1, <span class="stringliteral">&quot;canning plants&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> p <span class="keywordflow">in</span> plants:</div>
+<div class="line">        i.add_record(p)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>GamsParameter instances can be added by using the method GamsDatabase.add_parameter. It has the same signature as GamsDatabase.add_set. Anyhow, in this example we use GamsDatabase.add_parameter_dc instead which takes a list of GamsSet instances instead of the dimension for creating a parameter with domain information.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># add parameter &#39;a&#39; with domain &#39;i&#39;</span></div>
+<div class="line">    a = db.add_parameter_dc(<span class="stringliteral">&quot;a&quot;</span>, [i], <span class="stringliteral">&quot;capacity of plant i in cases&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> p <span class="keywordflow">in</span> plants:</div>
+<div class="line">        a.add_record(p).value = capacity[p]</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>As soon as all data is prepared in the GamsDatabase, the method GamsDatabase.export can be used to create a GDX file.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># export the GamsDatabase to a GDX file with name &#39;data.gdx&#39; located in the &#39;working_directory&#39; of the GamsWorkspace</span></div>
+<div class="line">    db.export(<span class="stringliteral">&quot;data.gdx&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_GAMSDATABASE_GDX_IMPORT"></a>
+How to import data from GDX (transport_gdx.py)</h2>
+<p>Data can be imported from a GDX file using GamsWorkspace.add_database_from_gdx. The method takes a path to a GDX file and creates a GamsDatabase instance.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># add a new GamsDatabase and initialize it from the GDX file just created</span></div>
+<div class="line">    db2 = ws.add_database_from_gdx(<span class="stringliteral">&quot;data.gdx&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Reading the data from the GamsSet <code>i</code> into a list can be done as follows:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="comment"># read data from symbols into Python data structures</span></div>
+<div class="line">    i = [rec.keys[0] <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> db2[<span class="stringliteral">&quot;i&quot;</span>]]</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>A Python list is created using list comprehensions. <code>i</code> is retrieved by querying the GamsDatabase <code>db2</code>. The returned GamsSet object can be iterated using a for-loop to access the records of the set. Each record is of type GamsSetRecord and can be asked for its keys.</p>
+<p>You can do the same for GamsParameters. Instead of creating a Python list, we want to have the data in the form of a Python dictionary. GamsParameterRecords can not only be asked for their keys, but also for their value. The following code snippet shows how to read the one dimensional parameter <code>a</code> into a Python dictionary using dict comprehensions.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    a = {rec.keys[0]: rec.value <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> db2[<span class="stringliteral">&quot;a&quot;</span>]}</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>For multi dimensional symbols, we choose the Python dictionary keys to be tuples instead of string. We access the keys as usual, but do not address a specific key. Instead, we take the whole list of keys and turn it into a tuple.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    d = {tuple(rec.keys): rec.value <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> db2[<span class="stringliteral">&quot;d&quot;</span>]}</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Scalars can be read into a Python identifier by accessing the value of the first and only record.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    f = db2[<span class="stringliteral">&quot;f&quot;</span>].first_record().value</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_RUN_JOB_FROM_FILE"></a>
+How to run a GamsJob from file (transport1.py)</h2>
+<p>At first we create our workspace using <code>ws = GamsWorkspace()</code>. Afterwards we load the <code>trnsport</code> model from the GAMS model library which puts the corresponding gms file in our working directory. Note that you can create a GamsJob with any other gms file you might have created on your own as long as it is located in the current working directory. Then the GamsJob <code>job</code> can be defined using the add_job_from_file method and afterwards we run the job.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    ws.gamslib(<span class="stringliteral">&quot;trnsport&quot;</span>)</div>
+<div class="line">    job = ws.add_job_from_file(<span class="stringliteral">&quot;trnsport.gms&quot;</span>)</div>
+<div class="line">    job.run()</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_RETRIEVE_SOLUTION_FROM_OUTPUT_DB"></a>
+How to retrieve a solution from an output database (transport1.py)</h2>
+<p>The following lines create the solution output and illustrate the usage of the GamsJob.out_db property to get access to the GamsDatabase created by the run method. To retrieve the content of variable <code>x</code> we use squared brackets that internally call the get_symbol method.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> job.out_db[<span class="stringliteral">&quot;x&quot;</span>]:</div>
+<div class="line">        print(</div>
+<div class="line">            f<span class="stringliteral">&quot;x({rec.key(0)},{rec.key(1)}): level={rec.level} marginal={rec.marginal}&quot;</span></div>
+<div class="line">        )</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Note that instead of using the squared brackets we could also use</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> job.out_db.get_symbol(<span class="stringliteral">&quot;x&quot;</span>):</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_SPECIFY_SOLVER_OPTIONS"></a>
+How to specify the solver using GamsOptions (transport1.py)</h2>
+<p>The solver can be specified via the GamsOptions class and the GamsWorkspace.add_options method. The GamsOptions.all_model_types property sets xpress as default solver for all model types that can be handled by the solver. Then we run our GamsJob <code>job</code> with the new GamsOption.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;xpress&quot;</span></div>
+<div class="line">    job.run(opt)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_RUN_JOB_SOLVER_OPTION_FILE"></a>
+How to run a job with a solver option file and capture its log output (transport1.py)</h2>
+<p>At first we create the file <code>xpress.opt</code> with content <code>algorithm=barrier</code> which will be used as solver option file and is stored in the current working directory. Afterwards we use a GamsOption just like in the preceding example and set GamsOption.optfile property to 1 to tell the solver to look for a solver option file. In addition, we specify the argument <code>output</code> in order to write the log of the GamsJob into the file <code>transport1_xpress.log</code>.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="keyword">with</span> open(os.path.join(ws.working_directory, <span class="stringliteral">&quot;xpress.opt&quot;</span>), <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> file:</div>
+<div class="line">        file.write(<span class="stringliteral">&quot;algorithm=barrier&quot;</span>)</div>
+<div class="line">    opt.optfile = 1</div>
+<div class="line">    <span class="keyword">with</span> open(<span class="stringliteral">&quot;transport1_xpress.log&quot;</span>, <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> log:</div>
+<div class="line">        job.run(opt, output=log)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Instead of writing the log output to a file, any object that provides the functions <code>write</code> and <code>flush</code> can be used. In order to write the log directly to <code>stdout</code>, we can use the following code:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job.run(opt, output=sys.stdout)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_USE_INCLUDE_FILES"></a>
+How to use include files (transport2.py)</h2>
+<p>In this example, as in many succeeding, the data text and the model text are separated into two different strings. Note that these strings accessed via <code>GAMS_DATA</code> and <code>GAMS_MODEL</code> are using GAMS syntax. At first we write an include file <code>tdata.gms</code> that contains the data but not the model text and save it in our current working directory.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="keyword">with</span> open(os.path.join(ws.working_directory, <span class="stringliteral">&quot;tdata.gms&quot;</span>), <span class="stringliteral">&quot;w&quot;</span>) <span class="keyword">as</span> file:</div>
+<div class="line">        file.write(GAMS_DATA)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Afterwards we create a GamsJob using the GamsWorkspace.add_job_from_string method. GamsOptions.defines is used like the 'double dash' GAMS parameters, i.e. it corresponds to <code>--incname=tdata</code> on the command line where <code>incname</code> is used as name for the include file in <code>GAMS_MODEL</code> as shown below.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;incname&quot;</span>] = <span class="stringliteral">&quot;tdata&quot;</span></div>
+<div class="line">    job.run(opt)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>The string <code>GAMS_MODEL</code> contains the following lines to read in the data.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">$if not set incname $abort &#39;no include file name for data file provided&#39;</div>
+<div class="line">$include %incname%</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_READ_DATA_FROM_STRING_AND_GDX_EXPORT"></a>
+How to read data from string and export to GDX (transport3.py)</h2>
+<p>We read the data from the string <code>GAMS_DATA</code>. Note that this contains no model but only data definition in GAMS syntax. By running the corresponding GamsJob a GamsDatabase is created that is available via the GamsJob.out_db property. We can use the GamsDatabase.export method to write the content of this database to a GDX file <code>tdata.gdx</code> in the current working directory.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_DATA)</div>
+<div class="line">    job.run()</div>
+<div class="line">    job.out_db.export(os.path.join(ws.working_directory, <span class="stringliteral">&quot;tdata.gdx&quot;</span>))</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_RUN_JOB_GDX_DATA"></a>
+How to run a job using data from GDX (transport3.py)</h2>
+<p>This works quite similar to the usage of an include file explained in <a class="el" href="#PY_USE_INCLUDE_FILES">How to use include files (transport2.py)</a>.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;gdxincname&quot;</span>] = <span class="stringliteral">&quot;tdata&quot;</span></div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;xpress&quot;</span></div>
+<div class="line">    job.run(opt)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Note that there are some minor changes in <code>GAMS_MODEL</code> compared to preceding examples due to the usage of a GDX instead of an include file.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">$if not set gdxincname $abort &#39;no include file name for data file provided&#39;</div>
+<div class="line">$gdxIn %gdxincname%</div>
+<div class="line">$load i j a b d f</div>
+<div class="line">$gdxIn</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_RUN_JOB_IMPLICIT_DB_COMMUNICATION"></a>
+How to run a job using implicit database communication (transport3.py)</h2>
+<p>This example does basically the same as the two preceding examples together. We create two GamsJobs <code>job_data</code> and <code>job_model</code> where the first one contains only the data and the second one contains only the model without data. After running <code>job_data</code> the corresponding <code>out_db</code> can be read in directly just like a GDX file. Note that the database needs to be passed to the GamsJob.run method as additional argument.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job_data = ws.add_job_from_string(GAMS_DATA)</div>
+<div class="line">    job_model = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    job_data.run()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;gdxincname&quot;</span>] = job_data.out_db.name</div>
+<div class="line">    job_model.run(opt, databases=job_data.out_db)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_DEFINE_DATA_PY_DATA_STRUCTURES"></a>
+How to define data using Python data structures (transport4.py)</h2>
+<p>We use Python lists to define the sets and Python dictionaries for the parameter definition.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    plants = [<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;San-Diego&quot;</span>]</div>
+<div class="line">    markets = [<span class="stringliteral">&quot;New-York&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>]</div>
+<div class="line">    capacity = {<span class="stringliteral">&quot;Seattle&quot;</span>: 350.0, <span class="stringliteral">&quot;San-Diego&quot;</span>: 600.0}</div>
+<div class="line">    demand = {<span class="stringliteral">&quot;New-York&quot;</span>: 325.0, <span class="stringliteral">&quot;Chicago&quot;</span>: 300.0, <span class="stringliteral">&quot;Topeka&quot;</span>: 275.0}</div>
+<div class="line">    distance = {</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;New-York&quot;</span>): 2.5,</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>): 1.7,</div>
+<div class="line">        (<span class="stringliteral">&quot;Seattle&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>): 1.8,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;New-York&quot;</span>): 2.5,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;Chicago&quot;</span>): 1.8,</div>
+<div class="line">        (<span class="stringliteral">&quot;San-Diego&quot;</span>, <span class="stringliteral">&quot;Topeka&quot;</span>): 1.4,</div>
+<div class="line">    }</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_PREPARE_DB_FROM_PY_DATA_STRUCTURES"></a>
+How to prepare a GamsDatabase from Python data structures (transport4.py)</h2>
+<p>At first we create an empty GamsDatabase db using the GamsWorkspace.add_database method. Afterwards we prepare the database. To add a set to the database we use the GamsSet class and the GamsDatabase.add_set method with arguments describing the identifier, dimension and explanatory text. To add the records to the database we iterate over the elements of our Python data structure and add them by using the GamsSet.add_record method.</p>
+<p>For parameters the procedure is pretty much the same. Note that the table that specifies the distances in GAMS can be treated as parameter with dimension 2.</p>
+<p>The GamsJob can be run like explained in the preceding example <a class="el" href="#PY_RUN_JOB_IMPLICIT_DB_COMMUNICATION">How to run a job using implicit database communication (transport3.py)</a>.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    db = ws.add_database()</div>
+<div class="line"> </div>
+<div class="line">    i = db.add_set(<span class="stringliteral">&quot;i&quot;</span>, 1, <span class="stringliteral">&quot;canning plants&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> p <span class="keywordflow">in</span> plants:</div>
+<div class="line">        i.add_record(p)</div>
+<div class="line"> </div>
+<div class="line">    j = db.add_set(<span class="stringliteral">&quot;j&quot;</span>, 1, <span class="stringliteral">&quot;markets&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> m <span class="keywordflow">in</span> markets:</div>
+<div class="line">        j.add_record(m)</div>
+<div class="line"> </div>
+<div class="line">    a = db.add_parameter_dc(<span class="stringliteral">&quot;a&quot;</span>, [i], <span class="stringliteral">&quot;capacity of plant i in cases&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> p <span class="keywordflow">in</span> plants:</div>
+<div class="line">        a.add_record(p).value = capacity[p]</div>
+<div class="line"> </div>
+<div class="line">    b = db.add_parameter_dc(<span class="stringliteral">&quot;b&quot;</span>, [j], <span class="stringliteral">&quot;demand at market j in cases&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> m <span class="keywordflow">in</span> markets:</div>
+<div class="line">        b.add_record(m).value = demand[m]</div>
+<div class="line"> </div>
+<div class="line">    d = db.add_parameter_dc(<span class="stringliteral">&quot;d&quot;</span>, [i, j], <span class="stringliteral">&quot;distance in thousands of miles&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">for</span> k, v <span class="keywordflow">in</span> distance.items():</div>
+<div class="line">        d.add_record(k).value = v</div>
+<div class="line"> </div>
+<div class="line">    f = db.add_parameter(<span class="stringliteral">&quot;f&quot;</span>, 0, <span class="stringliteral">&quot;freight in dollars per case per thousand miles&quot;</span>)</div>
+<div class="line">    f.add_record().value = 90</div>
+<div class="line"> </div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;gdxincname&quot;</span>] = db.name</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;xpress&quot;</span></div>
+<div class="line">    job.run(opt, databases=db)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_INIT_CHECKPOINT_RUNNING_JOB"></a>
+How to initialize a GamsCheckpoint by running a GamsJob (transport5.py)</h2>
+<p>The following lines of code conduct several operations. While the first line simply creates a GamsCheckpoint, the second one uses the GamsWorkspace.add_job_from_string method to create a GamsJob containing the model text and data but no solve statement. Afterwards the run method gets the GamsCheckpoint as argument. That means the GamsCheckpoint <code>cp</code> captures the state of the GamsJob.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    cp = ws.add_checkpoint()</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    job.run(checkpoint=cp)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_INIT_JOB_FROM_CHECKPOINT"></a>
+How to initialize a GamsJob from a GamsCheckpoint (transport5.py)</h2>
+<p>Note that the string <code>GAMS_MODEL</code> contains the entire model and data definition plus an additional demand multiplier and scalars for model and solve status but no solve statement:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">   bmult &#39;demand multiplier&#39; / 1 /;</div>
+<div class="line">...</div>
+<div class="line">   demand(j) &#39;satisfy demand at market j&#39;;</div>
+<div class="line">...</div>
+<div class="line">Scalar ms &#39;model status&#39;, ss &#39;solve status&#39;;</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>In transport5.py we create a list with eight different values for this demand multiplier.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    bmult = [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>For each entry of that list we create a GamsJob using the GamsWorkspace.add_job_from_string method. Besides another string which resets the demand multiplier <code>bmult</code>, specifies the solve statement and assigns values to the scalars <code>ms</code> and <code>ss</code> we pass the checkpoint <code>cp</code> as additional argument. This results in a GamsJob combined from the checkpoint plus the content provided by the string.</p>
+<p>We run the GamsJob and print some interesting data from the out_db.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    <span class="keywordflow">for</span> b <span class="keywordflow">in</span> bmult:</div>
+<div class="line">        job = ws.add_job_from_string(</div>
+<div class="line">            f<span class="stringliteral">&quot;bmult={b}; solve transport min z use lp; ms=transport.modelstat; ss=transport.solvestat;&quot;</span>,</div>
+<div class="line">            cp,</div>
+<div class="line">        )</div>
+<div class="line">        job.run()</div>
+<div class="line">        print(f<span class="stringliteral">&quot;Scenario bmult={b}:&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Modelstatus: {job.out_db[&#39;ms&#39;].find_record().value}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Solvestatus: {job.out_db[&#39;ss&#39;].find_record().value}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Obj: {job.out_db[&#39;z&#39;].find_record().level}&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>NOTE: Some of the demand multipliers cause infeasibility. Nevertheless, GAMS keeps the incumbent objective function value. Therefore the <a class="el" href="UG_GamsCall.html#GAMSAOmodelstat">model status</a> and the <a class="el" href="UG_GamsCall.html#GAMSAOsolvestat">solve status</a> provide important information for a correct solution interpretation.</p>
+<h2><a class="anchor" id="PY_RUN_MULTIPLE_JOBS_IN_PARALLEL_CHECKPOINT"></a>
+How to run multiple GamsJobs in parallel using a GamsCheckpoint (transport6.py)</h2>
+<p>With the exception of GamsWorkspace the objects in the <code>gams.control</code> package cannot be accessed across different threads unless the instance is locked. The classes themselves are thread safe and multiple objects of the class can be used from different threads (see below for restrictions on solvers that are not thread safe within the <code>GamsModelInstance</code> class).</p>
+<dl class="section note"><dt>Note</dt><dd>If you use multiple instances of the <code>GamsWorkspace</code> in parallel, you should avoid using the same working directory. Otherwise you may end up with conflicting file names.</dd></dl>
+<p>Currently only Cplex, Gurobi, and SoPlex fully utilize the power of solving GamsModelInstances. Some solvers will not even work in a multi-threaded application using GamsModelInstances. For some solvers this is unavoidable because the solver library is not thread safe (e.g. MINOS), other solvers are in principle thread safe but the GAMS link is not (e.g. SNOPT). Moreover, GamsModelInstances are not available for quadratic model types (QCP, MIQCP, RMIQCP).</p>
+<p>This example illustrates how to run the jobs known from transport5.py in parallel. We initialize the GamsCheckpoint <code>cp</code> and introduce a demand multiplier as we did before:</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    cp = ws.add_checkpoint()</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    job.run(checkpoint=cp)</div>
+<div class="line">    bmult = [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Furthermore, we introduce a lock object <code>io_lock</code> that will be used to avoid mixed up output from the parallel jobs. We create one scenario for each entry of <code>bmultlist</code> and cause a thread to begin execution.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    io_lock = Lock()</div>
+<div class="line">    threads = {}</div>
+<div class="line">    <span class="keywordflow">for</span> b <span class="keywordflow">in</span> bmult:</div>
+<div class="line">        threads[b] = Thread(target=run_scenario, args=(ws, cp, io_lock, b))</div>
+<div class="line">        threads[b].start()</div>
+<div class="line">    <span class="keywordflow">for</span> b <span class="keywordflow">in</span> bmult:</div>
+<div class="line">        threads[b].join()</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>In function <code>run_scenario</code> a GamsJob is created and run just like in the preceding example of transport5.py. The output section is also the same except for the fact that it is 'locked' by the object <code>io_lock</code> which means that the output section cannot be executed simultaneously for multiple demand multipliers.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="keyword">def </span>run_scenario(workspace, checkpoint, io_lock, b):</div>
+<div class="line">    job = workspace.add_job_from_string(</div>
+<div class="line">        f<span class="stringliteral">&quot;bmult={b}; solve transport min z use lp; ms=transport.modelstat; ss=transport.solvestat;&quot;</span>,</div>
+<div class="line">        checkpoint,</div>
+<div class="line">    )</div>
+<div class="line">    job.run()</div>
+<div class="line">    <span class="comment"># we need to make the output a critical section to avoid messed up report informations</span></div>
+<div class="line">    io_lock.acquire()</div>
+<div class="line">    print(f<span class="stringliteral">&quot;Scenario bmult={b}:&quot;</span>)</div>
+<div class="line">    print(f<span class="stringliteral">&quot;  Modelstatus: {job.out_db[&#39;ms&#39;].first_record().value}&quot;</span>)</div>
+<div class="line">    print(f<span class="stringliteral">&quot;  Solvestatus: {job.out_db[&#39;ss&#39;].first_record().value}&quot;</span>)</div>
+<div class="line">    print(f<span class="stringliteral">&quot;  Obj: {job.out_db[&#39;z&#39;].first_record().level}&quot;</span>)</div>
+<div class="line">    io_lock.release()</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>While the output in transport5.py is strictly ordered subject to the order of the elements of <code>bmult</code> in transport6.py the output blocks might change their order but the blocks describing one scenario are still appearing together due to the <code>io_lock</code> object.</p>
+<h2><a class="anchor" id="PY_CREATE_MODELINSTANCE_FROM_CHECKPPOINT"></a>
+How to create a GamsModelInstance from a GamsCheckpoint (transport7.py)</h2>
+<p>In transport7.py the usage of GamsModelInstance is demonstrated.</p>
+<p>At first checkpoint <code>cp</code> is created as in the preceding examples. Note that the GamsJob <code>job</code> again contains no solve statement and the demand multiplier is already included with default value 1. We create the GamsModelInstance <code>mi</code> using the GamsCheckpoint.add_modelinstance method.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    cp = ws.add_checkpoint()</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    job.run(checkpoint=cp)</div>
+<div class="line">    mi = cp.add_modelinstance()</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_MODIFY_PARAMETER_USING_MODIFIER"></a>
+How to modify a parameter of a GamsModelInstance using GamsModifier (transport7.py)</h2>
+<p>A GamsModelInstance uses a sync_db to maintain the data. We define <code>bmult</code> as GamsParameter using the GamsDatabase.add_parameter method and specify gurobi as solver. Afterwards the GamsModelInstance is instantiated with 3 arguments, the solve statement, GamsModifier <code>bmult</code> and GamsOptions <code>opt</code>. The GamsModifier means that <code>bmult</code> is modifiable while all other parameters, variables and equations of GamsModelInstance <code>mi</code> stay unchanged. We use the GamsParameter.add_record method to assign a value to <code>bmult</code>. That value can be varied afterwards using the GamsParameter.first_record method to reproduce our well-known example with different demand multipliers.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    bmult = mi.sync_db.add_parameter(<span class="stringliteral">&quot;bmult&quot;</span>, 0, <span class="stringliteral">&quot;demand multiplier&quot;</span>)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;cplex&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    mi.instantiate(<span class="stringliteral">&quot;transport use lp min z&quot;</span>, GamsModifier(bmult), opt)</div>
+<div class="line"> </div>
+<div class="line">    bmult.add_record().value = 1.0</div>
+<div class="line">    bmult_list = [0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3]</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> b <span class="keywordflow">in</span> bmult_list:</div>
+<div class="line">        bmult.first_record().value = b</div>
+<div class="line">        mi.solve()</div>
+<div class="line">        print(f<span class="stringliteral">&quot;Scenario bmult={b}:&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Modelstatus: {mi.model_status}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Solvestatus: {mi.solver_status}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Obj: {mi.sync_db[&#39;z&#39;].first_record().level}&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_MODIFY_VAR_USING_MODIFIER"></a>
+How to modify a variable of a GamsModelInstance using GamsModifier (transport7.py)</h2>
+<p>We create a GamsModelInstance using the GamsCheckpoint.add_modelinstance method. Afterwards we define <code>x</code> as GamsVariable and a GamsParameter <code>xup</code> that will be used as upper bound for <code>x</code>. At the following instantiate method GamsModifier has 3 arguments. The first one says that <code>x</code> is modifiable, the second determines which part of the variable (lower bound, upper bound or level) can be modified and the third specifies the GamsParameter that holds the new value, in this case <code>xup</code>.</p>
+<p>In the following loops we set the upper bound of one link of the network to zero, which means that no transportation between the corresponding plant and market is possible, and solve the modified transportation problem.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    mi = cp.add_modelinstance()</div>
+<div class="line">    x = mi.sync_db.add_variable(<span class="stringliteral">&quot;x&quot;</span>, 2, VarType.Positive)</div>
+<div class="line">    xup = mi.sync_db.add_parameter(<span class="stringliteral">&quot;xup&quot;</span>, 2, <span class="stringliteral">&quot;upper bound on x&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># instantiate the GamsModelInstance and pass a model definition and GamsModifier to declare upper bound of x mutable</span></div>
+<div class="line">    mi.instantiate(<span class="stringliteral">&quot;transport use lp min z&quot;</span>, GamsModifier(x, UpdateAction.Upper, xup))</div>
+<div class="line">    mi.solve()</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> job.out_db[<span class="stringliteral">&quot;i&quot;</span>]:</div>
+<div class="line">        <span class="keywordflow">for</span> j <span class="keywordflow">in</span> job.out_db[<span class="stringliteral">&quot;j&quot;</span>]:</div>
+<div class="line">            xup.clear()</div>
+<div class="line">            xup.add_record((i.key(0), j.key(0))).value = 0</div>
+<div class="line">            mi.solve()</div>
+<div class="line">            print(f<span class="stringliteral">&quot;Scenario link blocked: {i.key(0)} - {j.key(0)}&quot;</span>)</div>
+<div class="line">            print(f<span class="stringliteral">&quot;  Modelstatus: {mi.model_status}&quot;</span>)</div>
+<div class="line">            print(f<span class="stringliteral">&quot;  Solvestatus: {mi.solver_status}&quot;</span>)</div>
+<div class="line">            print(f<span class="stringliteral">&quot;  Obj: {mi.sync_db[&#39;z&#39;].find_record().level}&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_USE_QUE_SOLVE_MULTIPLE_MODEL_INSTANCE"></a>
+How to use a queue to solve multiple GamsModelInstances in parallel (transport8.py)</h2>
+<p>We initialize a GamsCheckpoint <code>cp</code> from a GamsJob. Then we define a list that represents the different values of the demand multiplier. That list will be used like a queue where we extract the last element first. The objects <code>list_lock</code> and <code>io_lock</code> are used later to avoid multiple reading of one demand multiplier and messed up output. Then we call function <code>scen_solve</code> multiple times in parallel. The number of parallel calls is specified by <code>nr_workers</code>.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    cp = ws.add_checkpoint()</div>
+<div class="line"> </div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    job.run(checkpoint=cp)</div>
+<div class="line"> </div>
+<div class="line">    bmult_list = [1.3, 1.2, 1.1, 1.0, 0.9, 0.8, 0.7, 0.6]</div>
+<div class="line"> </div>
+<div class="line">    list_lock = Lock()</div>
+<div class="line">    io_lock = Lock()</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># start 2 threads</span></div>
+<div class="line">    nr_workers = 2</div>
+<div class="line">    threads = {}</div>
+<div class="line">    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(nr_workers):</div>
+<div class="line">        threads[i] = Thread(</div>
+<div class="line">            target=scen_solve, args=(cp, bmult_list, list_lock, io_lock)</div>
+<div class="line">        )</div>
+<div class="line">        threads[i].start()</div>
+<div class="line">    <span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(nr_workers):</div>
+<div class="line">        threads[i].join()</div>
+</div><!-- fragment --><p>In function <code>scen_solve</code> we create and instantiate a GamsModelInstance as in the preceding examples and make parameter <code>bmult</code> modifiable. Note that we choose <code>cplex</code> as solver because it is thread safe (gurobi would also be possible).</p>
+<p>We have two critical sections that are locked by the objects <code>list_lock</code> and <code>io_lock</code>. Note that the pop method removes and returns the last element from the list and deletes it. Once the list is empty the loop terminates.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="keyword">def </span>scen_solve(checkpoint, bmult_list, list_lock, io_lock):</div>
+<div class="line">    list_lock.acquire()</div>
+<div class="line">    mi = checkpoint.add_modelinstance()</div>
+<div class="line">    list_lock.release()</div>
+<div class="line">    bmult = mi.sync_db.add_parameter(<span class="stringliteral">&quot;bmult&quot;</span>, 0, <span class="stringliteral">&quot;demand multiplier&quot;</span>)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;cplex&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># instantiate the GamsModelInstance and pass a model definition and GamsModifier to declare bmult mutable</span></div>
+<div class="line">    mi.instantiate(<span class="stringliteral">&quot;transport use lp min z&quot;</span>, GamsModifier(bmult), opt)</div>
+<div class="line">    bmult.add_record().value = 1.0</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
+<div class="line">        <span class="comment"># dynamically get a bmult value from the queue instead of passing it to the different threads at creation time</span></div>
+<div class="line">        list_lock.acquire()</div>
+<div class="line">        <span class="keywordflow">if</span> <span class="keywordflow">not</span> bmult_list:</div>
+<div class="line">            list_lock.release()</div>
+<div class="line">            <span class="keywordflow">return</span></div>
+<div class="line">        b = bmult_list.pop()</div>
+<div class="line">        list_lock.release()</div>
+<div class="line">        bmult.first_record().value = b</div>
+<div class="line">        mi.solve()</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment"># we need to make the output a critical section to avoid messed up report informations</span></div>
+<div class="line">        io_lock.acquire()</div>
+<div class="line">        print(f<span class="stringliteral">&quot;Scenario bmult={b}:&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Modelstatus: {mi.model_status}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Solvestatus: {mi.solver_status}&quot;</span>)</div>
+<div class="line">        print(f<span class="stringliteral">&quot;  Obj: {mi.sync_db[&#39;z&#39;].first_record().level}&quot;</span>)</div>
+<div class="line">        io_lock.release()</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_FILL_DB_READING_MSACCESS"></a>
+How to fill a GamsDatabase by reading from MS Access (transport9.py)</h2>
+<p>This example illustrates how to import data from Microsoft Access to a GamsDatabase. There are a few prerequisites required to run transport9.py successfully.</p><ul>
+<li>We import <code>pyodbc</code>.</li>
+<li>Note that an architecture mismatch might cause problems. The bitness of your MS Access, Python, pyodbc and GAMS should be identical (64 bit).</li>
+</ul>
+<p>We call a function <code>read_data_from_access</code> that finally returns a GamsDatabase as shown below.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    db = read_from_access(ws)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>The function <code>read_from_access</code> begins with the creation of an empty database. Afterwards we set up a connection to the MS Access database <code>transport.accdb</code> which can be found in <code>[GAMSDIR]\apifiles\Data</code>. To finally read in GAMS sets and parameters we call the functions <code>read_set</code> and <code>read_parameter</code> that are explained down below.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="keyword">def </span>read_from_access(ws):</div>
+<div class="line">    db = ws.add_database()</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># connect to database</span></div>
+<div class="line">    str_access_conn = <span class="stringliteral">r&quot;DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=..\..\..\..\apifiles\Data\transport.accdb&quot;</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">try</span>:</div>
+<div class="line">        connection = pyodbc.connect(str_access_conn)</div>
+<div class="line">    <span class="keywordflow">except</span> Exception <span class="keyword">as</span> e:</div>
+<div class="line">        <span class="keywordflow">raise</span> Exception(f<span class="stringliteral">&quot;Error: Failed to create a database connection.\n{e}&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># read GAMS sets</span></div>
+<div class="line">    read_set(connection, db, <span class="stringliteral">&quot;SELECT Plant FROM plant&quot;</span>, <span class="stringliteral">&quot;i&quot;</span>, 1, <span class="stringliteral">&quot;canning plants&quot;</span>)</div>
+<div class="line">    read_set(connection, db, <span class="stringliteral">&quot;SELECT Market FROM Market&quot;</span>, <span class="stringliteral">&quot;j&quot;</span>, 1, <span class="stringliteral">&quot;markets&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># read GAMS parameters</span></div>
+<div class="line">    read_parameter(</div>
+<div class="line">        connection,</div>
+<div class="line">        db,</div>
+<div class="line">        <span class="stringliteral">&quot;SELECT Plant,Capacity FROM Plant&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;a&quot;</span>,</div>
+<div class="line">        1,</div>
+<div class="line">        <span class="stringliteral">&quot;capacity of plant i in cases&quot;</span>,</div>
+<div class="line">    )</div>
+<div class="line">    read_parameter(</div>
+<div class="line">        connection,</div>
+<div class="line">        db,</div>
+<div class="line">        <span class="stringliteral">&quot;SELECT Market,Demand FROM Market&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;b&quot;</span>,</div>
+<div class="line">        1,</div>
+<div class="line">        <span class="stringliteral">&quot;demand at market j in cases&quot;</span>,</div>
+<div class="line">    )</div>
+<div class="line">    read_parameter(</div>
+<div class="line">        connection,</div>
+<div class="line">        db,</div>
+<div class="line">        <span class="stringliteral">&quot;SELECT Plant,Market,Distance FROM Distance&quot;</span>,</div>
+<div class="line">        <span class="stringliteral">&quot;d&quot;</span>,</div>
+<div class="line">        2,</div>
+<div class="line">        <span class="stringliteral">&quot;distance in thousands of miles&quot;</span>,</div>
+<div class="line">    )</div>
+<div class="line"> </div>
+<div class="line">    connection.close()</div>
+<div class="line">    <span class="keywordflow">return</span> db</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>The function <code>read_set</code> adds a set to the GamsDatabase that is filled with the data from the MS Access file afterwards. The function <code>read_parameter</code> works quite similar.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="keyword">def </span>read_set(connection, db, query_string, set_name, set_dim, set_exp=&quot;&quot;):</div>
+<div class="line">    <span class="keywordflow">try</span>:</div>
+<div class="line">        cursor = connection.cursor()</div>
+<div class="line">        cursor.execute(query_string)</div>
+<div class="line">        data = cursor.fetchall()</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> len(data[0]) != set_dim:</div>
+<div class="line">            <span class="keywordflow">raise</span> Exception(</div>
+<div class="line">                <span class="stringliteral">&quot;Number of fields in select statement does not match setDim&quot;</span></div>
+<div class="line">            )</div>
+<div class="line"> </div>
+<div class="line">        i = db.add_set(set_name, set_dim, set_exp)</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">for</span> row <span class="keywordflow">in</span> data:</div>
+<div class="line">            keys = []</div>
+<div class="line">            <span class="keywordflow">for</span> key <span class="keywordflow">in</span> row:</div>
+<div class="line">                keys.append(str(key))</div>
+<div class="line">            i.add_record(keys)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">except</span> Exception <span class="keyword">as</span> ex:</div>
+<div class="line">        <span class="keywordflow">raise</span> Exception(</div>
+<div class="line">            <span class="stringliteral">&quot;Error: Failed to retrieve the required data from the database.\n{0}&quot;</span>.format(</div>
+<div class="line">                ex</div>
+<div class="line">            )</div>
+<div class="line">        )</div>
+<div class="line">    <span class="keywordflow">finally</span>:</div>
+<div class="line">        cursor.close()</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Once we read in all the data we can create a GamsJob from the GamsDatabase and run it as usual.</p>
+<h2><a class="anchor" id="PY_FILL_DB_READING_MSEXCEL"></a>
+How to fill a GamsDatabase by reading from MS Excel (transport10.py)</h2>
+<p>This example illustrates how to read data from Excel, or to be more specific, from <code>[GAMSDIR]\apifiles\Data\transport.xlsx</code>.</p>
+<p>At first you have to download the <code>openpyxl</code> package:</p>
+<p><code>pip install openpyxl</code></p>
+<p>Now you should be able to run transport10.py.</p>
+<p>In transport10.py the model is given as string without data like in many examples before and the Excel file <code>transport.xlsx</code> is located at <code>[GAMSDIR]\apifiles\Data</code>. At first we define the workbook to read from and the different sheet names. To ensure to have the same number of markets and plants in all spreadsheets, we conduct a little test that checks for the number of rows and columns. Our workspace is only created if this test yields no errors.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    wb = load_workbook(</div>
+<div class="line">        os.path.join(*[os.pardir] * 4, <span class="stringliteral">&quot;apifiles&quot;</span>, <span class="stringliteral">&quot;Data&quot;</span>, <span class="stringliteral">&quot;transport.xlsx&quot;</span>)</div>
+<div class="line">    )</div>
+<div class="line">    capacity = wb[<span class="stringliteral">&quot;capacity&quot;</span>]</div>
+<div class="line">    demand = wb[<span class="stringliteral">&quot;demand&quot;</span>]</div>
+<div class="line">    distance = wb[<span class="stringliteral">&quot;distance&quot;</span>]</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment"># number of markets/plants have to be the same in all spreadsheets</span></div>
+<div class="line">    <span class="keywordflow">if</span> (</div>
+<div class="line">        distance.max_column - 1 != demand.max_column</div>
+<div class="line">        <span class="keywordflow">or</span> distance.max_row - 1 != capacity.max_row</div>
+<div class="line">    ):</div>
+<div class="line">        <span class="keywordflow">raise</span> Exception(<span class="stringliteral">&quot;Size of the spreadsheets doesn&#39;t match&quot;</span>)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Now we can create a GamsDatabase and read in the data contained in the different worksheets. We iterate over the columns and read in the set names and the corresponding parameter values.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    db = ws.add_database()</div>
+<div class="line">    i = db.add_set(<span class="stringliteral">&quot;i&quot;</span>, 1, <span class="stringliteral">&quot;Plants&quot;</span>)</div>
+<div class="line">    j = db.add_set(<span class="stringliteral">&quot;j&quot;</span>, 1, <span class="stringliteral">&quot;Markets&quot;</span>)</div>
+<div class="line">    capacity_param = db.add_parameter_dc(<span class="stringliteral">&quot;a&quot;</span>, [i], <span class="stringliteral">&quot;Capacity&quot;</span>)</div>
+<div class="line">    demand_param = db.add_parameter_dc(<span class="stringliteral">&quot;b&quot;</span>, [j], <span class="stringliteral">&quot;Demand&quot;</span>)</div>
+<div class="line">    distance_param = db.add_parameter_dc(<span class="stringliteral">&quot;d&quot;</span>, [i, j], <span class="stringliteral">&quot;Distance&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> c <span class="keywordflow">in</span> capacity.iter_cols():</div>
+<div class="line">        key = c[0].value</div>
+<div class="line">        i.add_record(key)</div>
+<div class="line">        capacity_param.add_record(key).value = c[1].value</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> c <span class="keywordflow">in</span> demand.iter_cols():</div>
+<div class="line">        key = c[0].value</div>
+<div class="line">        j.add_record(key)</div>
+<div class="line">        demand_param.add_record(key).value = c[1].value</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">for</span> c <span class="keywordflow">in</span> range(2, distance.max_column + 1):</div>
+<div class="line">        <span class="keywordflow">for</span> r <span class="keywordflow">in</span> range(2, distance.max_row + 1):</div>
+<div class="line">            keys = (</div>
+<div class="line">                distance.cell(row=r, column=1).value,</div>
+<div class="line">                distance.cell(row=1, column=c).value,</div>
+<div class="line">            )</div>
+<div class="line">            v = distance.cell(row=r, column=c).value</div>
+<div class="line">            distance_param.add_record(keys).value = v</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Note that we can name sets and parameters just like in the database but we don't have to. Now we can run our GamsJob as usual.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;gdxincname&quot;</span>] = db.name</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;xpress&quot;</span></div>
+<div class="line">    job.run(opt, databases=db)</div>
+<div class="line">    <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> job.out_db[<span class="stringliteral">&quot;x&quot;</span>]:</div>
+<div class="line">        print(</div>
+<div class="line">            f<span class="stringliteral">&quot;x({rec.key(0)},{rec.key(1)}): level={rec.level} marginal={rec.marginal}&quot;</span></div>
+<div class="line">        )</div>
+<div class="line">...</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_CREATE_USE_SAVE_RESTART"></a>
+How to create and use a save/restart file (transport11.py)</h2>
+<p>In transport11.py we demonstrate how to create and use a save/restart file. Usually such a file should be supplied by an application provider but in this example we create one for demonstration purpose. Note that the restart is launched from a GamsCheckpoint.</p>
+<p>We create a directory <code>tmp</code> with internal identifier <code>w_dir</code> in the directory we are currently in. This file will be used as working directory later. From the main function we call the function <code>create_save_restart</code> giving it directory <code>tmp</code> and the desired name for the save/restart file (<code>tbase</code>) as arguments.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    working_dir = os.path.join(os.curdir, <span class="stringliteral">&quot;tmp&quot;</span>)</div>
+<div class="line">    create_save_restart(sys_dir, os.path.join(working_dir, <span class="stringliteral">&quot;tbase&quot;</span>))</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>In function <code>create_save_restart</code> we create a workspace with the given working directory (<code>w_dir</code> refers to <code>tmp</code>). Then we create a GamsJob from a string. Note that the string given via <code>get_base_model_text</code> contains the basic definitions of sets without giving them a content (that is what <code>$onempty</code> is used for). Afterwards we specify a GamsOption to only compile the job but do not execute it. Then we create a checkpoint <code>cp</code> that is initialized by the following run of the GamsJob and stored in the file given as argument to the function, in our case <code>tbase</code>. This becomes possible because the add_checkpoint method accepts identifiers as well as file names as argument.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line"><span class="keyword">def </span>create_save_restart(sys_dir, cp_file_name):</div>
+<div class="line">    ws = GamsWorkspace(os.path.dirname(cp_file_name), sys_dir)</div>
+<div class="line">    job_1 = ws.add_job_from_string(GAMS_BASE_MODEL)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.action = Action.CompileOnly</div>
+<div class="line">    cp = ws.add_checkpoint(os.path.basename(cp_file_name))</div>
+<div class="line">    job_1.run(opt, cp)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>So what you should keep in mind before we return to further explanations of the main function is, that the file <code>tbase</code> is now in the current working directory and contains a checkpoint that will work exactly like a restart file.</p>
+<p>In the main function we define some data using Python data structures as we already did in [transport4.py] (<a class="el" href="#PY_DEFINE_DATA_PY_DATA_STRUCTURES">How to define data using Python data structures (transport4.py)</a>) before we create the GamsWorkspace and a GamsDatabase.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    sys_dir = sys.argv[1] <span class="keywordflow">if</span> len(sys.argv) &gt; 1 <span class="keywordflow">else</span> None</div>
+<div class="line">    working_dir = os.path.join(os.curdir, <span class="stringliteral">&quot;tmp&quot;</span>)</div>
+<div class="line">    ws = GamsWorkspace(working_dir, sys_dir)</div>
+<div class="line">    db = ws.add_database()</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Afterwards we set up the GamsDatabase like we already did in [transport4.py] (<a class="el" href="#PY_PREPARE_DB_FROM_PY_DATA_STRUCTURES">How to prepare a GamsDatabase from Python data structures (transport4.py)</a>). Once this is done we run a GamsJob using this data plus the checkpoint stored in file <code>tbase</code>.</p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">    cp_base = ws.add_checkpoint(<span class="stringliteral">&quot;tbase&quot;</span>)</div>
+<div class="line">    job = ws.add_job_from_string(GAMS_MODEL, cp_base)</div>
+<div class="line">    opt = ws.add_options()</div>
+<div class="line">    opt.defines[<span class="stringliteral">&quot;gdxincname&quot;</span>] = db.name</div>
+<div class="line">    opt.all_model_types = <span class="stringliteral">&quot;xpress&quot;</span></div>
+<div class="line">    job.run(opt, databases=db)</div>
+<div class="line">...</div>
+</div><!-- fragment --><p>Note that the string from which we create <code>job</code> is different to the one used to prepare the checkpoint stored in <code>tbase</code> and is only responsible for reading in the data from the GamsDatabase correctly. The entire model definition is delivered by the checkpoint <code>cp_base</code> which is equal to the one we saved in <code>tbase</code>. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="./style/jquery.highlight.js"></script>
+<script src="./style/navtree.js"></script>
+<script src="./style/navtreeinfo.js"></script>
+<script src="./style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

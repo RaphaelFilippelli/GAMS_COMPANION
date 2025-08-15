@@ -1,0 +1,23 @@
+--- Job test_conditional_include2.gms Start 08/14/25 15:37:22 49.6.1 55d34574 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\49\gmsprmNT.txt
+    C:\Users\prd705\OneDrive - University of Copenhagen\Documents\GAMS\gamsconfig.yaml
+--- GAMS Parameters defined
+    Input C:\Users\prd705\GAMS_GPT5\test_conditional_include2.gms
+    Action C
+    ScrDir C:\Users\prd705\GAMS_GPT5\225a\
+    SysDir C:\GAMS\49\
+    LogOption 2
+Licensee: Medium MUD - 10 User License                   S241216|0002AP-WIN
+          University of Copenhagen, Institute of Food and Resource EcDC2546
+          C:\Users\prd705\OneDrive - University of Copenhagen\Documents\GAMS\gamslice.txt
+          License Admin: Jesper Levring Andersen, jla@ifro.ku.dk           
+          The maintenance period of the license will expire on Dec 11, 2025
+System information: 24 physical cores and 64 Gb memory detected
+GAMS 49.6.1   Copyright (C) 1987-2025 GAMS Development. All rights reserved
+--- Starting compilation
+--- test_conditional_include2.gms(12) 3 Mb
+--- . test_include.inc(1) 3 Mb
+--- test_conditional_include2.gms(14) 3 Mb
+*** Status: Normal completion
+--- Job test_conditional_include2.gms Stop 08/14/25 15:37:22 elapsed 0:00:00.062

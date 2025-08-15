@@ -1,0 +1,1468 @@
+<!-- HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Python API-->
+<title>gams.control.options.GamsOptions Class Reference</title>
+<link href="../../style/tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../style/jquery.js"></script>
+<script type="text/javascript" src="../../style/dynsections.js"></script>
+<script type="text/javascript" src="../../style/cookie.js"></script>
+<script type="text/javascript" src="../../style/resize.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="../../style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="../../style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="../../style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="../../style/toc-highlight.js"></script>
+<script type="text/javascript" src="../../style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="../../style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+<style>
+.image
+{
+   text-align: left;
+}
+</style>
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div>
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="../../index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="../../Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="../../RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="../../UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="../../UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="../../UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="../../S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="../../T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="../../API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="../../UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="../../citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>  
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="../../modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../../../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../../../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../../../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../../../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../../../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../../../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../../../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../../../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div> 
+        <a id="keyword" href="../../keyword.html" class="menu">Index</a>
+        <a id="help" href="../../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+  <div style="height:20px; padding:10px;">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+  </div>
+</div>
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>gams</b></li><li class="navelem"><b>control</b></li><li class="navelem"><b>options</b></li><li class="navelem"><a class="el" href="classgams_1_1control_1_1options_1_1GamsOptions.html">GamsOptions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="classgams_1_1control_1_1options_1_1GamsOptions-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">gams.control.options.GamsOptions Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>The GamsOptions class manages GAMS options (sometimes also called GAMS parameters since they correspond to the command line parameters of the GAMS executable) for a GamsJob and GamsModelInstance.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:afaf77bfdb2672b31ac570b7a7e6417a5" id="r_afaf77bfdb2672b31ac570b7a7e6417a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaf77bfdb2672b31ac570b7a7e6417a5">__init__</a> (self, ws, opt_from=None, opt_file=None)</td></tr>
+<tr class="memdesc:afaf77bfdb2672b31ac570b7a7e6417a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:afaf77bfdb2672b31ac570b7a7e6417a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a46ccf31a659d4679922e072692d54" id="r_ad6a46ccf31a659d4679922e072692d54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6a46ccf31a659d4679922e072692d54">export</a> (self, file_path)</td></tr>
+<tr class="memdesc:ad6a46ccf31a659d4679922e072692d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write GamsOptions into a parameter file.  <br /></td></tr>
+<tr class="separator:ad6a46ccf31a659d4679922e072692d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ae4f743eabc504f567999efc3c1f84673" id="r_ae4f743eabc504f567999efc3c1f84673"><td class="memItemLeft" align="right" valign="top"><a id="ae4f743eabc504f567999efc3c1f84673" name="ae4f743eabc504f567999efc3c1f84673"></a>
+dict&#160;</td><td class="memItemRight" valign="bottom"><b>defines</b> = {}</td></tr>
+<tr class="memdesc:ae4f743eabc504f567999efc3c1f84673"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAMS Dash Options. <br /></td></tr>
+<tr class="separator:ae4f743eabc504f567999efc3c1f84673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a0a324e50dc339540c1f21225a957cf5a" id="r_a0a324e50dc339540c1f21225a957cf5a"><td class="memItemLeft" align="right" valign="top"><a id="a0a324e50dc339540c1f21225a957cf5a" name="a0a324e50dc339540c1f21225a957cf5a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>all_model_types</b> = property(fset=set_all_model_types)</td></tr>
+<tr class="memdesc:a0a324e50dc339540c1f21225a957cf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set solver for all model types. <br /></td></tr>
+<tr class="separator:a0a324e50dc339540c1f21225a957cf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3102e8d0ff7e48b2f23d063ac05705ba" id="r_a3102e8d0ff7e48b2f23d063ac05705ba"><td class="memItemLeft" align="right" valign="top"><a id="a3102e8d0ff7e48b2f23d063ac05705ba" name="a3102e8d0ff7e48b2f23d063ac05705ba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>lp</b> = property(get_lp, set_lp)</td></tr>
+<tr class="memdesc:a3102e8d0ff7e48b2f23d063ac05705ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default lp solver. <br /></td></tr>
+<tr class="separator:a3102e8d0ff7e48b2f23d063ac05705ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893cc0e36f67b88cc46685cf15959866" id="r_a893cc0e36f67b88cc46685cf15959866"><td class="memItemLeft" align="right" valign="top"><a id="a893cc0e36f67b88cc46685cf15959866" name="a893cc0e36f67b88cc46685cf15959866"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mip</b> = property(get_mip, set_mip)</td></tr>
+<tr class="memdesc:a893cc0e36f67b88cc46685cf15959866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default mip solver. <br /></td></tr>
+<tr class="separator:a893cc0e36f67b88cc46685cf15959866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5b9af48f7a5cefb5ea973ad34536dd" id="r_a2c5b9af48f7a5cefb5ea973ad34536dd"><td class="memItemLeft" align="right" valign="top"><a id="a2c5b9af48f7a5cefb5ea973ad34536dd" name="a2c5b9af48f7a5cefb5ea973ad34536dd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>rmip</b> = property(get_rmip, set_rmip)</td></tr>
+<tr class="memdesc:a2c5b9af48f7a5cefb5ea973ad34536dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default rmip solver. <br /></td></tr>
+<tr class="separator:a2c5b9af48f7a5cefb5ea973ad34536dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a079557b9b20f77ecc710e0387a4927c7" id="r_a079557b9b20f77ecc710e0387a4927c7"><td class="memItemLeft" align="right" valign="top"><a id="a079557b9b20f77ecc710e0387a4927c7" name="a079557b9b20f77ecc710e0387a4927c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>nlp</b> = property(get_nlp, set_nlp)</td></tr>
+<tr class="memdesc:a079557b9b20f77ecc710e0387a4927c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default nlp solver. <br /></td></tr>
+<tr class="separator:a079557b9b20f77ecc710e0387a4927c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c33eb8cc3bc6e7cd232efcbbf68661e" id="r_a7c33eb8cc3bc6e7cd232efcbbf68661e"><td class="memItemLeft" align="right" valign="top"><a id="a7c33eb8cc3bc6e7cd232efcbbf68661e" name="a7c33eb8cc3bc6e7cd232efcbbf68661e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mcp</b> = property(get_mcp, set_mcp)</td></tr>
+<tr class="memdesc:a7c33eb8cc3bc6e7cd232efcbbf68661e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default mcp solver. <br /></td></tr>
+<tr class="separator:a7c33eb8cc3bc6e7cd232efcbbf68661e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c6a0c00f5849a24a432cc5c18fd396b" id="r_a6c6a0c00f5849a24a432cc5c18fd396b"><td class="memItemLeft" align="right" valign="top"><a id="a6c6a0c00f5849a24a432cc5c18fd396b" name="a6c6a0c00f5849a24a432cc5c18fd396b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>mpec</b> = property(get_mpec, set_mpec)</td></tr>
+<tr class="memdesc:a6c6a0c00f5849a24a432cc5c18fd396b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default mpec solver. <br /></td></tr>
+<tr class="separator:a6c6a0c00f5849a24a432cc5c18fd396b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bad3373c072f805db5acac6cd4c848" id="r_a68bad3373c072f805db5acac6cd4c848"><td class="memItemLeft" align="right" valign="top"><a id="a68bad3373c072f805db5acac6cd4c848" name="a68bad3373c072f805db5acac6cd4c848"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>rmpec</b> = property(get_rmpec, set_rmpec)</td></tr>
+<tr class="memdesc:a68bad3373c072f805db5acac6cd4c848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default rmpec solver. <br /></td></tr>
+<tr class="separator:a68bad3373c072f805db5acac6cd4c848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade246d7eaa024b866d3a149cff2e5399" id="r_ade246d7eaa024b866d3a149cff2e5399"><td class="memItemLeft" align="right" valign="top"><a id="ade246d7eaa024b866d3a149cff2e5399" name="ade246d7eaa024b866d3a149cff2e5399"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cns</b> = property(get_cns, set_cns)</td></tr>
+<tr class="memdesc:ade246d7eaa024b866d3a149cff2e5399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default cns solver. <br /></td></tr>
+<tr class="separator:ade246d7eaa024b866d3a149cff2e5399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21604631e2fb9ad57f453ee7f2173e76" id="r_a21604631e2fb9ad57f453ee7f2173e76"><td class="memItemLeft" align="right" valign="top"><a id="a21604631e2fb9ad57f453ee7f2173e76" name="a21604631e2fb9ad57f453ee7f2173e76"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dnlp</b> = property(get_dnlp, set_dnlp)</td></tr>
+<tr class="memdesc:a21604631e2fb9ad57f453ee7f2173e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default dnlp solver. <br /></td></tr>
+<tr class="separator:a21604631e2fb9ad57f453ee7f2173e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ee2f149be0f34ff67aa2677b5c312f" id="r_a51ee2f149be0f34ff67aa2677b5c312f"><td class="memItemLeft" align="right" valign="top"><a id="a51ee2f149be0f34ff67aa2677b5c312f" name="a51ee2f149be0f34ff67aa2677b5c312f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>rminlp</b> = property(get_rminlp, set_rminlp)</td></tr>
+<tr class="memdesc:a51ee2f149be0f34ff67aa2677b5c312f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default rminlp solver. <br /></td></tr>
+<tr class="separator:a51ee2f149be0f34ff67aa2677b5c312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1abe717c841060f6043019dc070106c" id="r_ae1abe717c841060f6043019dc070106c"><td class="memItemLeft" align="right" valign="top"><a id="ae1abe717c841060f6043019dc070106c" name="ae1abe717c841060f6043019dc070106c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>minlp</b> = property(get_minlp, set_minlp)</td></tr>
+<tr class="memdesc:ae1abe717c841060f6043019dc070106c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default minlp solver. <br /></td></tr>
+<tr class="separator:ae1abe717c841060f6043019dc070106c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7adc1d1d9e6f51e94096cd6c8566ee24" id="r_a7adc1d1d9e6f51e94096cd6c8566ee24"><td class="memItemLeft" align="right" valign="top"><a id="a7adc1d1d9e6f51e94096cd6c8566ee24" name="a7adc1d1d9e6f51e94096cd6c8566ee24"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>qcp</b> = property(get_qcp, set_qcp)</td></tr>
+<tr class="memdesc:a7adc1d1d9e6f51e94096cd6c8566ee24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default qcp solver. <br /></td></tr>
+<tr class="separator:a7adc1d1d9e6f51e94096cd6c8566ee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eddfcb4703c0a619376665bcdec3b2c" id="r_a9eddfcb4703c0a619376665bcdec3b2c"><td class="memItemLeft" align="right" valign="top"><a id="a9eddfcb4703c0a619376665bcdec3b2c" name="a9eddfcb4703c0a619376665bcdec3b2c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>miqcp</b> = property(get_miqcp, set_miqcp)</td></tr>
+<tr class="memdesc:a9eddfcb4703c0a619376665bcdec3b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default miqcp solver. <br /></td></tr>
+<tr class="separator:a9eddfcb4703c0a619376665bcdec3b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd8c67a12bb6b7d307c34500ba15b0a" id="r_abfd8c67a12bb6b7d307c34500ba15b0a"><td class="memItemLeft" align="right" valign="top"><a id="abfd8c67a12bb6b7d307c34500ba15b0a" name="abfd8c67a12bb6b7d307c34500ba15b0a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>rmiqcp</b> = property(get_rmiqcp, set_rmiqcp)</td></tr>
+<tr class="memdesc:abfd8c67a12bb6b7d307c34500ba15b0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default rmiqcp solver. <br /></td></tr>
+<tr class="separator:abfd8c67a12bb6b7d307c34500ba15b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c846f2789f9d17660681391d582efd" id="r_ab5c846f2789f9d17660681391d582efd"><td class="memItemLeft" align="right" valign="top"><a id="ab5c846f2789f9d17660681391d582efd" name="ab5c846f2789f9d17660681391d582efd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>emp</b> = property(get_emp, set_emp)</td></tr>
+<tr class="memdesc:ab5c846f2789f9d17660681391d582efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default emp solver. <br /></td></tr>
+<tr class="separator:ab5c846f2789f9d17660681391d582efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1d553596b5e70089691e2b9ff30e37" id="r_a3b1d553596b5e70089691e2b9ff30e37"><td class="memItemLeft" align="right" valign="top"><a id="a3b1d553596b5e70089691e2b9ff30e37" name="a3b1d553596b5e70089691e2b9ff30e37"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>action</b> = property(get_action, set_action)</td></tr>
+<tr class="memdesc:a3b1d553596b5e70089691e2b9ff30e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAMS processing request. <br /></td></tr>
+<tr class="separator:a3b1d553596b5e70089691e2b9ff30e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9def68fa679a8f0979fd3fcf2477721a" id="r_a9def68fa679a8f0979fd3fcf2477721a"><td class="memItemLeft" align="right" valign="top"><a id="a9def68fa679a8f0979fd3fcf2477721a" name="a9def68fa679a8f0979fd3fcf2477721a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>appendexpand</b> = property(get_appendexpand, set_appendexpand)</td></tr>
+<tr class="memdesc:a9def68fa679a8f0979fd3fcf2477721a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand file append option. <br /></td></tr>
+<tr class="separator:a9def68fa679a8f0979fd3fcf2477721a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aa1d04c589828bc74e3578738e4607b" id="r_a3aa1d04c589828bc74e3578738e4607b"><td class="memItemLeft" align="right" valign="top"><a id="a3aa1d04c589828bc74e3578738e4607b" name="a3aa1d04c589828bc74e3578738e4607b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>appendout</b> = property(get_appendout, set_appendout)</td></tr>
+<tr class="memdesc:a3aa1d04c589828bc74e3578738e4607b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file append option. <br /></td></tr>
+<tr class="separator:a3aa1d04c589828bc74e3578738e4607b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e829b0e5e7050a6ec5ed9ef9f1ec9a" id="r_ad7e829b0e5e7050a6ec5ed9ef9f1ec9a"><td class="memItemLeft" align="right" valign="top"><a id="ad7e829b0e5e7050a6ec5ed9ef9f1ec9a" name="ad7e829b0e5e7050a6ec5ed9ef9f1ec9a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>asyncsollst</b> = property(get_asyncsollst, set_asyncsollst)</td></tr>
+<tr class="memdesc:ad7e829b0e5e7050a6ec5ed9ef9f1ec9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print solution listing when asynchronous solve (Grid or Threads) is used. <br /></td></tr>
+<tr class="separator:ad7e829b0e5e7050a6ec5ed9ef9f1ec9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1ffde2f6fa94380a67ff878be70f9d" id="r_a6f1ffde2f6fa94380a67ff878be70f9d"><td class="memItemLeft" align="right" valign="top"><a id="a6f1ffde2f6fa94380a67ff878be70f9d" name="a6f1ffde2f6fa94380a67ff878be70f9d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>bratio</b> = property(get_bratio, set_bratio)</td></tr>
+<tr class="memdesc:a6f1ffde2f6fa94380a67ff878be70f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basis detection threshold. <br /></td></tr>
+<tr class="separator:a6f1ffde2f6fa94380a67ff878be70f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0966e2f703a92f2a110b0b55846a6d9" id="r_ac0966e2f703a92f2a110b0b55846a6d9"><td class="memItemLeft" align="right" valign="top"><a id="ac0966e2f703a92f2a110b0b55846a6d9" name="ac0966e2f703a92f2a110b0b55846a6d9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>capturemodelinstance</b> = property(get_capturemodelinstance, set_capturemodelinstance)</td></tr>
+<tr class="memdesc:ac0966e2f703a92f2a110b0b55846a6d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch to capture all model instances within a run. <br /></td></tr>
+<tr class="separator:ac0966e2f703a92f2a110b0b55846a6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6b16e766c8d93c844907c8adcfccae" id="r_a5a6b16e766c8d93c844907c8adcfccae"><td class="memItemLeft" align="right" valign="top"><a id="a5a6b16e766c8d93c844907c8adcfccae" name="a5a6b16e766c8d93c844907c8adcfccae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>case</b> = property(get_case, set_case)</td></tr>
+<tr class="memdesc:a5a6b16e766c8d93c844907c8adcfccae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output case option for LST file. <br /></td></tr>
+<tr class="separator:a5a6b16e766c8d93c844907c8adcfccae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f8de59180330a9cffd071ef3c87d7f" id="r_a38f8de59180330a9cffd071ef3c87d7f"><td class="memItemLeft" align="right" valign="top"><a id="a38f8de59180330a9cffd071ef3c87d7f" name="a38f8de59180330a9cffd071ef3c87d7f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cerr</b> = property(get_cerr, set_cerr)</td></tr>
+<tr class="memdesc:a38f8de59180330a9cffd071ef3c87d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile time error limit. <br /></td></tr>
+<tr class="separator:a38f8de59180330a9cffd071ef3c87d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92788dac58e02844ac3d28778310d3d" id="r_ad92788dac58e02844ac3d28778310d3d"><td class="memItemLeft" align="right" valign="top"><a id="ad92788dac58e02844ac3d28778310d3d" name="ad92788dac58e02844ac3d28778310d3d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>charset</b> = property(get_charset, set_charset)</td></tr>
+<tr class="memdesc:ad92788dac58e02844ac3d28778310d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Character set flag. <br /></td></tr>
+<tr class="separator:ad92788dac58e02844ac3d28778310d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bd8d88e0e3173fa8092b4d70074d69c" id="r_a8bd8d88e0e3173fa8092b4d70074d69c"><td class="memItemLeft" align="right" valign="top"><a id="a8bd8d88e0e3173fa8092b4d70074d69c" name="a8bd8d88e0e3173fa8092b4d70074d69c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>checkerrorlevel</b> = property(get_checkerrorlevel, set_checkerrorlevel)</td></tr>
+<tr class="memdesc:a8bd8d88e0e3173fa8092b4d70074d69c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check errorLevel automatically after executing external program. <br /></td></tr>
+<tr class="separator:a8bd8d88e0e3173fa8092b4d70074d69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada049902d2ccde460c91c670476493f4" id="r_ada049902d2ccde460c91c670476493f4"><td class="memItemLeft" align="right" valign="top"><a id="ada049902d2ccde460c91c670476493f4" name="ada049902d2ccde460c91c670476493f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>decryptkey</b> = property(get_decryptkey, set_decryptkey)</td></tr>
+<tr class="memdesc:ada049902d2ccde460c91c670476493f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key to decrypt a text file that was encrypted via $encrypt. <br /></td></tr>
+<tr class="separator:ada049902d2ccde460c91c670476493f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9ed52c1c74dfb06d7acf1182ecffea5" id="r_ae9ed52c1c74dfb06d7acf1182ecffea5"><td class="memItemLeft" align="right" valign="top"><a id="ae9ed52c1c74dfb06d7acf1182ecffea5" name="ae9ed52c1c74dfb06d7acf1182ecffea5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dformat</b> = property(get_dformat, set_dformat)</td></tr>
+<tr class="memdesc:ae9ed52c1c74dfb06d7acf1182ecffea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date format. <br /></td></tr>
+<tr class="separator:ae9ed52c1c74dfb06d7acf1182ecffea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b9b7064fb563671522c989a9bc0bc4e" id="r_a4b9b7064fb563671522c989a9bc0bc4e"><td class="memItemLeft" align="right" valign="top"><a id="a4b9b7064fb563671522c989a9bc0bc4e" name="a4b9b7064fb563671522c989a9bc0bc4e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>digit</b> = property(get_digit, set_digit)</td></tr>
+<tr class="memdesc:a4b9b7064fb563671522c989a9bc0bc4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offDigit". <br /></td></tr>
+<tr class="separator:a4b9b7064fb563671522c989a9bc0bc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75768fba79a50e3addf7df7c7a4126e2" id="r_a75768fba79a50e3addf7df7c7a4126e2"><td class="memItemLeft" align="right" valign="top"><a id="a75768fba79a50e3addf7df7c7a4126e2" name="a75768fba79a50e3addf7df7c7a4126e2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>domlim</b> = property(get_domlim, set_domlim)</td></tr>
+<tr class="memdesc:a75768fba79a50e3addf7df7c7a4126e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Domain violation limit solver default. <br /></td></tr>
+<tr class="separator:a75768fba79a50e3addf7df7c7a4126e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04073ed00de934c751ba575ef99e4884" id="r_a04073ed00de934c751ba575ef99e4884"><td class="memItemLeft" align="right" valign="top"><a id="a04073ed00de934c751ba575ef99e4884" name="a04073ed00de934c751ba575ef99e4884"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dumpopt</b> = property(get_dumpopt, set_dumpopt)</td></tr>
+<tr class="memdesc:a04073ed00de934c751ba575ef99e4884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes preprocessed input to the file input.dmp. <br /></td></tr>
+<tr class="separator:a04073ed00de934c751ba575ef99e4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7532387e6a2119ee1a91d4f825cde18f" id="r_a7532387e6a2119ee1a91d4f825cde18f"><td class="memItemLeft" align="right" valign="top"><a id="a7532387e6a2119ee1a91d4f825cde18f" name="a7532387e6a2119ee1a91d4f825cde18f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dumpoptgdx</b> = property(get_dumpoptgdx, set_dumpoptgdx)</td></tr>
+<tr class="memdesc:a7532387e6a2119ee1a91d4f825cde18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a GDX file name stem created when using DumpOpt. <br /></td></tr>
+<tr class="separator:a7532387e6a2119ee1a91d4f825cde18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b49b4334c41419162069728b243583" id="r_aa6b49b4334c41419162069728b243583"><td class="memItemLeft" align="right" valign="top"><a id="aa6b49b4334c41419162069728b243583" name="aa6b49b4334c41419162069728b243583"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dumpparms</b> = property(get_dumpparms, set_dumpparms)</td></tr>
+<tr class="memdesc:aa6b49b4334c41419162069728b243583"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAMS parameter logging. <br /></td></tr>
+<tr class="separator:aa6b49b4334c41419162069728b243583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4e95aaaa7e89d46b2569c18a3eea00" id="r_aea4e95aaaa7e89d46b2569c18a3eea00"><td class="memItemLeft" align="right" valign="top"><a id="aea4e95aaaa7e89d46b2569c18a3eea00" name="aea4e95aaaa7e89d46b2569c18a3eea00"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dumpparmslogprefix</b> = property(get_dumpparmslogprefix, set_dumpparmslogprefix)</td></tr>
+<tr class="memdesc:aea4e95aaaa7e89d46b2569c18a3eea00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix of lines triggered by DumpParms&gt;1. <br /></td></tr>
+<tr class="separator:aea4e95aaaa7e89d46b2569c18a3eea00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a7915f72f2b8ee1c6585e4a3799433" id="r_a15a7915f72f2b8ee1c6585e4a3799433"><td class="memItemLeft" align="right" valign="top"><a id="a15a7915f72f2b8ee1c6585e4a3799433" name="a15a7915f72f2b8ee1c6585e4a3799433"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ecimplicitload</b> = property(get_ecimplicitload, set_ecimplicitload)</td></tr>
+<tr class="memdesc:a15a7915f72f2b8ee1c6585e4a3799433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow implicit loading of symbols from embedded code or not. <br /></td></tr>
+<tr class="separator:a15a7915f72f2b8ee1c6585e4a3799433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ef8abd8612d08e3b79f3ab183536a28" id="r_a0ef8abd8612d08e3b79f3ab183536a28"><td class="memItemLeft" align="right" valign="top"><a id="a0ef8abd8612d08e3b79f3ab183536a28" name="a0ef8abd8612d08e3b79f3ab183536a28"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b> = property(get_empty, set_empty)</td></tr>
+<tr class="memdesc:a0ef8abd8612d08e3b79f3ab183536a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offEmpty". <br /></td></tr>
+<tr class="separator:a0ef8abd8612d08e3b79f3ab183536a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1cc0e2305172946f7b582f0dd77f45c" id="r_ac1cc0e2305172946f7b582f0dd77f45c"><td class="memItemLeft" align="right" valign="top"><a id="ac1cc0e2305172946f7b582f0dd77f45c" name="ac1cc0e2305172946f7b582f0dd77f45c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>encryptkey</b> = property(get_encryptkey, set_encryptkey)</td></tr>
+<tr class="memdesc:ac1cc0e2305172946f7b582f0dd77f45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key to encrypt a text file using $encrypt. <br /></td></tr>
+<tr class="separator:ac1cc0e2305172946f7b582f0dd77f45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd9ee1fe990c44cb24aa0dde905e8d0" id="r_abdd9ee1fe990c44cb24aa0dde905e8d0"><td class="memItemLeft" align="right" valign="top"><a id="abdd9ee1fe990c44cb24aa0dde905e8d0" name="abdd9ee1fe990c44cb24aa0dde905e8d0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>eolcom</b> = property(get_eolcom, set_eolcom)</td></tr>
+<tr class="memdesc:abdd9ee1fe990c44cb24aa0dde905e8d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offEolCom" and "$eolCom". <br /></td></tr>
+<tr class="separator:abdd9ee1fe990c44cb24aa0dde905e8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f2da9ebcd9810f280aed71d76b8072" id="r_a70f2da9ebcd9810f280aed71d76b8072"><td class="memItemLeft" align="right" valign="top"><a id="a70f2da9ebcd9810f280aed71d76b8072" name="a70f2da9ebcd9810f280aed71d76b8072"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>errmsg</b> = property(get_errmsg, set_errmsg)</td></tr>
+<tr class="memdesc:a70f2da9ebcd9810f280aed71d76b8072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Placing of compilation error messages. <br /></td></tr>
+<tr class="separator:a70f2da9ebcd9810f280aed71d76b8072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc861809702f58a75297d22278db8bf" id="r_abcc861809702f58a75297d22278db8bf"><td class="memItemLeft" align="right" valign="top"><a id="abcc861809702f58a75297d22278db8bf" name="abcc861809702f58a75297d22278db8bf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>errorlog</b> = property(get_errorlog, set_errorlog)</td></tr>
+<tr class="memdesc:abcc861809702f58a75297d22278db8bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max error message lines written to the log for each error. <br /></td></tr>
+<tr class="separator:abcc861809702f58a75297d22278db8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac6a63f34daf6b1f8ddb0b25c599b86" id="r_adac6a63f34daf6b1f8ddb0b25c599b86"><td class="memItemLeft" align="right" valign="top"><a id="adac6a63f34daf6b1f8ddb0b25c599b86" name="adac6a63f34daf6b1f8ddb0b25c599b86"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>etlim</b> = property(get_etlim, set_etlim)</td></tr>
+<tr class="memdesc:adac6a63f34daf6b1f8ddb0b25c599b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Elapsed time limit in seconds. <br /></td></tr>
+<tr class="separator:adac6a63f34daf6b1f8ddb0b25c599b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d292931385f8c50165ecdeb6fbd20e5" id="r_a7d292931385f8c50165ecdeb6fbd20e5"><td class="memItemLeft" align="right" valign="top"><a id="a7d292931385f8c50165ecdeb6fbd20e5" name="a7d292931385f8c50165ecdeb6fbd20e5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>execmode</b> = property(get_execmode, set_execmode)</td></tr>
+<tr class="memdesc:a7d292931385f8c50165ecdeb6fbd20e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limits on external programs that are allowed to be executed. <br /></td></tr>
+<tr class="separator:a7d292931385f8c50165ecdeb6fbd20e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a161519f397b5d5a3a9b888671c656003" id="r_a161519f397b5d5a3a9b888671c656003"><td class="memItemLeft" align="right" valign="top"><a id="a161519f397b5d5a3a9b888671c656003" name="a161519f397b5d5a3a9b888671c656003"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>expand</b> = property(get_expand, set_expand)</td></tr>
+<tr class="memdesc:a161519f397b5d5a3a9b888671c656003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expanded (include) input file name. <br /></td></tr>
+<tr class="separator:a161519f397b5d5a3a9b888671c656003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a8bf9314cb2ae77a6d6fbeebc67595" id="r_af4a8bf9314cb2ae77a6d6fbeebc67595"><td class="memItemLeft" align="right" valign="top"><a id="af4a8bf9314cb2ae77a6d6fbeebc67595" name="af4a8bf9314cb2ae77a6d6fbeebc67595"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>fddelta</b> = property(get_fddelta, set_fddelta)</td></tr>
+<tr class="memdesc:af4a8bf9314cb2ae77a6d6fbeebc67595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Step size for finite differences. <br /></td></tr>
+<tr class="separator:af4a8bf9314cb2ae77a6d6fbeebc67595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c0d9dfb2ef3d7c41845000dc491f7e" id="r_a70c0d9dfb2ef3d7c41845000dc491f7e"><td class="memItemLeft" align="right" valign="top"><a id="a70c0d9dfb2ef3d7c41845000dc491f7e" name="a70c0d9dfb2ef3d7c41845000dc491f7e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>fdopt</b> = property(get_fdopt, set_fdopt)</td></tr>
+<tr class="memdesc:a70c0d9dfb2ef3d7c41845000dc491f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Options for finite differences. <br /></td></tr>
+<tr class="separator:a70c0d9dfb2ef3d7c41845000dc491f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af367f8912ef8cc6e9e4b4bfd8071230f" id="r_af367f8912ef8cc6e9e4b4bfd8071230f"><td class="memItemLeft" align="right" valign="top"><a id="af367f8912ef8cc6e9e4b4bfd8071230f" name="af367f8912ef8cc6e9e4b4bfd8071230f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ferr</b> = property(get_ferr, set_ferr)</td></tr>
+<tr class="memdesc:af367f8912ef8cc6e9e4b4bfd8071230f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative error message file. <br /></td></tr>
+<tr class="separator:af367f8912ef8cc6e9e4b4bfd8071230f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40daf3e84d00c5def7aa8f4cd321e86" id="r_ad40daf3e84d00c5def7aa8f4cd321e86"><td class="memItemLeft" align="right" valign="top"><a id="ad40daf3e84d00c5def7aa8f4cd321e86" name="ad40daf3e84d00c5def7aa8f4cd321e86"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>filecase</b> = property(get_filecase, set_filecase)</td></tr>
+<tr class="memdesc:ad40daf3e84d00c5def7aa8f4cd321e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casing of file names and paths (put, gdx, ref, $include, etc.) <br /></td></tr>
+<tr class="separator:ad40daf3e84d00c5def7aa8f4cd321e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ec32f94fe13348051f9fe4974d0557" id="r_a47ec32f94fe13348051f9fe4974d0557"><td class="memItemLeft" align="right" valign="top"><a id="a47ec32f94fe13348051f9fe4974d0557" name="a47ec32f94fe13348051f9fe4974d0557"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>filestem</b> = property(get_filestem, set_filestem)</td></tr>
+<tr class="memdesc:a47ec32f94fe13348051f9fe4974d0557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the file stem for output files which use the input file name as stem by default. <br /></td></tr>
+<tr class="separator:a47ec32f94fe13348051f9fe4974d0557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7948398962d069010f97aa4a83cb0222" id="r_a7948398962d069010f97aa4a83cb0222"><td class="memItemLeft" align="right" valign="top"><a id="a7948398962d069010f97aa4a83cb0222" name="a7948398962d069010f97aa4a83cb0222"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>filestemapfromenv</b> = property(get_filestemapfromenv, set_filestemapfromenv)</td></tr>
+<tr class="memdesc:a7948398962d069010f97aa4a83cb0222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a string read from an environment variable to the "FileStem". <br /></td></tr>
+<tr class="separator:a7948398962d069010f97aa4a83cb0222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31f800956cae55385b13200a69992a3e" id="r_a31f800956cae55385b13200a69992a3e"><td class="memItemLeft" align="right" valign="top"><a id="a31f800956cae55385b13200a69992a3e" name="a31f800956cae55385b13200a69992a3e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>filtered</b> = property(get_filtered, set_filtered)</td></tr>
+<tr class="memdesc:a31f800956cae55385b13200a69992a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between filtered and domain-checked read from GDX. <br /></td></tr>
+<tr class="separator:a31f800956cae55385b13200a69992a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf43f9b77abc9ba960e229060cac42a" id="r_a5cf43f9b77abc9ba960e229060cac42a"><td class="memItemLeft" align="right" valign="top"><a id="a5cf43f9b77abc9ba960e229060cac42a" name="a5cf43f9b77abc9ba960e229060cac42a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>forceoptfile</b> = property(get_forceoptfile, set_forceoptfile)</td></tr>
+<tr class="memdesc:a5cf43f9b77abc9ba960e229060cac42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overwrites other option file section mechanism. <br /></td></tr>
+<tr class="separator:a5cf43f9b77abc9ba960e229060cac42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb589cb5941b9ba2b093fdad82df1a89" id="r_acb589cb5941b9ba2b093fdad82df1a89"><td class="memItemLeft" align="right" valign="top"><a id="acb589cb5941b9ba2b093fdad82df1a89" name="acb589cb5941b9ba2b093fdad82df1a89"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>forcework</b> = property(get_forcework, set_forcework)</td></tr>
+<tr class="memdesc:acb589cb5941b9ba2b093fdad82df1a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force GAMS to process a save file created with a newer GAMS version or with execution errors. <br /></td></tr>
+<tr class="separator:acb589cb5941b9ba2b093fdad82df1a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33042c768a3e49d39009dd99b7313f8" id="r_ab33042c768a3e49d39009dd99b7313f8"><td class="memItemLeft" align="right" valign="top"><a id="ab33042c768a3e49d39009dd99b7313f8" name="ab33042c768a3e49d39009dd99b7313f8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>forlim</b> = property(get_forlim, set_forlim)</td></tr>
+<tr class="memdesc:ab33042c768a3e49d39009dd99b7313f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAMS looping limit. <br /></td></tr>
+<tr class="separator:ab33042c768a3e49d39009dd99b7313f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30a7a7e4b5173e4862d962dcb1bb2822" id="r_a30a7a7e4b5173e4862d962dcb1bb2822"><td class="memItemLeft" align="right" valign="top"><a id="a30a7a7e4b5173e4862d962dcb1bb2822" name="a30a7a7e4b5173e4862d962dcb1bb2822"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>freeembeddedpython</b> = property(get_freeembeddedpython, set_freeembeddedpython)</td></tr>
+<tr class="memdesc:a30a7a7e4b5173e4862d962dcb1bb2822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free external resources at the end of each embedded Python code blocks. <br /></td></tr>
+<tr class="separator:a30a7a7e4b5173e4862d962dcb1bb2822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8d9f1353f80899bfb3ceb50d3fed7b" id="r_acc8d9f1353f80899bfb3ceb50d3fed7b"><td class="memItemLeft" align="right" valign="top"><a id="acc8d9f1353f80899bfb3ceb50d3fed7b" name="acc8d9f1353f80899bfb3ceb50d3fed7b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>gdxcompress</b> = property(get_gdxcompress, set_gdxcompress)</td></tr>
+<tr class="memdesc:acc8d9f1353f80899bfb3ceb50d3fed7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression of generated GDX file. <br /></td></tr>
+<tr class="separator:acc8d9f1353f80899bfb3ceb50d3fed7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d7ab97af785feff665f19ed418c6356" id="r_a8d7ab97af785feff665f19ed418c6356"><td class="memItemLeft" align="right" valign="top"><a id="a8d7ab97af785feff665f19ed418c6356" name="a8d7ab97af785feff665f19ed418c6356"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>gdxconvert</b> = property(get_gdxconvert, set_gdxconvert)</td></tr>
+<tr class="memdesc:a8d7ab97af785feff665f19ed418c6356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Version of GDX files generated (for backward compatibility) <br /></td></tr>
+<tr class="separator:a8d7ab97af785feff665f19ed418c6356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dfe604b4cfeb44b48216b964144a2de" id="r_a1dfe604b4cfeb44b48216b964144a2de"><td class="memItemLeft" align="right" valign="top"><a id="a1dfe604b4cfeb44b48216b964144a2de" name="a1dfe604b4cfeb44b48216b964144a2de"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>gdxuels</b> = property(get_gdxuels, set_gdxuels)</td></tr>
+<tr class="memdesc:a1dfe604b4cfeb44b48216b964144a2de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload labels or UELs to GDX either squeezed or full. <br /></td></tr>
+<tr class="separator:a1dfe604b4cfeb44b48216b964144a2de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9d89fa14d2c29fb2604f9dc2c3bbe8" id="r_a1e9d89fa14d2c29fb2604f9dc2c3bbe8"><td class="memItemLeft" align="right" valign="top"><a id="a1e9d89fa14d2c29fb2604f9dc2c3bbe8" name="a1e9d89fa14d2c29fb2604f9dc2c3bbe8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>griddir</b> = property(get_griddir, set_griddir)</td></tr>
+<tr class="memdesc:a1e9d89fa14d2c29fb2604f9dc2c3bbe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid file directory. <br /></td></tr>
+<tr class="separator:a1e9d89fa14d2c29fb2604f9dc2c3bbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d4c62c3e458883990163821b450dec2" id="r_a7d4c62c3e458883990163821b450dec2"><td class="memItemLeft" align="right" valign="top"><a id="a7d4c62c3e458883990163821b450dec2" name="a7d4c62c3e458883990163821b450dec2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>gridscript</b> = property(get_gridscript, set_gridscript)</td></tr>
+<tr class="memdesc:a7d4c62c3e458883990163821b450dec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grid submission script. <br /></td></tr>
+<tr class="separator:a7d4c62c3e458883990163821b450dec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa98a24796caffef473173d3cba25444f" id="r_aa98a24796caffef473173d3cba25444f"><td class="memItemLeft" align="right" valign="top"><a id="aa98a24796caffef473173d3cba25444f" name="aa98a24796caffef473173d3cba25444f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>heaplimit</b> = property(get_heaplimit, set_heaplimit)</td></tr>
+<tr class="memdesc:aa98a24796caffef473173d3cba25444f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum Heap size allowed in MB. <br /></td></tr>
+<tr class="separator:aa98a24796caffef473173d3cba25444f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e62ea29193706f1f67e9bd153a7d9f3" id="r_a3e62ea29193706f1f67e9bd153a7d9f3"><td class="memItemLeft" align="right" valign="top"><a id="a3e62ea29193706f1f67e9bd153a7d9f3" name="a3e62ea29193706f1f67e9bd153a7d9f3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>holdfixed</b> = property(get_holdfixed, set_holdfixed)</td></tr>
+<tr class="memdesc:a3e62ea29193706f1f67e9bd153a7d9f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Treat fixed variables as constants. <br /></td></tr>
+<tr class="separator:a3e62ea29193706f1f67e9bd153a7d9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68d03d5daae02a638fea2e59da182d4" id="r_af68d03d5daae02a638fea2e59da182d4"><td class="memItemLeft" align="right" valign="top"><a id="af68d03d5daae02a638fea2e59da182d4" name="af68d03d5daae02a638fea2e59da182d4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>holdfixedasync</b> = property(get_holdfixedasync, set_holdfixedasync)</td></tr>
+<tr class="memdesc:af68d03d5daae02a638fea2e59da182d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow HoldFixed for models solved asynchronously as well. <br /></td></tr>
+<tr class="separator:af68d03d5daae02a638fea2e59da182d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704eafd94820e20774ba8d5643f22e72" id="r_a704eafd94820e20774ba8d5643f22e72"><td class="memItemLeft" align="right" valign="top"><a id="a704eafd94820e20774ba8d5643f22e72" name="a704eafd94820e20774ba8d5643f22e72"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>idcgdxinput</b> = property(get_idcgdxinput, set_idcgdxinput)</td></tr>
+<tr class="memdesc:a704eafd94820e20774ba8d5643f22e72"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDX file name with data for implicit input. <br /></td></tr>
+<tr class="separator:a704eafd94820e20774ba8d5643f22e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe603afe7f97c236069dc3f38b94db27" id="r_abe603afe7f97c236069dc3f38b94db27"><td class="memItemLeft" align="right" valign="top"><a id="abe603afe7f97c236069dc3f38b94db27" name="abe603afe7f97c236069dc3f38b94db27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>idcgdxoutput</b> = property(get_idcgdxoutput, set_idcgdxoutput)</td></tr>
+<tr class="memdesc:abe603afe7f97c236069dc3f38b94db27"><td class="mdescLeft">&#160;</td><td class="mdescRight">GDX file name for data for implicit output. <br /></td></tr>
+<tr class="separator:abe603afe7f97c236069dc3f38b94db27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26d993dbe5b0d9c9f7d04a81b67c99d" id="r_aa26d993dbe5b0d9c9f7d04a81b67c99d"><td class="memItemLeft" align="right" valign="top"><a id="aa26d993dbe5b0d9c9f7d04a81b67c99d" name="aa26d993dbe5b0d9c9f7d04a81b67c99d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>implicitassign</b> = property(get_implicitassign, set_implicitassign)</td></tr>
+<tr class="memdesc:aa26d993dbe5b0d9c9f7d04a81b67c99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offImplicitAssign". <br /></td></tr>
+<tr class="separator:aa26d993dbe5b0d9c9f7d04a81b67c99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a059b2c2f949d627d72642386759efeae" id="r_a059b2c2f949d627d72642386759efeae"><td class="memItemLeft" align="right" valign="top"><a id="a059b2c2f949d627d72642386759efeae" name="a059b2c2f949d627d72642386759efeae"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>inlinecom</b> = property(get_inlinecom, set_inlinecom)</td></tr>
+<tr class="memdesc:a059b2c2f949d627d72642386759efeae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offInline" and "$inlineCom". <br /></td></tr>
+<tr class="separator:a059b2c2f949d627d72642386759efeae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b50833f26c51531423a5a77cff2ecd" id="r_a62b50833f26c51531423a5a77cff2ecd"><td class="memItemLeft" align="right" valign="top"><a id="a62b50833f26c51531423a5a77cff2ecd" name="a62b50833f26c51531423a5a77cff2ecd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integer1</b> = property(get_integer1, set_integer1)</td></tr>
+<tr class="memdesc:a62b50833f26c51531423a5a77cff2ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer communication cell N. <br /></td></tr>
+<tr class="separator:a62b50833f26c51531423a5a77cff2ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaccceb3d68bbf81a366dc2e39d350831" id="r_aaccceb3d68bbf81a366dc2e39d350831"><td class="memItemLeft" align="right" valign="top"><a id="aaccceb3d68bbf81a366dc2e39d350831" name="aaccceb3d68bbf81a366dc2e39d350831"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integer2</b> = property(get_integer2, set_integer2)</td></tr>
+<tr class="memdesc:aaccceb3d68bbf81a366dc2e39d350831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer communication cell N. <br /></td></tr>
+<tr class="separator:aaccceb3d68bbf81a366dc2e39d350831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763c65b301a7e92879012f5094aaf23f" id="r_a763c65b301a7e92879012f5094aaf23f"><td class="memItemLeft" align="right" valign="top"><a id="a763c65b301a7e92879012f5094aaf23f" name="a763c65b301a7e92879012f5094aaf23f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integer3</b> = property(get_integer3, set_integer3)</td></tr>
+<tr class="memdesc:a763c65b301a7e92879012f5094aaf23f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer communication cell N. <br /></td></tr>
+<tr class="separator:a763c65b301a7e92879012f5094aaf23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd564b78245e74c799a9d10527275d2" id="r_a2cd564b78245e74c799a9d10527275d2"><td class="memItemLeft" align="right" valign="top"><a id="a2cd564b78245e74c799a9d10527275d2" name="a2cd564b78245e74c799a9d10527275d2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integer4</b> = property(get_integer4, set_integer4)</td></tr>
+<tr class="memdesc:a2cd564b78245e74c799a9d10527275d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer communication cell N. <br /></td></tr>
+<tr class="separator:a2cd564b78245e74c799a9d10527275d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa716e6e29e118cac6b3d11219348016a" id="r_aa716e6e29e118cac6b3d11219348016a"><td class="memItemLeft" align="right" valign="top"><a id="aa716e6e29e118cac6b3d11219348016a" name="aa716e6e29e118cac6b3d11219348016a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>integer5</b> = property(get_integer5, set_integer5)</td></tr>
+<tr class="memdesc:aa716e6e29e118cac6b3d11219348016a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer communication cell N. <br /></td></tr>
+<tr class="separator:aa716e6e29e118cac6b3d11219348016a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5175871445aaa8581dfa4230fc121c" id="r_a3c5175871445aaa8581dfa4230fc121c"><td class="memItemLeft" align="right" valign="top"><a id="a3c5175871445aaa8581dfa4230fc121c" name="a3c5175871445aaa8581dfa4230fc121c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>interactivesolver</b> = property(get_interactivesolver, set_interactivesolver)</td></tr>
+<tr class="memdesc:a3c5175871445aaa8581dfa4230fc121c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow solver to interact via command line input. <br /></td></tr>
+<tr class="separator:a3c5175871445aaa8581dfa4230fc121c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a087f09633e176dbfb0467c99ce425771" id="r_a087f09633e176dbfb0467c99ce425771"><td class="memItemLeft" align="right" valign="top"><a id="a087f09633e176dbfb0467c99ce425771" name="a087f09633e176dbfb0467c99ce425771"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>intvarup</b> = property(get_intvarup, set_intvarup)</td></tr>
+<tr class="memdesc:a087f09633e176dbfb0467c99ce425771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set mode for default upper bounds on integer variables. <br /></td></tr>
+<tr class="separator:a087f09633e176dbfb0467c99ce425771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9c4e57be5c706ce6fdfc6e089ace8c" id="r_a2f9c4e57be5c706ce6fdfc6e089ace8c"><td class="memItemLeft" align="right" valign="top"><a id="a2f9c4e57be5c706ce6fdfc6e089ace8c" name="a2f9c4e57be5c706ce6fdfc6e089ace8c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>iterlim</b> = property(get_iterlim, set_iterlim)</td></tr>
+<tr class="memdesc:a2f9c4e57be5c706ce6fdfc6e089ace8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iteration limit of solver. <br /></td></tr>
+<tr class="separator:a2f9c4e57be5c706ce6fdfc6e089ace8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a392917899164f430f398ca5f57c1e" id="r_a85a392917899164f430f398ca5f57c1e"><td class="memItemLeft" align="right" valign="top"><a id="a85a392917899164f430f398ca5f57c1e" name="a85a392917899164f430f398ca5f57c1e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>jobtrace</b> = property(get_jobtrace, set_jobtrace)</td></tr>
+<tr class="memdesc:a85a392917899164f430f398ca5f57c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Job trace string to be written to the trace file at the end of a GAMS job. <br /></td></tr>
+<tr class="separator:a85a392917899164f430f398ca5f57c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7ff79ddbd35c5fc4e9799e18250d12" id="r_a2e7ff79ddbd35c5fc4e9799e18250d12"><td class="memItemLeft" align="right" valign="top"><a id="a2e7ff79ddbd35c5fc4e9799e18250d12" name="a2e7ff79ddbd35c5fc4e9799e18250d12"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>keep</b> = property(get_keep, set_keep)</td></tr>
+<tr class="memdesc:a2e7ff79ddbd35c5fc4e9799e18250d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls keeping or deletion of process directory and scratch files. <br /></td></tr>
+<tr class="separator:a2e7ff79ddbd35c5fc4e9799e18250d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7929764e80a6c1bd82dfe4c4082086b0" id="r_a7929764e80a6c1bd82dfe4c4082086b0"><td class="memItemLeft" align="right" valign="top"><a id="a7929764e80a6c1bd82dfe4c4082086b0" name="a7929764e80a6c1bd82dfe4c4082086b0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>libincdir</b> = property(get_libincdir, set_libincdir)</td></tr>
+<tr class="memdesc:a7929764e80a6c1bd82dfe4c4082086b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">LibInclude directory. <br /></td></tr>
+<tr class="separator:a7929764e80a6c1bd82dfe4c4082086b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bff64ecf39b70d052807561923323a3" id="r_a4bff64ecf39b70d052807561923323a3"><td class="memItemLeft" align="right" valign="top"><a id="a4bff64ecf39b70d052807561923323a3" name="a4bff64ecf39b70d052807561923323a3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>license</b> = property(get_license, set_license)</td></tr>
+<tr class="memdesc:a4bff64ecf39b70d052807561923323a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use alternative license file. <br /></td></tr>
+<tr class="separator:a4bff64ecf39b70d052807561923323a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071b9b19f537b17904c54f634564a386" id="r_a071b9b19f537b17904c54f634564a386"><td class="memItemLeft" align="right" valign="top"><a id="a071b9b19f537b17904c54f634564a386" name="a071b9b19f537b17904c54f634564a386"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>limcol</b> = property(get_limcol, set_limcol)</td></tr>
+<tr class="memdesc:a071b9b19f537b17904c54f634564a386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of columns listed in one variable block. <br /></td></tr>
+<tr class="separator:a071b9b19f537b17904c54f634564a386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b8f414d44a4d6a1665737a786ec4f7" id="r_aa2b8f414d44a4d6a1665737a786ec4f7"><td class="memItemLeft" align="right" valign="top"><a id="aa2b8f414d44a4d6a1665737a786ec4f7" name="aa2b8f414d44a4d6a1665737a786ec4f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>limrow</b> = property(get_limrow, set_limrow)</td></tr>
+<tr class="memdesc:aa2b8f414d44a4d6a1665737a786ec4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of rows listed in one equation block. <br /></td></tr>
+<tr class="separator:aa2b8f414d44a4d6a1665737a786ec4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac225184a311178de282535928f71eeb4" id="r_ac225184a311178de282535928f71eeb4"><td class="memItemLeft" align="right" valign="top"><a id="ac225184a311178de282535928f71eeb4" name="ac225184a311178de282535928f71eeb4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>listing</b> = property(get_listing, set_listing)</td></tr>
+<tr class="memdesc:ac225184a311178de282535928f71eeb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offListing". <br /></td></tr>
+<tr class="separator:ac225184a311178de282535928f71eeb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b2faac2968abf72d2e904a02be3a33" id="r_ad2b2faac2968abf72d2e904a02be3a33"><td class="memItemLeft" align="right" valign="top"><a id="ad2b2faac2968abf72d2e904a02be3a33" name="ad2b2faac2968abf72d2e904a02be3a33"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>logline</b> = property(get_logline, set_logline)</td></tr>
+<tr class="memdesc:ad2b2faac2968abf72d2e904a02be3a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Amount of line tracing to the log file. <br /></td></tr>
+<tr class="separator:ad2b2faac2968abf72d2e904a02be3a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15676581040feb4c34b11da5426eb1cd" id="r_a15676581040feb4c34b11da5426eb1cd"><td class="memItemLeft" align="right" valign="top"><a id="a15676581040feb4c34b11da5426eb1cd" name="a15676581040feb4c34b11da5426eb1cd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>lsttitleleftaligned</b> = property(get_lsttitleleftaligned, set_lsttitleleftaligned)</td></tr>
+<tr class="memdesc:a15676581040feb4c34b11da5426eb1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write title of LST file all left aligned. <br /></td></tr>
+<tr class="separator:a15676581040feb4c34b11da5426eb1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a64e4a2535b85e3c3a6b8d84447afdc" id="r_a1a64e4a2535b85e3c3a6b8d84447afdc"><td class="memItemLeft" align="right" valign="top"><a id="a1a64e4a2535b85e3c3a6b8d84447afdc" name="a1a64e4a2535b85e3c3a6b8d84447afdc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>maxexecerror</b> = property(get_maxexecerror, set_maxexecerror)</td></tr>
+<tr class="memdesc:a1a64e4a2535b85e3c3a6b8d84447afdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution time error limit. <br /></td></tr>
+<tr class="separator:a1a64e4a2535b85e3c3a6b8d84447afdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56a81884920554fe129951808ec74aaa" id="r_a56a81884920554fe129951808ec74aaa"><td class="memItemLeft" align="right" valign="top"><a id="a56a81884920554fe129951808ec74aaa" name="a56a81884920554fe129951808ec74aaa"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>maxprocdir</b> = property(get_maxprocdir, set_maxprocdir)</td></tr>
+<tr class="memdesc:a56a81884920554fe129951808ec74aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of 225* process directories. <br /></td></tr>
+<tr class="separator:a56a81884920554fe129951808ec74aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c5374e3ca588a7834481fdf4c3270b8" id="r_a7c5374e3ca588a7834481fdf4c3270b8"><td class="memItemLeft" align="right" valign="top"><a id="a7c5374e3ca588a7834481fdf4c3270b8" name="a7c5374e3ca588a7834481fdf4c3270b8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>miimode</b> = property(get_miimode, set_miimode)</td></tr>
+<tr class="memdesc:a7c5374e3ca588a7834481fdf4c3270b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Model Instance Mode. <br /></td></tr>
+<tr class="separator:a7c5374e3ca588a7834481fdf4c3270b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad86c0816723a82c2401ef8bba7ce60" id="r_a7ad86c0816723a82c2401ef8bba7ce60"><td class="memItemLeft" align="right" valign="top"><a id="a7ad86c0816723a82c2401ef8bba7ce60" name="a7ad86c0816723a82c2401ef8bba7ce60"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>multi</b> = property(get_multi, set_multi)</td></tr>
+<tr class="memdesc:a7ad86c0816723a82c2401ef8bba7ce60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offMulti[R]". <br /></td></tr>
+<tr class="separator:a7ad86c0816723a82c2401ef8bba7ce60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40d7d82484fa2a277dc9634be2b8973a" id="r_a40d7d82484fa2a277dc9634be2b8973a"><td class="memItemLeft" align="right" valign="top"><a id="a40d7d82484fa2a277dc9634be2b8973a" name="a40d7d82484fa2a277dc9634be2b8973a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>nodlim</b> = property(get_nodlim, set_nodlim)</td></tr>
+<tr class="memdesc:a40d7d82484fa2a277dc9634be2b8973a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node limit in branch and bound tree. <br /></td></tr>
+<tr class="separator:a40d7d82484fa2a277dc9634be2b8973a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e26104a827ca32f87ce1d241cf87171" id="r_a3e26104a827ca32f87ce1d241cf87171"><td class="memItemLeft" align="right" valign="top"><a id="a3e26104a827ca32f87ce1d241cf87171" name="a3e26104a827ca32f87ce1d241cf87171"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>nonewvarequ</b> = property(get_nonewvarequ, set_nonewvarequ)</td></tr>
+<tr class="memdesc:a3e26104a827ca32f87ce1d241cf87171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers a compilation error when new equations or variable symbols are introduced. <br /></td></tr>
+<tr class="separator:a3e26104a827ca32f87ce1d241cf87171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc92adfb043ba4bb85fb56da215b3645" id="r_adc92adfb043ba4bb85fb56da215b3645"><td class="memItemLeft" align="right" valign="top"><a id="adc92adfb043ba4bb85fb56da215b3645" name="adc92adfb043ba4bb85fb56da215b3645"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>on115</b> = property(get_on115, set_on115)</td></tr>
+<tr class="memdesc:adc92adfb043ba4bb85fb56da215b3645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate errors for unknown unique element in an equation. <br /></td></tr>
+<tr class="separator:adc92adfb043ba4bb85fb56da215b3645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ed0745ceb4b7ad85d1a633505bef733" id="r_a9ed0745ceb4b7ad85d1a633505bef733"><td class="memItemLeft" align="right" valign="top"><a id="a9ed0745ceb4b7ad85d1a633505bef733" name="a9ed0745ceb4b7ad85d1a633505bef733"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>optca</b> = property(get_optca, set_optca)</td></tr>
+<tr class="memdesc:a9ed0745ceb4b7ad85d1a633505bef733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute Optimality criterion solver default. <br /></td></tr>
+<tr class="separator:a9ed0745ceb4b7ad85d1a633505bef733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3adec12e170236105156517fae33c8a" id="r_ad3adec12e170236105156517fae33c8a"><td class="memItemLeft" align="right" valign="top"><a id="ad3adec12e170236105156517fae33c8a" name="ad3adec12e170236105156517fae33c8a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>optcr</b> = property(get_optcr, set_optcr)</td></tr>
+<tr class="memdesc:ad3adec12e170236105156517fae33c8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative Optimality criterion solver default. <br /></td></tr>
+<tr class="separator:ad3adec12e170236105156517fae33c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4968b6ac494e423f1ecbbf9f7ed9b4f" id="r_ad4968b6ac494e423f1ecbbf9f7ed9b4f"><td class="memItemLeft" align="right" valign="top"><a id="ad4968b6ac494e423f1ecbbf9f7ed9b4f" name="ad4968b6ac494e423f1ecbbf9f7ed9b4f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>optdir</b> = property(get_optdir, set_optdir)</td></tr>
+<tr class="memdesc:ad4968b6ac494e423f1ecbbf9f7ed9b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option file directory. <br /></td></tr>
+<tr class="separator:ad4968b6ac494e423f1ecbbf9f7ed9b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af44f837f7e5fcce6362c12c9b88588" id="r_a7af44f837f7e5fcce6362c12c9b88588"><td class="memItemLeft" align="right" valign="top"><a id="a7af44f837f7e5fcce6362c12c9b88588" name="a7af44f837f7e5fcce6362c12c9b88588"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>optfile</b> = property(get_optfile, set_optfile)</td></tr>
+<tr class="memdesc:a7af44f837f7e5fcce6362c12c9b88588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default option file. <br /></td></tr>
+<tr class="separator:a7af44f837f7e5fcce6362c12c9b88588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cdc809dbea2275f5d20f52157c7662" id="r_a93cdc809dbea2275f5d20f52157c7662"><td class="memItemLeft" align="right" valign="top"><a id="a93cdc809dbea2275f5d20f52157c7662" name="a93cdc809dbea2275f5d20f52157c7662"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>output</b> = property(get_output, set_output)</td></tr>
+<tr class="memdesc:a93cdc809dbea2275f5d20f52157c7662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Listing file name. <br /></td></tr>
+<tr class="separator:a93cdc809dbea2275f5d20f52157c7662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78497ae404d84aa509edf3e47e46d2d7" id="r_a78497ae404d84aa509edf3e47e46d2d7"><td class="memItemLeft" align="right" valign="top"><a id="a78497ae404d84aa509edf3e47e46d2d7" name="a78497ae404d84aa509edf3e47e46d2d7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pagecontr</b> = property(get_pagecontr, set_pagecontr)</td></tr>
+<tr class="memdesc:a78497ae404d84aa509edf3e47e46d2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file page control option. <br /></td></tr>
+<tr class="separator:a78497ae404d84aa509edf3e47e46d2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77fccd87971c0fade5b1b483d8bc7132" id="r_a77fccd87971c0fade5b1b483d8bc7132"><td class="memItemLeft" align="right" valign="top"><a id="a77fccd87971c0fade5b1b483d8bc7132" name="a77fccd87971c0fade5b1b483d8bc7132"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pagesize</b> = property(get_pagesize, set_pagesize)</td></tr>
+<tr class="memdesc:a77fccd87971c0fade5b1b483d8bc7132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file page size (=0 no paging) <br /></td></tr>
+<tr class="separator:a77fccd87971c0fade5b1b483d8bc7132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d3d90485f45d5781a8282e196f8f6c2" id="r_a3d3d90485f45d5781a8282e196f8f6c2"><td class="memItemLeft" align="right" valign="top"><a id="a3d3d90485f45d5781a8282e196f8f6c2" name="a3d3d90485f45d5781a8282e196f8f6c2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pagewidth</b> = property(get_pagewidth, set_pagewidth)</td></tr>
+<tr class="memdesc:a3d3d90485f45d5781a8282e196f8f6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output file page width. <br /></td></tr>
+<tr class="separator:a3d3d90485f45d5781a8282e196f8f6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4873de5af4a7f8fa2e5041b504ab75e" id="r_aa4873de5af4a7f8fa2e5041b504ab75e"><td class="memItemLeft" align="right" valign="top"><a id="aa4873de5af4a7f8fa2e5041b504ab75e" name="aa4873de5af4a7f8fa2e5041b504ab75e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>plicense</b> = property(get_plicense, set_plicense)</td></tr>
+<tr class="memdesc:aa4873de5af4a7f8fa2e5041b504ab75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Privacy license file name. <br /></td></tr>
+<tr class="separator:aa4873de5af4a7f8fa2e5041b504ab75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4872923c92867d30f93f7332dc2a8f48" id="r_a4872923c92867d30f93f7332dc2a8f48"><td class="memItemLeft" align="right" valign="top"><a id="a4872923c92867d30f93f7332dc2a8f48" name="a4872923c92867d30f93f7332dc2a8f48"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>prefixloadpath</b> = property(get_prefixloadpath, set_prefixloadpath)</td></tr>
+<tr class="memdesc:a4872923c92867d30f93f7332dc2a8f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepend GAMS system directory to library load path. <br /></td></tr>
+<tr class="separator:a4872923c92867d30f93f7332dc2a8f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515edbf960b79ee5f5ec6abd69403335" id="r_a515edbf960b79ee5f5ec6abd69403335"><td class="memItemLeft" align="right" valign="top"><a id="a515edbf960b79ee5f5ec6abd69403335" name="a515edbf960b79ee5f5ec6abd69403335"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>previouswork</b> = property(get_previouswork, set_previouswork)</td></tr>
+<tr class="memdesc:a515edbf960b79ee5f5ec6abd69403335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicator for writing workfile with previous workfile version. <br /></td></tr>
+<tr class="separator:a515edbf960b79ee5f5ec6abd69403335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61fc0d4fe49403d09f086fea74f1d4db" id="r_a61fc0d4fe49403d09f086fea74f1d4db"><td class="memItemLeft" align="right" valign="top"><a id="a61fc0d4fe49403d09f086fea74f1d4db" name="a61fc0d4fe49403d09f086fea74f1d4db"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>proctreememmonitor</b> = property(get_proctreememmonitor, set_proctreememmonitor)</td></tr>
+<tr class="memdesc:a61fc0d4fe49403d09f086fea74f1d4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Monitor the memory used by the GAMS process tree. <br /></td></tr>
+<tr class="separator:a61fc0d4fe49403d09f086fea74f1d4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9d5459c69a77b0b25d04b95bd9b7093" id="r_ac9d5459c69a77b0b25d04b95bd9b7093"><td class="memItemLeft" align="right" valign="top"><a id="ac9d5459c69a77b0b25d04b95bd9b7093" name="ac9d5459c69a77b0b25d04b95bd9b7093"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>proctreememticks</b> = property(get_proctreememticks, set_proctreememticks)</td></tr>
+<tr class="memdesc:ac9d5459c69a77b0b25d04b95bd9b7093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set wait interval between memory monitor checks: ticks = milliseconds. <br /></td></tr>
+<tr class="separator:ac9d5459c69a77b0b25d04b95bd9b7093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197584959f8dbb39feed9f5d9bee51df" id="r_a197584959f8dbb39feed9f5d9bee51df"><td class="memItemLeft" align="right" valign="top"><a id="a197584959f8dbb39feed9f5d9bee51df" name="a197584959f8dbb39feed9f5d9bee51df"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>profile</b> = property(get_profile, set_profile)</td></tr>
+<tr class="memdesc:a197584959f8dbb39feed9f5d9bee51df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution profiling. <br /></td></tr>
+<tr class="separator:a197584959f8dbb39feed9f5d9bee51df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ae311bf0bf28dd19ec2e942448221b" id="r_ac7ae311bf0bf28dd19ec2e942448221b"><td class="memItemLeft" align="right" valign="top"><a id="ac7ae311bf0bf28dd19ec2e942448221b" name="ac7ae311bf0bf28dd19ec2e942448221b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>profilefile</b> = property(get_profilefile, set_profilefile)</td></tr>
+<tr class="memdesc:ac7ae311bf0bf28dd19ec2e942448221b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write profile information to this file. <br /></td></tr>
+<tr class="separator:ac7ae311bf0bf28dd19ec2e942448221b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a4bed735780ae8db4e3be96ee0478fc" id="r_a0a4bed735780ae8db4e3be96ee0478fc"><td class="memItemLeft" align="right" valign="top"><a id="a0a4bed735780ae8db4e3be96ee0478fc" name="a0a4bed735780ae8db4e3be96ee0478fc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>profiletol</b> = property(get_profiletol, set_profiletol)</td></tr>
+<tr class="memdesc:a0a4bed735780ae8db4e3be96ee0478fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum time a statement must use to appear in profile generated output. <br /></td></tr>
+<tr class="separator:a0a4bed735780ae8db4e3be96ee0478fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01de3fb20cbf57db6b70da0e73e6ea13" id="r_a01de3fb20cbf57db6b70da0e73e6ea13"><td class="memItemLeft" align="right" valign="top"><a id="a01de3fb20cbf57db6b70da0e73e6ea13" name="a01de3fb20cbf57db6b70da0e73e6ea13"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>putdir</b> = property(get_putdir, set_putdir)</td></tr>
+<tr class="memdesc:a01de3fb20cbf57db6b70da0e73e6ea13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put file directory. <br /></td></tr>
+<tr class="separator:a01de3fb20cbf57db6b70da0e73e6ea13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9679454bcccea75aa4881483f25faa42" id="r_a9679454bcccea75aa4881483f25faa42"><td class="memItemLeft" align="right" valign="top"><a id="a9679454bcccea75aa4881483f25faa42" name="a9679454bcccea75aa4881483f25faa42"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>putnd</b> = property(get_putnd, set_putnd)</td></tr>
+<tr class="memdesc:a9679454bcccea75aa4881483f25faa42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of decimals for put files. <br /></td></tr>
+<tr class="separator:a9679454bcccea75aa4881483f25faa42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada350147046323e4e1e8e26ddea80072" id="r_ada350147046323e4e1e8e26ddea80072"><td class="memItemLeft" align="right" valign="top"><a id="ada350147046323e4e1e8e26ddea80072" name="ada350147046323e4e1e8e26ddea80072"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>putnr</b> = property(get_putnr, set_putnr)</td></tr>
+<tr class="memdesc:ada350147046323e4e1e8e26ddea80072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numeric round format for put files. <br /></td></tr>
+<tr class="separator:ada350147046323e4e1e8e26ddea80072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c5b2a7232d049d8e0192347f490600" id="r_a17c5b2a7232d049d8e0192347f490600"><td class="memItemLeft" align="right" valign="top"><a id="a17c5b2a7232d049d8e0192347f490600" name="a17c5b2a7232d049d8e0192347f490600"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>putps</b> = property(get_putps, set_putps)</td></tr>
+<tr class="memdesc:a17c5b2a7232d049d8e0192347f490600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page size for put files. <br /></td></tr>
+<tr class="separator:a17c5b2a7232d049d8e0192347f490600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44e0d383d139a303878c7d62652a836" id="r_aa44e0d383d139a303878c7d62652a836"><td class="memItemLeft" align="right" valign="top"><a id="aa44e0d383d139a303878c7d62652a836" name="aa44e0d383d139a303878c7d62652a836"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>putpw</b> = property(get_putpw, set_putpw)</td></tr>
+<tr class="memdesc:aa44e0d383d139a303878c7d62652a836"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page width for put files. <br /></td></tr>
+<tr class="separator:aa44e0d383d139a303878c7d62652a836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a127482f789948d303d7c18a3f1cc8a36" id="r_a127482f789948d303d7c18a3f1cc8a36"><td class="memItemLeft" align="right" valign="top"><a id="a127482f789948d303d7c18a3f1cc8a36" name="a127482f789948d303d7c18a3f1cc8a36"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b> = property(get_reference, set_reference)</td></tr>
+<tr class="memdesc:a127482f789948d303d7c18a3f1cc8a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbol reference file. <br /></td></tr>
+<tr class="separator:a127482f789948d303d7c18a3f1cc8a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf96b6329511c016d8cf310fee6d6fe" id="r_a9bf96b6329511c016d8cf310fee6d6fe"><td class="memItemLeft" align="right" valign="top"><a id="a9bf96b6329511c016d8cf310fee6d6fe" name="a9bf96b6329511c016d8cf310fee6d6fe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>referencelineno</b> = property(get_referencelineno, set_referencelineno)</td></tr>
+<tr class="memdesc:a9bf96b6329511c016d8cf310fee6d6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls the line numbers written to a reference file. <br /></td></tr>
+<tr class="separator:a9bf96b6329511c016d8cf310fee6d6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d04400f9aec54e5a84e484b560f9dd6" id="r_a7d04400f9aec54e5a84e484b560f9dd6"><td class="memItemLeft" align="right" valign="top"><a id="a7d04400f9aec54e5a84e484b560f9dd6" name="a7d04400f9aec54e5a84e484b560f9dd6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>replace</b> = property(get_replace, set_replace)</td></tr>
+<tr class="memdesc:a7d04400f9aec54e5a84e484b560f9dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch between merge and replace when reading from GDX into non-empty symbol. <br /></td></tr>
+<tr class="separator:a7d04400f9aec54e5a84e484b560f9dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d7ec9b64285541919ddb62fe9ceea05" id="r_a1d7ec9b64285541919ddb62fe9ceea05"><td class="memItemLeft" align="right" valign="top"><a id="a1d7ec9b64285541919ddb62fe9ceea05" name="a1d7ec9b64285541919ddb62fe9ceea05"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>reslim</b> = property(get_reslim, set_reslim)</td></tr>
+<tr class="memdesc:a1d7ec9b64285541919ddb62fe9ceea05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wall-clock time limit for solver. <br /></td></tr>
+<tr class="separator:a1d7ec9b64285541919ddb62fe9ceea05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f99e7ab8b189d49ec23870e1071766" id="r_a06f99e7ab8b189d49ec23870e1071766"><td class="memItemLeft" align="right" valign="top"><a id="a06f99e7ab8b189d49ec23870e1071766" name="a06f99e7ab8b189d49ec23870e1071766"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>savepoint</b> = property(get_savepoint, set_savepoint)</td></tr>
+<tr class="memdesc:a06f99e7ab8b189d49ec23870e1071766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save solver point in GDX file. <br /></td></tr>
+<tr class="separator:a06f99e7ab8b189d49ec23870e1071766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21388dc7fa1a5b9110229edb15598240" id="r_a21388dc7fa1a5b9110229edb15598240"><td class="memItemLeft" align="right" valign="top"><a id="a21388dc7fa1a5b9110229edb15598240" name="a21388dc7fa1a5b9110229edb15598240"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>scriptexit</b> = property(get_scriptexit, set_scriptexit)</td></tr>
+<tr class="memdesc:a21388dc7fa1a5b9110229edb15598240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Program or script to be executed at the end of a GAMS run. <br /></td></tr>
+<tr class="separator:a21388dc7fa1a5b9110229edb15598240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13cee375fd7ced8d38561575e9f2dd85" id="r_a13cee375fd7ced8d38561575e9f2dd85"><td class="memItemLeft" align="right" valign="top"><a id="a13cee375fd7ced8d38561575e9f2dd85" name="a13cee375fd7ced8d38561575e9f2dd85"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>seed</b> = property(get_seed, set_seed)</td></tr>
+<tr class="memdesc:a13cee375fd7ced8d38561575e9f2dd85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Random number seed. <br /></td></tr>
+<tr class="separator:a13cee375fd7ced8d38561575e9f2dd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a41ebd8be671aa884b833eaf30d12b" id="r_ad7a41ebd8be671aa884b833eaf30d12b"><td class="memItemLeft" align="right" valign="top"><a id="ad7a41ebd8be671aa884b833eaf30d12b" name="ad7a41ebd8be671aa884b833eaf30d12b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>showosmemory</b> = property(get_showosmemory, set_showosmemory)</td></tr>
+<tr class="memdesc:ad7a41ebd8be671aa884b833eaf30d12b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the memory usage reported by the Operating System instead of the internal counting. <br /></td></tr>
+<tr class="separator:ad7a41ebd8be671aa884b833eaf30d12b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf08fc43feeebde45210fc38420f289" id="r_aeaf08fc43feeebde45210fc38420f289"><td class="memItemLeft" align="right" valign="top"><a id="aeaf08fc43feeebde45210fc38420f289" name="aeaf08fc43feeebde45210fc38420f289"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>solprint</b> = property(get_solprint, set_solprint)</td></tr>
+<tr class="memdesc:aeaf08fc43feeebde45210fc38420f289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solution report print option. <br /></td></tr>
+<tr class="separator:aeaf08fc43feeebde45210fc38420f289"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad27ea29e787759c030d443380dd59f70" id="r_ad27ea29e787759c030d443380dd59f70"><td class="memItemLeft" align="right" valign="top"><a id="ad27ea29e787759c030d443380dd59f70" name="ad27ea29e787759c030d443380dd59f70"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>solvelink</b> = property(get_solvelink, set_solvelink)</td></tr>
+<tr class="memdesc:ad27ea29e787759c030d443380dd59f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solver link option. <br /></td></tr>
+<tr class="separator:ad27ea29e787759c030d443380dd59f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46d9c02cabcc5b37f61b2436da450fe9" id="r_a46d9c02cabcc5b37f61b2436da450fe9"><td class="memItemLeft" align="right" valign="top"><a id="a46d9c02cabcc5b37f61b2436da450fe9" name="a46d9c02cabcc5b37f61b2436da450fe9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>solveopt</b> = property(get_solveopt, set_solveopt)</td></tr>
+<tr class="memdesc:a46d9c02cabcc5b37f61b2436da450fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiple solve management. <br /></td></tr>
+<tr class="separator:a46d9c02cabcc5b37f61b2436da450fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7cffe87a2d6cf42914d40962e8b8388" id="r_aa7cffe87a2d6cf42914d40962e8b8388"><td class="memItemLeft" align="right" valign="top"><a id="aa7cffe87a2d6cf42914d40962e8b8388" name="aa7cffe87a2d6cf42914d40962e8b8388"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stepsum</b> = property(get_stepsum, set_stepsum)</td></tr>
+<tr class="memdesc:aa7cffe87a2d6cf42914d40962e8b8388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Summary of computing resources used by job steps. <br /></td></tr>
+<tr class="separator:aa7cffe87a2d6cf42914d40962e8b8388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf4af73d6b500cce21cdcfacc5d428a" id="r_adcf4af73d6b500cce21cdcfacc5d428a"><td class="memItemLeft" align="right" valign="top"><a id="adcf4af73d6b500cce21cdcfacc5d428a" name="adcf4af73d6b500cce21cdcfacc5d428a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>strictsingleton</b> = property(get_strictsingleton, set_strictsingleton)</td></tr>
+<tr class="memdesc:adcf4af73d6b500cce21cdcfacc5d428a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error if assignment to singleton set has multiple elements. <br /></td></tr>
+<tr class="separator:adcf4af73d6b500cce21cdcfacc5d428a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44036d149b0afd48e1022bc3a2936ad2" id="r_a44036d149b0afd48e1022bc3a2936ad2"><td class="memItemLeft" align="right" valign="top"><a id="a44036d149b0afd48e1022bc3a2936ad2" name="a44036d149b0afd48e1022bc3a2936ad2"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stringchk</b> = property(get_stringchk, set_stringchk)</td></tr>
+<tr class="memdesc:a44036d149b0afd48e1022bc3a2936ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">String substitution options. <br /></td></tr>
+<tr class="separator:a44036d149b0afd48e1022bc3a2936ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fbcf1a834bcfac1158023c8f1603202" id="r_a7fbcf1a834bcfac1158023c8f1603202"><td class="memItemLeft" align="right" valign="top"><a id="a7fbcf1a834bcfac1158023c8f1603202" name="a7fbcf1a834bcfac1158023c8f1603202"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>suffixdlvars</b> = property(get_suffixdlvars, set_suffixdlvars)</td></tr>
+<tr class="memdesc:a7fbcf1a834bcfac1158023c8f1603202"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offSuffixDLVars". <br /></td></tr>
+<tr class="separator:a7fbcf1a834bcfac1158023c8f1603202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2ff1cd19c0d9dffc54bc9ac616a164" id="r_a4f2ff1cd19c0d9dffc54bc9ac616a164"><td class="memItemLeft" align="right" valign="top"><a id="a4f2ff1cd19c0d9dffc54bc9ac616a164" name="a4f2ff1cd19c0d9dffc54bc9ac616a164"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>suffixalgebravars</b> = property(get_suffixalgebravars, set_suffixalgebravars)</td></tr>
+<tr class="memdesc:a4f2ff1cd19c0d9dffc54bc9ac616a164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch default for "$on/offSuffixAlgebraVars". <br /></td></tr>
+<tr class="separator:a4f2ff1cd19c0d9dffc54bc9ac616a164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60ba506b684c314f896919ceea693b3" id="r_ad60ba506b684c314f896919ceea693b3"><td class="memItemLeft" align="right" valign="top"><a id="ad60ba506b684c314f896919ceea693b3" name="ad60ba506b684c314f896919ceea693b3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>suppress</b> = property(get_suppress, set_suppress)</td></tr>
+<tr class="memdesc:ad60ba506b684c314f896919ceea693b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compiler listing option. <br /></td></tr>
+<tr class="separator:ad60ba506b684c314f896919ceea693b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca01190f2fdd726abfa71eec96f76370" id="r_aca01190f2fdd726abfa71eec96f76370"><td class="memItemLeft" align="right" valign="top"><a id="aca01190f2fdd726abfa71eec96f76370" name="aca01190f2fdd726abfa71eec96f76370"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>symbol</b> = property(get_symbol, set_symbol)</td></tr>
+<tr class="memdesc:aca01190f2fdd726abfa71eec96f76370"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbol table file. <br /></td></tr>
+<tr class="separator:aca01190f2fdd726abfa71eec96f76370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa280642ca040c283b0800b5b2035db03" id="r_aa280642ca040c283b0800b5b2035db03"><td class="memItemLeft" align="right" valign="top"><a id="aa280642ca040c283b0800b5b2035db03" name="aa280642ca040c283b0800b5b2035db03"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>symprefix</b> = property(get_symprefix, set_symprefix)</td></tr>
+<tr class="memdesc:aa280642ca040c283b0800b5b2035db03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix all symbols encountered during compilation by the specified string in work file. <br /></td></tr>
+<tr class="separator:aa280642ca040c283b0800b5b2035db03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4799d3f8c854be1fe51bfe07c736592d" id="r_a4799d3f8c854be1fe51bfe07c736592d"><td class="memItemLeft" align="right" valign="top"><a id="a4799d3f8c854be1fe51bfe07c736592d" name="a4799d3f8c854be1fe51bfe07c736592d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sys10</b> = property(get_sys10, set_sys10)</td></tr>
+<tr class="memdesc:a4799d3f8c854be1fe51bfe07c736592d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes rpower to ipower when the exponent is constant and within 1e-12 of an integer. <br /></td></tr>
+<tr class="separator:a4799d3f8c854be1fe51bfe07c736592d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e62e49daac6ae73997fcb51a11930a" id="r_a13e62e49daac6ae73997fcb51a11930a"><td class="memItemLeft" align="right" valign="top"><a id="a13e62e49daac6ae73997fcb51a11930a" name="a13e62e49daac6ae73997fcb51a11930a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sys11</b> = property(get_sys11, set_sys11)</td></tr>
+<tr class="memdesc:a13e62e49daac6ae73997fcb51a11930a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamic resorting if indices in assignment/data statements are not in natural order. <br /></td></tr>
+<tr class="separator:a13e62e49daac6ae73997fcb51a11930a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38839348a78f3aaa799ff636afd26889" id="r_a38839348a78f3aaa799ff636afd26889"><td class="memItemLeft" align="right" valign="top"><a id="a38839348a78f3aaa799ff636afd26889" name="a38839348a78f3aaa799ff636afd26889"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sys12</b> = property(get_sys12, set_sys12)</td></tr>
+<tr class="memdesc:a38839348a78f3aaa799ff636afd26889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass model with generation errors to solver. <br /></td></tr>
+<tr class="separator:a38839348a78f3aaa799ff636afd26889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14cc3b166db122933a220937d9732fdd" id="r_a14cc3b166db122933a220937d9732fdd"><td class="memItemLeft" align="right" valign="top"><a id="a14cc3b166db122933a220937d9732fdd" name="a14cc3b166db122933a220937d9732fdd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sysincdir</b> = property(get_sysincdir, set_sysincdir)</td></tr>
+<tr class="memdesc:a14cc3b166db122933a220937d9732fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">SysInclude directory. <br /></td></tr>
+<tr class="separator:a14cc3b166db122933a220937d9732fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0d390b40df0cd363049a873b7eed707" id="r_ab0d390b40df0cd363049a873b7eed707"><td class="memItemLeft" align="right" valign="top"><a id="ab0d390b40df0cd363049a873b7eed707" name="ab0d390b40df0cd363049a873b7eed707"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sysout</b> = property(get_sysout, set_sysout)</td></tr>
+<tr class="memdesc:ab0d390b40df0cd363049a873b7eed707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solver Status file reporting option. <br /></td></tr>
+<tr class="separator:ab0d390b40df0cd363049a873b7eed707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5104155461d942e5d2766a11e3d89b3f" id="r_a5104155461d942e5d2766a11e3d89b3f"><td class="memItemLeft" align="right" valign="top"><a id="a5104155461d942e5d2766a11e3d89b3f" name="a5104155461d942e5d2766a11e3d89b3f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>tabin</b> = property(get_tabin, set_tabin)</td></tr>
+<tr class="memdesc:a5104155461d942e5d2766a11e3d89b3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tab spacing. <br /></td></tr>
+<tr class="separator:a5104155461d942e5d2766a11e3d89b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2238972da2ca6478afee0ee69c80807" id="r_aa2238972da2ca6478afee0ee69c80807"><td class="memItemLeft" align="right" valign="top"><a id="aa2238972da2ca6478afee0ee69c80807" name="aa2238972da2ca6478afee0ee69c80807"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>tformat</b> = property(get_tformat, set_tformat)</td></tr>
+<tr class="memdesc:aa2238972da2ca6478afee0ee69c80807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time format. <br /></td></tr>
+<tr class="separator:aa2238972da2ca6478afee0ee69c80807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcdbdd4720e68a60e0d7220a0633af90" id="r_adcdbdd4720e68a60e0d7220a0633af90"><td class="memItemLeft" align="right" valign="top"><a id="adcdbdd4720e68a60e0d7220a0633af90" name="adcdbdd4720e68a60e0d7220a0633af90"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>threads</b> = property(get_threads, set_threads)</td></tr>
+<tr class="memdesc:adcdbdd4720e68a60e0d7220a0633af90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of processors to be used by a solver. <br /></td></tr>
+<tr class="separator:adcdbdd4720e68a60e0d7220a0633af90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f835056ce9dc602a6f57f2cea6afc64" id="r_a3f835056ce9dc602a6f57f2cea6afc64"><td class="memItemLeft" align="right" valign="top"><a id="a3f835056ce9dc602a6f57f2cea6afc64" name="a3f835056ce9dc602a6f57f2cea6afc64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>threadsasync</b> = property(get_threadsasync, set_threadsasync)</td></tr>
+<tr class="memdesc:a3f835056ce9dc602a6f57f2cea6afc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limit on number of threads to be used for asynchronous solves (solveLink=6) <br /></td></tr>
+<tr class="separator:a3f835056ce9dc602a6f57f2cea6afc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf2acd933654cd90c852b5ec042d3794" id="r_acf2acd933654cd90c852b5ec042d3794"><td class="memItemLeft" align="right" valign="top"><a id="acf2acd933654cd90c852b5ec042d3794" name="acf2acd933654cd90c852b5ec042d3794"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>timer</b> = property(get_timer, set_timer)</td></tr>
+<tr class="memdesc:acf2acd933654cd90c852b5ec042d3794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instruction timer threshold in milliseconds. <br /></td></tr>
+<tr class="separator:acf2acd933654cd90c852b5ec042d3794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22038286a28d38e2b5bfeb97eee07917" id="r_a22038286a28d38e2b5bfeb97eee07917"><td class="memItemLeft" align="right" valign="top"><a id="a22038286a28d38e2b5bfeb97eee07917" name="a22038286a28d38e2b5bfeb97eee07917"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>trace</b> = property(get_trace, set_trace)</td></tr>
+<tr class="memdesc:a22038286a28d38e2b5bfeb97eee07917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trace file name. <br /></td></tr>
+<tr class="separator:a22038286a28d38e2b5bfeb97eee07917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba6d801701f59c60b56de1b2e52dee3" id="r_aaba6d801701f59c60b56de1b2e52dee3"><td class="memItemLeft" align="right" valign="top"><a id="aaba6d801701f59c60b56de1b2e52dee3" name="aaba6d801701f59c60b56de1b2e52dee3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>tracelevel</b> = property(get_tracelevel, set_tracelevel)</td></tr>
+<tr class="memdesc:aaba6d801701f59c60b56de1b2e52dee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modelstat/Solvestat threshold used in conjunction with action=GT. <br /></td></tr>
+<tr class="separator:aaba6d801701f59c60b56de1b2e52dee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37dd5708cd52f3fd102ff73136c89332" id="r_a37dd5708cd52f3fd102ff73136c89332"><td class="memItemLeft" align="right" valign="top"><a id="a37dd5708cd52f3fd102ff73136c89332" name="a37dd5708cd52f3fd102ff73136c89332"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>traceopt</b> = property(get_traceopt, set_traceopt)</td></tr>
+<tr class="memdesc:a37dd5708cd52f3fd102ff73136c89332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trace file format option. <br /></td></tr>
+<tr class="separator:a37dd5708cd52f3fd102ff73136c89332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5274760b9649af62b7e8c619056b610e" id="r_a5274760b9649af62b7e8c619056b610e"><td class="memItemLeft" align="right" valign="top"><a id="a5274760b9649af62b7e8c619056b610e" name="a5274760b9649af62b7e8c619056b610e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>user1</b> = property(get_user1, set_user1)</td></tr>
+<tr class="memdesc:a5274760b9649af62b7e8c619056b610e"><td class="mdescLeft">&#160;</td><td class="mdescRight">User string N. <br /></td></tr>
+<tr class="separator:a5274760b9649af62b7e8c619056b610e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409f8501b104439a7f386facc65a4939" id="r_a409f8501b104439a7f386facc65a4939"><td class="memItemLeft" align="right" valign="top"><a id="a409f8501b104439a7f386facc65a4939" name="a409f8501b104439a7f386facc65a4939"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>user2</b> = property(get_user2, set_user2)</td></tr>
+<tr class="memdesc:a409f8501b104439a7f386facc65a4939"><td class="mdescLeft">&#160;</td><td class="mdescRight">User string N. <br /></td></tr>
+<tr class="separator:a409f8501b104439a7f386facc65a4939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b59f5395e5f2eebf67df57b1078f25" id="r_ad9b59f5395e5f2eebf67df57b1078f25"><td class="memItemLeft" align="right" valign="top"><a id="ad9b59f5395e5f2eebf67df57b1078f25" name="ad9b59f5395e5f2eebf67df57b1078f25"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>user3</b> = property(get_user3, set_user3)</td></tr>
+<tr class="memdesc:ad9b59f5395e5f2eebf67df57b1078f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">User string N. <br /></td></tr>
+<tr class="separator:ad9b59f5395e5f2eebf67df57b1078f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9152bb81f1d80a2c3c6541a66bf3c35e" id="r_a9152bb81f1d80a2c3c6541a66bf3c35e"><td class="memItemLeft" align="right" valign="top"><a id="a9152bb81f1d80a2c3c6541a66bf3c35e" name="a9152bb81f1d80a2c3c6541a66bf3c35e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>user4</b> = property(get_user4, set_user4)</td></tr>
+<tr class="memdesc:a9152bb81f1d80a2c3c6541a66bf3c35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">User string N. <br /></td></tr>
+<tr class="separator:a9152bb81f1d80a2c3c6541a66bf3c35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aea3540fefeadf1e4c4ac3be3cafbd0" id="r_a4aea3540fefeadf1e4c4ac3be3cafbd0"><td class="memItemLeft" align="right" valign="top"><a id="a4aea3540fefeadf1e4c4ac3be3cafbd0" name="a4aea3540fefeadf1e4c4ac3be3cafbd0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>user5</b> = property(get_user5, set_user5)</td></tr>
+<tr class="memdesc:a4aea3540fefeadf1e4c4ac3be3cafbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">User string N. <br /></td></tr>
+<tr class="separator:a4aea3540fefeadf1e4c4ac3be3cafbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf9de4efcfa8729e9b221c83efe125c" id="r_a2bf9de4efcfa8729e9b221c83efe125c"><td class="memItemLeft" align="right" valign="top"><a id="a2bf9de4efcfa8729e9b221c83efe125c" name="a2bf9de4efcfa8729e9b221c83efe125c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>warnings</b> = property(get_warnings, set_warnings)</td></tr>
+<tr class="memdesc:a2bf9de4efcfa8729e9b221c83efe125c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of warnings permitted before a run terminates. <br /></td></tr>
+<tr class="separator:a2bf9de4efcfa8729e9b221c83efe125c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e1219d644e0038c0d7e9d7154723aab" id="r_a7e1219d644e0038c0d7e9d7154723aab"><td class="memItemLeft" align="right" valign="top"><a id="a7e1219d644e0038c0d7e9d7154723aab" name="a7e1219d644e0038c0d7e9d7154723aab"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>workfactor</b> = property(get_workfactor, set_workfactor)</td></tr>
+<tr class="memdesc:a7e1219d644e0038c0d7e9d7154723aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory Estimate multiplier for some solvers. <br /></td></tr>
+<tr class="separator:a7e1219d644e0038c0d7e9d7154723aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62585f9e24060e0f0e96cdb1458a5b7e" id="r_a62585f9e24060e0f0e96cdb1458a5b7e"><td class="memItemLeft" align="right" valign="top"><a id="a62585f9e24060e0f0e96cdb1458a5b7e" name="a62585f9e24060e0f0e96cdb1458a5b7e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>workspace</b> = property(get_workspace, set_workspace)</td></tr>
+<tr class="memdesc:a62585f9e24060e0f0e96cdb1458a5b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Work space for some solvers in MB. <br /></td></tr>
+<tr class="separator:a62585f9e24060e0f0e96cdb1458a5b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcd89ac1d74b5b2c38ebcfb1a29b110" id="r_a1dcd89ac1d74b5b2c38ebcfb1a29b110"><td class="memItemLeft" align="right" valign="top"><a id="a1dcd89ac1d74b5b2c38ebcfb1a29b110" name="a1dcd89ac1d74b5b2c38ebcfb1a29b110"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>zerores</b> = property(get_zerores, set_zerores)</td></tr>
+<tr class="memdesc:a1dcd89ac1d74b5b2c38ebcfb1a29b110"><td class="mdescLeft">&#160;</td><td class="mdescRight">The results of certain operations will be set to zero if abs(result) LE ZeroRes. <br /></td></tr>
+<tr class="separator:a1dcd89ac1d74b5b2c38ebcfb1a29b110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f9ca488581be81b33e54df00226e1d" id="r_aa2f9ca488581be81b33e54df00226e1d"><td class="memItemLeft" align="right" valign="top"><a id="aa2f9ca488581be81b33e54df00226e1d" name="aa2f9ca488581be81b33e54df00226e1d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>zeroresrep</b> = property(get_zeroresrep, set_zeroresrep)</td></tr>
+<tr class="memdesc:aa2f9ca488581be81b33e54df00226e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report underflow as a warning when abs(results) LE ZeroRes and result set to zero. <br /></td></tr>
+<tr class="separator:aa2f9ca488581be81b33e54df00226e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The GamsOptions class manages GAMS options (sometimes also called GAMS parameters since they correspond to the command line parameters of the GAMS executable) for a GamsJob and GamsModelInstance. </p>
+<p>There are integer (e.g. nodlim), double (e.g. reslim), and string (e.g. putdir) valued options. There are also a few list options (defines to set string macros inside GAMS and idir provide multiple search paths for include files) and a power option to set a solver for all suitable model types (all_model_types).</p>
+<p>Some options known from other interfaces to GAMS that are of limited use or could even create problematic situations in the Python environment are not settable through the GamsOptions class.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afaf77bfdb2672b31ac570b7a7e6417a5" name="afaf77bfdb2672b31ac570b7a7e6417a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf77bfdb2672b31ac570b7a7e6417a5">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.options.GamsOptions.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ws</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>opt_from</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>opt_file</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>GamsWorkspace containing GamsOptions </td></tr>
+    <tr><td class="paramname">opt_from</td><td>GamsOptions used to initialize the new object </td></tr>
+    <tr><td class="paramname">opt_file</td><td>Parameter used to initialize the new objectfile </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad6a46ccf31a659d4679922e072692d54" name="ad6a46ccf31a659d4679922e072692d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a46ccf31a659d4679922e072692d54">&#9670;&#160;</a></span>export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.options.GamsOptions.export </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>file_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write GamsOptions into a parameter file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>The path used to write the parameter file. A relative path is relative to the GAMS working directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="../../style/jquery.highlight.js"></script>
+<script src="../../style/navtree.js"></script>
+<script src="../../style/navtreeinfo.js"></script>
+<script src="../../style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

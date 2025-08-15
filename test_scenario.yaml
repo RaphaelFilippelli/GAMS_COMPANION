@@ -1,0 +1,12 @@
+id: test_equation_only
+description: Test equation injection only
+model:
+  work_dir: ./toy_model
+  main_file: main.gms
+gams:
+  options:
+    Lo: 2
+edits: {}
+equations:
+  - file: equation_patches/new_constraint.inc
+notes: Test equation injection without any edits

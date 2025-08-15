@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(move \"toy_model/cost_by_catchment.csv\" \"toy_model/edits/cost_by_catchment.csv\")",
+      "Bash(mv:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)",
+      "Bash(C:GAMS44gams.exe --version)",
+      "Bash(C:GAMS44gams.exe main.gms)",
+      "Bash(\"/c/GAMS/44/gams.exe\" main.gms lo=2)",
+      "Bash(cmd /c \"C:\\GAMS\\44\\gams.exe main.gms lo=2\")",
+      "Bash(ruff check:*)",
+      "Bash(pytest:*)",
+      "WebSearch",
+      "WebFetch(domain:www.gams.com)",
+      "Bash(dir:*)",
+      "Bash(find:*)",
+      "Bash(rm:*)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" --version)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" main.gms lo=2 action=c)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" toy_model/main.gms lo=2 action=c)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" test_equation.gms lo=2 action=c)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" test_conditional_include.gms lo=2 action=c)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" test_conditional_include2.gms lo=2 action=c)",
+      "Bash(git checkout:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(.venv/Scripts/pip.exe list:*)",
+      "Bash(source:*)",
+      "Bash(echo $PATH)",
+      "Bash(.venv\\Scripts\\activate.bat)",
+      "Bash(.venv/Scripts/pip.exe:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(where python)",
+      "Bash(del debug_options.py)"
+    ],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "acceptEdits"
+  }
+}

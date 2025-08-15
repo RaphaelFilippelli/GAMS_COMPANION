@@ -1,0 +1,1005 @@
+<!-- modified HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Documentation-->
+<title>Transfer</title>
+<!--<link href="./style/tabs.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="./style/jquery.js"></script>
+<script type="text/javascript" src="./style/jquery.highlight.js"></script>
+<script type="text/javascript" src="./style/dynsections.js"></script>
+<script type="text/javascript" src="./style/resize.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="./style/MathJax/es5/tex-svg.js"></script>
+<script type="text/javascript" language="javascript" src="./style/prism.js"></script>
+<link href="./style/prism.css" rel="stylesheet" type="text/css" />
+<link href="./style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="./style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="./style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="./style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="./style/toc-highlight.js"></script>
+<script type="text/javascript" src="./style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="./style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!-- -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div> 
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div>  
+        <a id="keyword" href="keyword.html" class="menu">Index</a>
+        <a id="help" href="./style/../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Transfer</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#PY_TRANSFER_IMPORT">Recommended Import</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_GAMSTRANSFER_DESIGN">Design</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_GAMSTRANSFER_CONVENTIONS">Naming Conventions</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_GAMSTRANSFER_INSTALLATION">Install</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_GAMSTRANSFER_EXAMPLES">Examples</a>
+    <ul>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_QUICK_GDX_READ">GDX Read</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_QUICK_CSV_WRITE">Write Symbol to CSV</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_QUICK_GDX_WRITE">Write a New GDX</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_FULL_EXAMPLE">Full Example</a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#PY_GAMSTRANSFER_EXTENDED_EXAMPLES">Extended Examples</a>
+    <ul>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_EXTENDED_EXAMPLE_HTML">Get HTML data</a>
+      </li>
+      <li class="level2">
+        <a href="#PY_GAMSTRANSFER_EXTENDED_EXAMPLE_SQL">Get PostgreSQL data (w/ sqlalchemy)</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p><code>transfer</code> is a tool to maintain GAMS data outside a GAMS script in a programming language like Python or Matlab. It allows the user to add GAMS symbols (Sets, Aliases, Parameters, Variables and Equations), to manipulate GAMS symbols, as well as read/write symbols to different data endpoints. <code>transfer</code>âs main focus is the highly efficient transfer of data between GAMS and the target programming language, while keeping those operations as simple as possible for the user. In order to achieve this, symbol records â the actual and potentially large-scale data sets â are stored in native data structures of the corresponding programming languages. The benefits of this approach are threefold: (1) The user is usually very familiar with these data structures, (2) these data structures come with a large tool box for various data operations, and (3) optimized methods for reading from and writing to GAMS can transfer the data as a bulk â resulting in the high performance of this package. This documentation describes, in detail, the use of <code>transfer</code> within a Python environment.</p>
+<p>Data within <code>transfer</code> will be stored as Pandas DataFrame. The flexible nature of Pandas DataFrames makes them ideal for storing/manipulating sparse data. Pandas includes advanced operations for <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html">indexing and slicing</a>, <a target="_blank" href="https://pandas.pydata.org/docs/user_guide/reshaping.html">reshaping</a>, <a target="_blank" href="https://pandas.pydata.org/docs/user_guide/merging.html">merging</a> and even <a target="_blank" href="https://pandas.pydata.org/docs/user_guide/visualization.html">visualization</a>.</p>
+<p>Pandas also includes a number of advanced data <a target="_blank" href="https://pandas.pydata.org/docs/user_guide/io.html">I/O tools</a> that allow users to generate DataFrames directly from CSV (<code>.csv</code>), JSON (<code>.json</code>), HTML (<code>.html</code>), Microsoft Excel (<code>.xls</code>, <code>.xlsx</code>), SQL , pickle (.<code>pkl</code>), SPSS (<code>.sav</code>, <code>.zsav</code>), SAS (<code>.xpt</code>, <code>.sas7bdat</code>), etc.</p>
+<p>Centering <code>transfer</code> around the Pandas DataFrame gives GAMS users (on a variety of platforms &ndash; macOS, Windows, Linux) access to tools to move data back and forth between their favorite environments for use in their GAMS models.</p>
+<p>The goal of this documentation is to introduce the user to <code>transfer</code> and its functionality. This documentation is not designed to teach the user how to effectively manipulate Pandas DataFrames; users seeking a deeper understanding of Pandas are referred to the extensive <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/index.html">documentation</a>.</p>
+<p>Experienced GAMS API users seeking detailed documentation and examples are directed to <a class="el" href="API_PY_GAMSTRANSFER_MAIN_CLASSES.html">Main Classes</a> and <a class="el" href="API_PY_GAMSTRANSFER_ADDITIONAL_TOPICS.html">Additional Topics</a>.</p>
+<h1><a class="anchor" id="PY_TRANSFER_IMPORT"></a>
+Recommended Import</h1>
+<p>Users can access the <code>transfer</code> sub-module with either of the following (equivalent) import statements once the GAMS Python API has been installed:</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="keyword">from</span> gams <span class="keyword">import</span> transfer <span class="keyword">as</span> gt</div>
+</div><!-- fragment --><h1><a class="anchor" id="PY_GAMSTRANSFER_DESIGN"></a>
+Design</h1>
+<p>Storing, manipulating, and transforming sparse data requires that it lives within an environment &ndash; this data can then be linked together to enable various operations. In <code>transfer</code> we refer to this "environment" as the <code>Container</code>, it is the main repository for storing and linking our sparse data. Symbols can be added to the <code>Container</code> from a variety of GAMS starting points but they can also be generated directly within the Python environment using convenient function calls that are part of the <code>transfer</code> package; a symbol can only belong to one container at a time.</p>
+<p>The process of linking symbols together within a container was inspired by typical GAMS workflows but leverages aspects of object oriented programming to make linking data a natural process. Linking data enables data operations like implicit set growth, domain checking, data format transformations (to dense/sparse matrix formats), etc &ndash; all of these features are enabled by the use of ordered <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.CategoricalDtype.html">pandas.CategoricalDtype</a> data types. All of these details will be discussed in the following sections.</p>
+<h1><a class="anchor" id="PY_GAMSTRANSFER_CONVENTIONS"></a>
+Naming Conventions</h1>
+<p>Methods &ndash; functions that operate on a object &ndash; are all verbs (i.e., <code>getMaxAbsValue()</code>, <code>getUELs()</code>, etc.) and use camel case for identification purposes. Methods are, by convention, tools that "do things"; that is they involve some, potentially expensive, computations. Some <code>transfer</code> methods accept arguments, while others are simply called using the <code>()</code> notation. Plural arguments (<code>columns</code>) hint that they can accept lists of inputs (i.e., a list of symbol names) while singular arguments (<code>column</code>) will only accept one input at a time.</p>
+<p>Properties &ndash; inherent attributes of an object &ndash; are all nouns (i.e., <code>name</code>, <code>number_records</code>, etc.) and use snake case (lower case words separated by underscores) for identification purposes. Object properties (or "object attributes") are fundamental to the object and therefore they are not called like methods; object properties are simply accessed by other methods or user calls. By convention, properties only require trival amounts of computation to access.</p>
+<p>Classes &ndash; the basic structure of an object &ndash; are all singular nouns and use camel case (starting with a capital first letter) for identification purposes.</p>
+<h1><a class="anchor" id="PY_GAMSTRANSFER_INSTALLATION"></a>
+Install</h1>
+<p>The user must download and install the latest version of GAMS in order to install <code>transfer</code>. <code>transfer</code> is installed when the GAMS Python API is built and installed. The user is referred <a class="el" href="API_PY_GETTING_STARTED.html">HERE</a> for instructions on how to install the Python API files. <code>transfer</code> and all GAMS Python API files are compatible with environment managers such as Anaconda.</p>
+<h1><a class="anchor" id="PY_GAMSTRANSFER_EXAMPLES"></a>
+Examples</h1>
+<h2><a class="anchor" id="PY_GAMSTRANSFER_QUICK_GDX_READ"></a>
+GDX Read</h2>
+<p>Reading in all symbols can be accomplished with one line of code (we reference data from the <a class="elRef" href="../gamslib_ml/libhtml/gamslib_trnsport.html">`trnsport.gms`</a> example).</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+<div class="line"> </div>
+<div class="line">m = gt.Container(<span class="stringliteral">&quot;trnsport.gdx&quot;</span>)</div>
+</div><!-- fragment --><p>All symbol data is organized in the data attribute &ndash; <code>m.data[&lt;symbol_name&gt;].records</code> (the <code>Container</code> is also subscriptable, <code>m[&lt;symbol_name&gt;].records</code> is an equivalent statement) &ndash; records are stored as Pandas DataFrames.</p>
+<h2><a class="anchor" id="PY_GAMSTRANSFER_QUICK_CSV_WRITE"></a>
+Write Symbol to CSV</h2>
+<p>Writing symbol records to a CSV can also be accomplished with one line.</p>
+<div class="fragment"><div class="line">m[<span class="stringliteral">&quot;x&quot;</span>].records.to_csv(<span class="stringliteral">&quot;x.csv&quot;</span>)</div>
+</div><!-- fragment --><h2><a class="anchor" id="PY_GAMSTRANSFER_QUICK_GDX_WRITE"></a>
+Write a New GDX</h2>
+<p>There are six symbol classes within <code>transfer</code>: 1) Sets, 2) Parameters, 3) Variables, 4) Equations, 5) Aliases and 6) UniverseAliases. For purposes of this quick start, we show how to recreate the <code>distance</code> data structure from the <a class="elRef" href="../gamslib_ml/libhtml/gamslib_trnsport.html">`trnsport.gms`</a> model (the parameter <code>d</code>). This brief example shows how users can achieve "GAMS-like" functionality, but within a Python environment &ndash; <code>transfer</code> leverages the object oriented programming to simplify syntax.</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+<div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<div class="line"> </div>
+<div class="line">m = gt.Container()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># create the sets i, j</span></div>
+<div class="line">i = gt.Set(m, <span class="stringliteral">&quot;i&quot;</span>, records=[<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;san-diego&quot;</span>], description=<span class="stringliteral">&quot;supply&quot;</span>)</div>
+<div class="line">j = gt.Set(m, <span class="stringliteral">&quot;j&quot;</span>, records=[<span class="stringliteral">&quot;new-york&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>], description=<span class="stringliteral">&quot;markets&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># add &quot;d&quot; parameter -- domain linked to set objects i and j</span></div>
+<div class="line">d = gt.Parameter(m, <span class="stringliteral">&quot;d&quot;</span>, [i, j], description=<span class="stringliteral">&quot;distance in thousands of miles&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># create some data as a generic DataFrame</span></div>
+<div class="line">dist = pd.DataFrame(</div>
+<div class="line">    [</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 2.5),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 1.7),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 1.8),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 2.5),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 1.8),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 1.4),</div>
+<div class="line">    ],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;from&quot;</span>, <span class="stringliteral">&quot;to&quot;</span>, <span class="stringliteral">&quot;thousand_miles&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># setRecords will automatically convert the dist DataFrame into a standard DataFrame format</span></div>
+<div class="line">d.setRecords(dist)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># write the GDX</span></div>
+<div class="line">m.write(<span class="stringliteral">&quot;out.gdx&quot;</span>)</div>
+</div><!-- fragment --><p>This example shows a few fundamental features of <code>transfer</code>:</p>
+<ol type="1">
+<li>An empty Container is analogous to an empty GDX file</li>
+<li>Symbols will always be linked to a Container (notice that we always pass the Container reference <code>m</code> to the symbol constructor)</li>
+<li>Records can be added to a symbol with the <code>setRecords()</code> method or through the <code>records</code> constructor argument (internally calls <code>setRecords()</code>). <code>transfer</code> will convert many common Python data structures into a standard format.</li>
+<li>Domain linking is possible by passing domain set objects to other symbols</li>
+<li>Writing a GDX file can be accomplished in one line with the <code>write()</code> method.</li>
+</ol>
+<h2><a class="anchor" id="PY_GAMSTRANSFER_FULL_EXAMPLE"></a>
+Full Example</h2>
+<p>It is possible to use everything we now know about <code>transfer</code> to recreate the <a class="elRef" href="../gamslib_ml/libhtml/gamslib_trnsport.html">`trnsport.gms`</a> results in GDX form. As part of this example we also introduce the <code>write</code> method (and generate <code>new.gdx</code>). We will discuss it in more detail in the following section: <a class="el" href="API_PY_GAMSTRANSFER_ADDITIONAL_TOPICS.html#PY_GAMSTRANSFER_GDX">GDX Read/Write</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># create an empty Container object</span></div>
+<div class="line">m = gt.Container()</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># add sets</span></div>
+<div class="line">i = gt.Set(m, <span class="stringliteral">&quot;i&quot;</span>, records=[<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;san-diego&quot;</span>], description=<span class="stringliteral">&quot;supply&quot;</span>)</div>
+<div class="line">j = gt.Set(m, <span class="stringliteral">&quot;j&quot;</span>, records=[<span class="stringliteral">&quot;new-york&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>], description=<span class="stringliteral">&quot;markets&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># add parameters</span></div>
+<div class="line">a = gt.Parameter(m, <span class="stringliteral">&quot;a&quot;</span>, [<span class="stringliteral">&quot;*&quot;</span>], description=<span class="stringliteral">&quot;capacity of plant i in cases&quot;</span>)</div>
+<div class="line">b = gt.Parameter(m, <span class="stringliteral">&quot;b&quot;</span>, j, description=<span class="stringliteral">&quot;demand at market j in cases&quot;</span>)</div>
+<div class="line">d = gt.Parameter(m, <span class="stringliteral">&quot;d&quot;</span>, [i, j], description=<span class="stringliteral">&quot;distance in thousands of miles&quot;</span>)</div>
+<div class="line">f = gt.Parameter(</div>
+<div class="line">    m, <span class="stringliteral">&quot;f&quot;</span>, records=90, description=<span class="stringliteral">&quot;freight in dollars per case per thousand miles&quot;</span></div>
+<div class="line">)</div>
+<div class="line">c = gt.Parameter(</div>
+<div class="line">    m, <span class="stringliteral">&quot;c&quot;</span>, [i, j], description=<span class="stringliteral">&quot;transport cost in thousands of dollars per case&quot;</span></div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># set parameter records</span></div>
+<div class="line">cap = pd.DataFrame([(<span class="stringliteral">&quot;seattle&quot;</span>, 350), (<span class="stringliteral">&quot;san-diego&quot;</span>, 600)], columns=[<span class="stringliteral">&quot;plant&quot;</span>, <span class="stringliteral">&quot;n_cases&quot;</span>])</div>
+<div class="line">a.setRecords(cap)</div>
+<div class="line"> </div>
+<div class="line">dem = pd.DataFrame(</div>
+<div class="line">    [(<span class="stringliteral">&quot;new-york&quot;</span>, 325), (<span class="stringliteral">&quot;chicago&quot;</span>, 300), (<span class="stringliteral">&quot;topeka&quot;</span>, 275)],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;market&quot;</span>, <span class="stringliteral">&quot;n_cases&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line">b.setRecords(dem)</div>
+<div class="line"> </div>
+<div class="line">dist = pd.DataFrame(</div>
+<div class="line">    [</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 2.5),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 1.7),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 1.8),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 2.5),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 1.8),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 1.4),</div>
+<div class="line">    ],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;from&quot;</span>, <span class="stringliteral">&quot;to&quot;</span>, <span class="stringliteral">&quot;thousand_miles&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line">d.setRecords(dist)</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># c(i,j) = f * d(i,j) / 1000;</span></div>
+<div class="line">cost = d.records.copy(deep=<span class="keyword">True</span>)</div>
+<div class="line">cost[<span class="stringliteral">&quot;value&quot;</span>] = f.records.loc[0, <span class="stringliteral">&quot;value&quot;</span>] * cost[<span class="stringliteral">&quot;value&quot;</span>] / 1000</div>
+<div class="line">c.setRecords(cost)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># add variables</span></div>
+<div class="line">q = pd.DataFrame(</div>
+<div class="line">    [</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 50, 0),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 300, 0),</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 0, 0.036),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;new-york&quot;</span>, 275, 0),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;chicago&quot;</span>, 0, 0.009),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, <span class="stringliteral">&quot;topeka&quot;</span>, 275, 0),</div>
+<div class="line">    ],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;from&quot;</span>, <span class="stringliteral">&quot;to&quot;</span>, <span class="stringliteral">&quot;level&quot;</span>, <span class="stringliteral">&quot;marginal&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line">x = gt.Variable(</div>
+<div class="line">    m, <span class="stringliteral">&quot;x&quot;</span>, <span class="stringliteral">&quot;positive&quot;</span>, [i, j], records=q, description=<span class="stringliteral">&quot;shipment quantities in cases&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line">z = gt.Variable(</div>
+<div class="line">    m,</div>
+<div class="line">    <span class="stringliteral">&quot;z&quot;</span>,</div>
+<div class="line">    records=pd.DataFrame(data=[153.675], columns=[<span class="stringliteral">&quot;level&quot;</span>]),</div>
+<div class="line">    description=<span class="stringliteral">&quot;total transportation costs in thousands of dollars&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># add equations</span></div>
+<div class="line">cost = gt.Equation(m, <span class="stringliteral">&quot;cost&quot;</span>, <span class="stringliteral">&quot;eq&quot;</span>, description=<span class="stringliteral">&quot;define objective function&quot;</span>)</div>
+<div class="line">supply = gt.Equation(m, <span class="stringliteral">&quot;supply&quot;</span>, <span class="stringliteral">&quot;leq&quot;</span>, i, description=<span class="stringliteral">&quot;observe supply limit at plant i&quot;</span>)</div>
+<div class="line">demand = gt.Equation(m, <span class="stringliteral">&quot;demand&quot;</span>, <span class="stringliteral">&quot;geq&quot;</span>, j, description=<span class="stringliteral">&quot;satisfy demand at market j&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># set equation records</span></div>
+<div class="line">cost.setRecords(</div>
+<div class="line">    pd.DataFrame(data=[[0, 1, 0, 0]], columns=[<span class="stringliteral">&quot;level&quot;</span>, <span class="stringliteral">&quot;marginal&quot;</span>, <span class="stringliteral">&quot;lower&quot;</span>, <span class="stringliteral">&quot;upper&quot;</span>])</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">supplies = pd.DataFrame(</div>
+<div class="line">    [</div>
+<div class="line">        (<span class="stringliteral">&quot;seattle&quot;</span>, 350, <span class="stringliteral">&quot;eps&quot;</span>, float(<span class="stringliteral">&quot;-inf&quot;</span>), 350),</div>
+<div class="line">        (<span class="stringliteral">&quot;san-diego&quot;</span>, 550, 0, float(<span class="stringliteral">&quot;-inf&quot;</span>), 600),</div>
+<div class="line">    ],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;from&quot;</span>, <span class="stringliteral">&quot;level&quot;</span>, <span class="stringliteral">&quot;marginal&quot;</span>, <span class="stringliteral">&quot;lower&quot;</span>, <span class="stringliteral">&quot;upper&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line">supply.setRecords(supplies)</div>
+<div class="line"> </div>
+<div class="line">demands = pd.DataFrame(</div>
+<div class="line">    [</div>
+<div class="line">        (<span class="stringliteral">&quot;new-york&quot;</span>, 325, 0.225, 325),</div>
+<div class="line">        (<span class="stringliteral">&quot;chicago&quot;</span>, 300, 0.153, 300),</div>
+<div class="line">        (<span class="stringliteral">&quot;topeka&quot;</span>, 275, 0.126, 275),</div>
+<div class="line">    ],</div>
+<div class="line">    columns=[<span class="stringliteral">&quot;from&quot;</span>, <span class="stringliteral">&quot;level&quot;</span>, <span class="stringliteral">&quot;marginal&quot;</span>, <span class="stringliteral">&quot;lower&quot;</span>],</div>
+<div class="line">)</div>
+<div class="line">demand.setRecords(demands)</div>
+<div class="line"> </div>
+<div class="line">m.write(<span class="stringliteral">&quot;new.gdx&quot;</span>)</div>
+</div><!-- fragment --><h1><a class="anchor" id="PY_GAMSTRANSFER_EXTENDED_EXAMPLES"></a>
+Extended Examples</h1>
+<h2><a class="anchor" id="PY_GAMSTRANSFER_EXTENDED_EXAMPLE_HTML"></a>
+Get HTML data</h2>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+<div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<div class="line"> </div>
+<div class="line">url = <span class="stringliteral">&quot;https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list&quot;</span></div>
+<div class="line">dfs = pd.read_html(url)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># pandas will create a list of dataframes depending on the target URL, we just need the first one</span></div>
+<div class="line">df = dfs[0]</div>
+<div class="line"> </div>
+<div class="line">m = gt.Container()</div>
+<div class="line">b = gt.Set(m, <span class="stringliteral">&quot;b&quot;</span>, [<span class="stringliteral">&quot;*&quot;</span>], records=df[<span class="stringliteral">&quot;Bank NameBank&quot;</span>].unique(), description=<span class="stringliteral">&quot;Bank Name&quot;</span>)</div>
+<div class="line">s = gt.Set(</div>
+<div class="line">    m,</div>
+<div class="line">    <span class="stringliteral">&quot;s&quot;</span>,</div>
+<div class="line">    [<span class="stringliteral">&quot;*&quot;</span>],</div>
+<div class="line">    records=df[<span class="stringliteral">&quot;StateSt&quot;</span>].sort_values().unique(),</div>
+<div class="line">    description=<span class="stringliteral">&quot;States (alphabetical order)&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line">c = gt.Set(</div>
+<div class="line">    m,</div>
+<div class="line">    <span class="stringliteral">&quot;c&quot;</span>,</div>
+<div class="line">    [<span class="stringliteral">&quot;*&quot;</span>],</div>
+<div class="line">    records=df[<span class="stringliteral">&quot;CityCity&quot;</span>].sort_values().unique(),</div>
+<div class="line">    description=<span class="stringliteral">&quot;Cities (alphabetical order)&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line">c_to_s = gt.Set(</div>
+<div class="line">    m,</div>
+<div class="line">    <span class="stringliteral">&quot;c_to_s&quot;</span>,</div>
+<div class="line">    [c, s],</div>
+<div class="line">    records=df[[<span class="stringliteral">&quot;CityCity&quot;</span>, <span class="stringliteral">&quot;StateSt&quot;</span>]]</div>
+<div class="line">    .drop_duplicates()</div>
+<div class="line">    .sort_values(by=[<span class="stringliteral">&quot;StateSt&quot;</span>, <span class="stringliteral">&quot;CityCity&quot;</span>]),</div>
+<div class="line">    description=<span class="stringliteral">&quot;City/State pair&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">bf = gt.Parameter(</div>
+<div class="line">    m,</div>
+<div class="line">    <span class="stringliteral">&quot;bf&quot;</span>,</div>
+<div class="line">    b,</div>
+<div class="line">    records=df[[<span class="stringliteral">&quot;Bank NameBank&quot;</span>, <span class="stringliteral">&quot;FundFund&quot;</span>]]</div>
+<div class="line">    .drop_duplicates(subset=<span class="stringliteral">&quot;Bank NameBank&quot;</span>)</div>
+<div class="line">    .sort_values(by=[<span class="stringliteral">&quot;Bank NameBank&quot;</span>]),</div>
+<div class="line">    description=<span class="stringliteral">&quot;Bank Namd &amp; Fund #&quot;</span>,</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">In [1]: m.isValid()</div>
+<div class="line">Out[1]: <span class="keyword">True</span></div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Users can chain Pandas operations together and pass those operations through to the <code>records</code> argument or the <code>setRecords</code> method.</dd></dl>
+<h2><a class="anchor" id="PY_GAMSTRANSFER_EXTENDED_EXAMPLE_SQL"></a>
+Get PostgreSQL data (w/ sqlalchemy)</h2>
+<div class="fragment"><div class="line"><span class="keyword">import</span> gams.transfer <span class="keyword">as</span> gt</div>
+<div class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</div>
+<div class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># connect to postgres (assuming a localhost)</span></div>
+<div class="line">engine = create_engine(<span class="stringliteral">&quot;postgresql://localhost:5432/&quot;</span> + &lt;database_name&gt;)</div>
+<div class="line">df = pd.read_sql(&lt;sql_table_name&gt;, con=engine, index_col=0)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># create the Container and add symbol</span></div>
+<div class="line">m = Container()</div>
+<div class="line">p = Parameter(m, &lt;sql_table_name&gt;)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># we need to figure out the symbol dimensionality (potentially from the shape of the dataframe)</span></div>
+<div class="line">r, c = df.shape</div>
+<div class="line">p.dimension = c - 1</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># set the records</span></div>
+<div class="line">p.setRecords(df)</div>
+<div class="line"> </div>
+<div class="line"><span class="comment"># write out the GDX file</span></div>
+<div class="line">m.write(<span class="stringliteral">&quot;out.gdx&quot;</span>)</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="./style/jquery.highlight.js"></script>
+<script src="./style/navtree.js"></script>
+<script src="./style/navtreeinfo.js"></script>
+<script src="./style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

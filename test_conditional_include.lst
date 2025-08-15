@@ -1,0 +1,41 @@
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:36:54 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2      i / A, B /;
+   3   
+   4  Variables
+   5      x(i);
+   6   
+   7  Positive Variable x;
+   8   
+   9  Equations
+  10      limitA;
+  11   
+  13   
+  14  Model test /all/;
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:36:54 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\prd705\GAMS_GPT5\test_conditional_include.gms
+     2       12 IF EXIST       1      12  C:\Users\prd705\GAMS_GPT5\nonexistent.inc
+
+
+COMPILATION TIME     =        0.015 SECONDS      3 MB  49.6.1 55d34574 WEX-WEI
+
+
+USER: Medium MUD - 10 User License                   S241216|0002AP-WIN
+      University of Copenhagen, Institute of Food and Resource EcDC2546
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\prd705\GAMS_GPT5\test_conditional_include.gms
+Output     C:\Users\prd705\GAMS_GPT5\test_conditional_include.lst

@@ -1,0 +1,14 @@
+id: test_minimal
+description: Minimal test with just scalar edit
+model:
+  work_dir: ./toy_model
+  main_file: main.gms
+gams:
+  options:
+    Lo: 2
+edits:
+  scalars:
+    Cap: 8
+equations:
+  - file: equation_patches/new_constraint.inc
+notes: Minimal test with scalar only

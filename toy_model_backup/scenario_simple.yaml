@@ -1,0 +1,21 @@
+id: toy_simple_test
+description: Simple test without equations
+model:
+  work_dir: ./toy_model
+  main_file: main.gms
+gams:
+  options:
+    action: c
+    Lo: 2
+edits:
+  scalars:
+    CapacityLimit: 8
+  parameters:
+    CostByCatchment: edits/cost_by_catchment.csv
+  sets:
+    ActiveCatchments:
+      add: []
+      remove: []
+# No equations section - test basic model compilation
+notes: |
+  Simple test to verify the basic model compiles correctly.

@@ -1,0 +1,11 @@
+id: test_no_edits
+description: Test with no edits or equations
+model:
+  work_dir: ./toy_model
+  main_file: main.gms
+gams:
+  options:
+    Lo: 2
+edits: {}
+equations: []
+notes: Test original model without any modifications

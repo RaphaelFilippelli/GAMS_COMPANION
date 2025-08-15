@@ -1,0 +1,1060 @@
+<!-- HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Python API-->
+<title>gams.control.execution.GamsModelInstance Class Reference</title>
+<link href="../../style/tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../style/jquery.js"></script>
+<script type="text/javascript" src="../../style/dynsections.js"></script>
+<script type="text/javascript" src="../../style/cookie.js"></script>
+<script type="text/javascript" src="../../style/resize.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="../../style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="../../style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="../../style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="../../style/toc-highlight.js"></script>
+<script type="text/javascript" src="../../style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="../../style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+<style>
+.image
+{
+   text-align: left;
+}
+</style>
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div>
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="../../index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="../../Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="../../RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="../../UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="../../UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="../../UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="../../S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="../../T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="../../API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="../../UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="../../citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>  
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="../../modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../../../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../../../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../../../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../../../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../../../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../../../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../../../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../../../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div> 
+        <a id="keyword" href="../../keyword.html" class="menu">Index</a>
+        <a id="help" href="../../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+  <div style="height:20px; padding:10px;">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+  </div>
+</div>
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>gams</b></li><li class="navelem"><b>control</b></li><li class="navelem"><b>execution</b></li><li class="navelem"><a class="el" href="classgams_1_1control_1_1execution_1_1GamsModelInstance.html">GamsModelInstance</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="classgams_1_1control_1_1execution_1_1GamsModelInstance-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">gams.control.execution.GamsModelInstance Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a43d5c88e1cd821855fd8b7435fbd5a7c" id="r_a43d5c88e1cd821855fd8b7435fbd5a7c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43d5c88e1cd821855fd8b7435fbd5a7c">__init__</a> (self, <a class="el" href="#af7c9726a6c26c7cfb66b9e7fce6f18cb">checkpoint</a>=None, modelinstance_name=None, source=None)</td></tr>
+<tr class="memdesc:a43d5c88e1cd821855fd8b7435fbd5a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a43d5c88e1cd821855fd8b7435fbd5a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b51de7eeb46301d589b4efdaae04388" id="r_a7b51de7eeb46301d589b4efdaae04388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b51de7eeb46301d589b4efdaae04388">copy_modelinstance</a> (self, modelinstance_name=None)</td></tr>
+<tr class="memdesc:a7b51de7eeb46301d589b4efdaae04388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies this ModelInstance to a new ModelInstance.  <br /></td></tr>
+<tr class="separator:a7b51de7eeb46301d589b4efdaae04388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06698234b1f8c762dcd345850454cfed" id="r_a06698234b1f8c762dcd345850454cfed"><td class="memItemLeft" align="right" valign="top"><a id="a06698234b1f8c762dcd345850454cfed" name="a06698234b1f8c762dcd345850454cfed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__del__</b> (self)</td></tr>
+<tr class="memdesc:a06698234b1f8c762dcd345850454cfed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to explicitly free unmanaged resources. <br /></td></tr>
+<tr class="separator:a06698234b1f8c762dcd345850454cfed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e633f0147869b30c90ccf9c230cb3c" id="r_a84e633f0147869b30c90ccf9c230cb3c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a84e633f0147869b30c90ccf9c230cb3c">cleanup</a> (self)</td></tr>
+<tr class="memdesc:a84e633f0147869b30c90ccf9c230cb3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly closes the license session when using a license that limits the actual uses of GAMS.  <br /></td></tr>
+<tr class="separator:a84e633f0147869b30c90ccf9c230cb3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9c3c304512fcb094440f61f089b5d0" id="r_a2b9c3c304512fcb094440f61f089b5d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b9c3c304512fcb094440f61f089b5d0">instantiate</a> (self, model_definition, modifiers=[], options=None)</td></tr>
+<tr class="memdesc:a2b9c3c304512fcb094440f61f089b5d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate the GamsModelInstance.  <br /></td></tr>
+<tr class="separator:a2b9c3c304512fcb094440f61f089b5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae8841b93b647fa11d4e639f6be4bf2b" id="r_aae8841b93b647fa11d4e639f6be4bf2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae8841b93b647fa11d4e639f6be4bf2b">solve</a> (self, update_type=<a class="el" href="classgams_1_1control_1_1execution_1_1SymbolUpdateType.html#a85e370641ac5254006b94b3f9ba6b183">SymbolUpdateType.BaseCase</a>, output=None, mi_opt=None)</td></tr>
+<tr class="memdesc:aae8841b93b647fa11d4e639f6be4bf2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve model instance.  <br /></td></tr>
+<tr class="separator:aae8841b93b647fa11d4e639f6be4bf2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d4b03d4c17ddfdeb3c0418bfc95eb4" id="r_a33d4b03d4c17ddfdeb3c0418bfc95eb4"><td class="memItemLeft" align="right" valign="top"><a id="a33d4b03d4c17ddfdeb3c0418bfc95eb4" name="a33d4b03d4c17ddfdeb3c0418bfc95eb4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>interrupt</b> (self)</td></tr>
+<tr class="memdesc:a33d4b03d4c17ddfdeb3c0418bfc95eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send interrupt signal to running GamsModelInstance. <br /></td></tr>
+<tr class="separator:a33d4b03d4c17ddfdeb3c0418bfc95eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a5deb3a4814e0586493bfc6083a27937e" id="r_a5deb3a4814e0586493bfc6083a27937e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5deb3a4814e0586493bfc6083a27937e">model_status</a> = property(get_model_status)</td></tr>
+<tr class="memdesc:a5deb3a4814e0586493bfc6083a27937e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the model.  <br /></td></tr>
+<tr class="separator:a5deb3a4814e0586493bfc6083a27937e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a4a8055568c358ed0feabd5fa9310b8" id="r_a7a4a8055568c358ed0feabd5fa9310b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a4a8055568c358ed0feabd5fa9310b8">solver_status</a> = property(get_solver_status)</td></tr>
+<tr class="memdesc:a7a4a8055568c358ed0feabd5fa9310b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solve status of the model.  <br /></td></tr>
+<tr class="separator:a7a4a8055568c358ed0feabd5fa9310b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c9726a6c26c7cfb66b9e7fce6f18cb" id="r_af7c9726a6c26c7cfb66b9e7fce6f18cb"><td class="memItemLeft" align="right" valign="top"><a id="af7c9726a6c26c7cfb66b9e7fce6f18cb" name="af7c9726a6c26c7cfb66b9e7fce6f18cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>checkpoint</b> = property(get_checkpoint)</td></tr>
+<tr class="memdesc:af7c9726a6c26c7cfb66b9e7fce6f18cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve GamsCheckpoint. <br /></td></tr>
+<tr class="separator:af7c9726a6c26c7cfb66b9e7fce6f18cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec0971ff648993ff715a71509bf8bdb9" id="r_aec0971ff648993ff715a71509bf8bdb9"><td class="memItemLeft" align="right" valign="top"><a id="aec0971ff648993ff715a71509bf8bdb9" name="aec0971ff648993ff715a71509bf8bdb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = property(get_name)</td></tr>
+<tr class="memdesc:aec0971ff648993ff715a71509bf8bdb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve name of GamsModelInstance. <br /></td></tr>
+<tr class="separator:aec0971ff648993ff715a71509bf8bdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef855d7ee60a2e9a658f0280d0d96354" id="r_aef855d7ee60a2e9a658f0280d0d96354"><td class="memItemLeft" align="right" valign="top"><a id="aef855d7ee60a2e9a658f0280d0d96354" name="aef855d7ee60a2e9a658f0280d0d96354"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>sync_db</b> = property(get_sync_db)</td></tr>
+<tr class="memdesc:aef855d7ee60a2e9a658f0280d0d96354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve GamsDatabase used to synchronize modifiable data. <br /></td></tr>
+<tr class="separator:aef855d7ee60a2e9a658f0280d0d96354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The GamsJob class is the standard way of dealing with a GAMS model and the corresponding solution provided by a solver. The GAMS language provides programming flow that allows to solve models in a loop and do other sophisticated tasks, like building decomposition algorithms.</p>
+<p>In rare cases, the GAMS model generation time dominates the solver solution time and GAMS itself becomes the bottleneck in an optimization application. For a model instance which is a single mathematical model generated by a GAMS solve statement, the GamsModelInstance class provides a controlled way of modifying a model instance and solving the resulting problem in the most efficient way, by communicating only the changes of the model to the solver and doing a hot start (in case of a continuous model like LP) without the use of disk IO.</p>
+<p>The GamsModelInstance requires a GamsCheckpoint that contains the model definition. Significant parts of the GAMS solve need to be provided for the instantiation of the GamsModelInstance. The modification of the model instance is done through data in sync_db (a property of GamsModelInstance of type GamsDatabase). One needs to create GamsModifiers which contain the information on how to modify the GamsModelInstance. Such a GamsModifier consists either of a GamsParameter or of a triple with the GamsVariable or GamsEquation to be updated, the modification action (e.g. Upper, Lower or Fixed for updating bounds of a variable, or Primal/Dual for updating the level/marginal of a variable or equation mainly used for starting non-linear models from different starting points), and a GamsParameter that holds the data for modification. GamsSymbols of a GamsModifier must belong to sync_db. The list of GamsModifiers needs to be supplied on the instantiate call. The use of GamsParameters that are GamsModifiers is restricted in the GAMS model source. For example, the parameter cannot be used inside $(). Such parameters become endogenous to the model and will be treated by the GAMS compiler as such. Moreover, the rim of the model instance is fixed: No addition of variables and equations is possible.</p>
+<p>The instantiate call will only query the symbol information of the GamsModifiers, not the data of sync_db, e.g. to retrieve the dimension of the modifiers. That's why the modifier symbols have to exist (but don't have to have data) in sync_db when instantiate is called. The GamsParameters that contain the update data in sync_db can be filled at any time before executing the solve method. The solve method uses this data to update the model instance. The solve method will iterate through all records of modifier symbols in the model instance and try to find update data in sync_db. If a record in sync_db is found, this data record will be copied into the model instance. If no corresponding record is found in SyncDB there are different choices: 1) the original data record is restored (update_type=SymbolUpdateType.BaseCase) which is the default, 2) the default record of a GamsParameter (which is 0) is used (update_type=SymbolUpdateType.Zero, and 3) no copy takes place and we use the previously copied record value (update_type=SymbolUpdateType.Accumulate). After the model instance has been updated, the model is passed to the selected solver.</p>
+<p>After the completion of the Solve method, the sync_db will contain the primal and dual solution of the model just solved. Moreover, the GamsParameters that are GamsModifiers are also accessible in sync_db as GamsVariables with the name of the GamsParameter plus "_var". The Marginal of this GamsVariable can provide sensitivity information about the parameter setting. The status of the solve is accessible through the model_status and solver_status properties.</p>
+<p>In general, file operations in GAMS Python API take place in the working_directory defined in the GamsWorkspace. Exceptions to this rule are files read or created due to solver specific options in the solve routine of GamsModelInstance. These files are written to (or read from) the current directory, meaning the directory where the application gets executed.</p>
+<p>Example on how to create a GAMSModelInstance from a GAMSCheckpoint that was generated by the Run method of GAMSJob. </p><div class="fragment"><div class="line">ws = GamsWorkspace()</div>
+<div class="line">cp = ws.add_checkpoint()</div>
+<div class="line"> </div>
+<div class="line">ws.gamslib(<span class="stringliteral">&quot;trnsport&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">job = ws.add_job_from_file(<span class="stringliteral">&quot;trnsport.gms&quot;</span>)</div>
+<div class="line">job.run(checkpoint=cp)</div>
+<div class="line"> </div>
+<div class="line">mi = cp.add_modelinstance()</div>
+<div class="line">b = mi.sync_db.add_parameter(<span class="stringliteral">&quot;b&quot;</span>, 1, <span class="stringliteral">&quot;demand&quot;</span>)</div>
+<div class="line"> </div>
+<div class="line">mi.instantiate(<span class="stringliteral">&quot;transport us lp min z&quot;</span>, GamsModifier(b))</div>
+<div class="line"> </div>
+<div class="line">bmult = [ 0.7, 0.9, 1.1, 1.3 ]</div>
+<div class="line"><span class="keywordflow">for</span> bm <span class="keywordflow">in</span> bmult:</div>
+<div class="line">    b.clear()</div>
+<div class="line">    <span class="keywordflow">for</span> rec <span class="keywordflow">in</span> job.out_db.get_parameter(<span class="stringliteral">&quot;b&quot;</span>):</div>
+<div class="line">        b.add_record(rec.keys).value = rec.value * bm</div>
+<div class="line">    mi.solve()</div>
+<div class="line">    print(<span class="stringliteral">&quot;Scenario bmult=&quot;</span> + str(bm) + <span class="stringliteral">&quot;:&quot;</span>)</div>
+<div class="line">    print(<span class="stringliteral">&quot;  Modelstatus: &quot;</span> + str(mi.model_status))</div>
+<div class="line">    print(<span class="stringliteral">&quot;  Solvestatus: &quot;</span> + str(mi.solver_status))</div>
+<div class="line">    print(<span class="stringliteral">&quot;  Obj: &quot;</span> + str(mi.sync_db.get_variable(<span class="stringliteral">&quot;z&quot;</span>)[()].level))</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a43d5c88e1cd821855fd8b7435fbd5a7c" name="a43d5c88e1cd821855fd8b7435fbd5a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d5c88e1cd821855fd8b7435fbd5a7c">&#9670;&#160;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>checkpoint</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>modelinstance_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>source</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">checkpoint</td><td>GamsCheckpoint </td></tr>
+    <tr><td class="paramname">modelinstance_name</td><td>Identifier of GamsModelInstance (determined automatically if omitted) </td></tr>
+    <tr><td class="paramname">source</td><td>model instance to be copied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a84e633f0147869b30c90ccf9c230cb3c" name="a84e633f0147869b30c90ccf9c230cb3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e633f0147869b30c90ccf9c230cb3c">&#9670;&#160;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.cleanup </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Explicitly closes the license session when using a license that limits the actual uses of GAMS. </p>
+<p>This method should only be called when the GamsModelInstance is not used anymore. </p>
+
+</div>
+</div>
+<a id="a7b51de7eeb46301d589b4efdaae04388" name="a7b51de7eeb46301d589b4efdaae04388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b51de7eeb46301d589b4efdaae04388">&#9670;&#160;</a></span>copy_modelinstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.copy_modelinstance </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>modelinstance_name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copies this ModelInstance to a new ModelInstance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modelinstance_name</td><td>Identifier of GamsModelInstance (determined automatically if omitted) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to new ModelInstance </dd></dl>
+
+</div>
+</div>
+<a id="a2b9c3c304512fcb094440f61f089b5d0" name="a2b9c3c304512fcb094440f61f089b5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9c3c304512fcb094440f61f089b5d0">&#9670;&#160;</a></span>instantiate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.instantiate </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>model_definition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>modifiers</em></span><span class="paramdefsep"> = </span><span class="paramdefval">[]</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>options</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiate the GamsModelInstance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model_definition</td><td>Model definition </td></tr>
+    <tr><td class="paramname">modifiers</td><td>List of GamsModifiers </td></tr>
+    <tr><td class="paramname">options</td><td>GamsOptions </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aae8841b93b647fa11d4e639f6be4bf2b" name="aae8841b93b647fa11d4e639f6be4bf2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae8841b93b647fa11d4e639f6be4bf2b">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.solve </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>update_type</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="classgams_1_1control_1_1execution_1_1SymbolUpdateType.html#a85e370641ac5254006b94b3f9ba6b183">SymbolUpdateType.BaseCase</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>output</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>mi_opt</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solve model instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">update_type</td><td>Update type </td></tr>
+    <tr><td class="paramname">output</td><td>Used to capture GAMS log, (e.g. sys.stdout or an object created by the build-in function open()) </td></tr>
+    <tr><td class="paramname">mi_opt</td><td>GamsModelInstance options </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a5deb3a4814e0586493bfc6083a27937e" name="a5deb3a4814e0586493bfc6083a27937e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5deb3a4814e0586493bfc6083a27937e">&#9670;&#160;</a></span>model_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.model_status = property(get_model_status)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Status of the model. </p>
+<p>(available after a solve) </p>
+
+</div>
+</div>
+<a id="a7a4a8055568c358ed0feabd5fa9310b8" name="a7a4a8055568c358ed0feabd5fa9310b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a4a8055568c358ed0feabd5fa9310b8">&#9670;&#160;</a></span>solver_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.execution.GamsModelInstance.solver_status = property(get_solver_status)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solve status of the model. </p>
+<p>(available after a solve) </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="../../style/jquery.highlight.js"></script>
+<script src="../../style/navtree.js"></script>
+<script src="../../style/navtreeinfo.js"></script>
+<script src="../../style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

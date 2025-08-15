@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Symbol Manifest",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "gdx_template_hint": {
+      "type": "string"
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "kind",
+          "dim",
+          "editable"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "scalar",
+              "set",
+              "parameter",
+              "variable",
+              "equation"
+            ]
+          },
+          "dim": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "keys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unit": {
+            "type": "string"
+          },
+          "editable": {
+            "type": "boolean"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "version",
+    "symbols"
+  ]
+}

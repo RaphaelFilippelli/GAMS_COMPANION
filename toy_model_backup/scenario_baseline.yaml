@@ -1,0 +1,22 @@
+id: toy_baseline_v1
+description: Baseline run for the toy model
+model:
+  work_dir: ./toy_model
+  main_file: main.gms
+gams:
+  options:
+    Lo: 2
+    gdxcompress: 1
+edits:
+  scalars:
+    CapacityLimit: 8
+  parameters:
+    CostByCatchment: edits/cost_by_catchment.csv
+  sets:
+    ActiveCatchments:
+      add: []
+      remove: []
+equations:
+  - file: equation_patches/new_constraint.inc
+notes: |
+  Baseline toy scenario that adjusts Cap to 8 and adds a constraint limiting A to 3.

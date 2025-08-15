@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+.venv/
+.env
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+
+# App artifacts
+runs/
+*.duckdb
+*.parquet
+*.xlsx
+*.zip

@@ -1,0 +1,930 @@
+<!-- modified HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Documentation-->
+<title>Getting Started</title>
+<!--<link href="./style/tabs.css" rel="stylesheet" type="text/css"/>-->
+<script type="text/javascript" src="./style/jquery.js"></script>
+<script type="text/javascript" src="./style/jquery.highlight.js"></script>
+<script type="text/javascript" src="./style/dynsections.js"></script>
+<script type="text/javascript" src="./style/resize.js"></script>
+<script type="text/javascript">
+window.MathJax = {
+  options: {
+    ignoreHtmlClass: 'tex2jax_ignore',
+    processHtmlClass: 'tex2jax_process'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async="async" src="./style/MathJax/es5/tex-svg.js"></script>
+<script type="text/javascript" language="javascript" src="./style/prism.js"></script>
+<link href="./style/prism.css" rel="stylesheet" type="text/css" />
+<link href="./style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="./style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="./style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="./style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="./style/toc-highlight.js"></script>
+<script type="text/javascript" src="./style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="./style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+<!-- -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div> 
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div>  
+        <a id="keyword" href="keyword.html" class="menu">Index</a>
+        <a id="help" href="./style/../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div><div class="header">
+  <div class="headertitle"><div class="title">Getting Started</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Table of Contents</h3>
+<ul>
+  <li class="level1">
+    <a href="#PY_VERIFY_CONDA">Verify Conda Installation</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_NEW_CONDA_ENVIRONMENT">Create a New Conda Environment</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_PIP_INSTALL_BDIST">Install</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_COMPATIBILITY">macOS Compatibility</a>
+    <ul>
+      <li class="level2">
+        <a href="#PY_APPLE_ARM">Apple M1/M2</a>
+      </li>
+    </ul>
+  </li>
+  <li class="level1">
+    <a href="#PY_VERIFY_PIP_INSTALL">Verify the GAMS API</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_TEARDOWN">Uninstall the GAMS API</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_REMOVE_ENVIRONMENT">Remove Conda Environment</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_CONDA_OTHER">Other Useful Conda Commands</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_VENV">Python Virtual Environment (venv)</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_MULTIPLE_GAMS_INSTALLATIONS">Working with Python and multiple GAMS Installations</a>
+  </li>
+  <li class="level1">
+    <a href="#PY_SITE_PACKAGE">A note on using Python site package</a>
+  </li>
+</ul>
+</div>
+<div class="textblock"><p>Users have many options to manage their Python installation; in many cases it is advantageous to create a Python "environment" to sandbox an instance of Python (something which can be done with <code>venv</code> or <code>conda</code>). We recommend that users download a version of <a target="_blank" href="https://docs.conda.io/en/latest/miniconda.html"><code>miniconda</code></a>. We direct users to the <code>conda</code> documentation for installation issues. After the user has installed <code>miniconda</code> (or <code>conda</code>) we will:</p>
+<ul>
+<li>Verify that <code>conda</code> is working</li>
+<li>Create a new scratch Python environment</li>
+<li>Enter the new environment and verify the <code>python</code> version</li>
+<li>Install the GAMS API with <code>pip</code></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd><code>miniconda</code> and <code>conda</code> are synonymous &ndash; both are package + environment managers &ndash; however, <code>conda</code> comes preloaded with a number of useful data science-related packages. We emphasize <code>miniconda</code> because of the smaller install size. The terminal commands we used here apply to both <code>miniconda</code> and <code>conda</code> versions. The remaining documentation will only use the term <code>conda</code>.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The new API structure cannot be used to simply "update" previous versions &ndash; users should build new Python environments from scratch before attempting to install.</dd></dl>
+<h1><a class="anchor" id="PY_VERIFY_CONDA"></a>
+Verify Conda Installation</h1>
+<p>To verify that <code>conda</code> is accessible from the terminal we simply need to check for the version number. Your version of <code>conda</code> may differ. The installation of the GAMS API does not depend on the <code>conda</code> version.</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>$ </font> <font color=antiquewhite>conda --version</font>
+<font color=ghostwhite>conda 22.9.0</font>
+</pre>
+</p>
+<h1><a class="anchor" id="PY_NEW_CONDA_ENVIRONMENT"></a>
+Create a New Conda Environment</h1>
+<p><code>Conda</code> can create, manage, and delete Python environments easily &ndash; this flexibility allows users to experiment quickly with different tools. If experiments fail, the entire environment can be removed without damaging the rest of the system. In short, each <code>conda</code> environment is an isolated sandbox. We will now create a new <code>conda</code> environment called <code>gams</code> that we will used when installing the GAMS API.</p>
+<dl class="section note"><dt>Note</dt><dd>Best practice is to use an environment rather than install into conda's base environment</dd></dl>
+<p> 
+<pre class="console">
+<font color=lightgreen>$ </font> <font color=antiquewhite>conda create --name gams python=3.10</font>
+<font color=ghostwhite>[verbose conda output]</font>
+<font color=ghostwhite>#</font>
+<font color=ghostwhite># To activate this environment, use</font>
+<font color=ghostwhite>#</font>
+<font color=ghostwhite>#     $ conda activate gams</font>
+<font color=ghostwhite>#</font>
+<font color=ghostwhite># To deactivate an active environment, use</font>
+<font color=ghostwhite>#</font>
+<font color=ghostwhite>#     $ conda deactivate</font>
+<font color=ghostwhite>Retrieving notices: ...working... done</font>
+<font color=lightgreen>$ </font>
+</pre>
+</p>
+<dl class="section note"><dt>Note</dt><dd>It is necessary to specify the version of Python to install into the new <code>conda</code> environment. The GAMS API currently supports Python 3.9 to 3.13.</dd></dl>
+<p>We must now "activate" the <code>conda</code> environment (i.e., enter the Python sandbox).</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>$ </font> <font color=antiquewhite>conda activate gams</font>
+<font color=lightgreen>(gams)$ </font>
+</pre>
+</p>
+<p>Once in the activated environment we should verify the Python version is the one that was specified at creation.</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>python --version</font>
+<font color=ghostwhite>Python 3.10.8</font>
+</pre>
+</p>
+<h1><a class="anchor" id="PY_PIP_INSTALL_BDIST"></a>
+Install</h1>
+<p>The GAMS Python API is distributed through the <a target="_blank" href="https://pypi.org/project/gamsapi/">Python Package Index</a>. The <code>gamsapi</code> package comes with several install options (via <code>pip</code> <code>extras</code>) that change how dependencies are resolved. <code>pip</code> will not install any third-party dependencies if an <code>extra</code> label was not provided. For example, to install the <code>transfer</code> data tool (and its dependencies to <code>pandas</code> and <code>scipy</code>).</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>pip install gamsapi[transfer]==</font><font color=lightskyblue>xx.y.z</font>
+</pre>
+</p>
+<dl class="section note"><dt>Note</dt><dd><code>xx.y.z</code> represents your installed GAMS version number (e.g., 49.6.1). To specifically install a <code>gamsapi</code> release candidate (released with a GAMS beta version) the user will need to use the pattern <code>xx.0.0rcN</code>, where <code>N</code> is the number of the release candidate.</dd></dl>
+<p>The <code>extras</code> that are available for the GAMS Python API are:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"><code>extra</code>   </th><th class="markdownTableHeadLeft">Third-party Dependencies to Install    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>connect</code>   </td><td class="markdownTableBodyLeft"><code>pandas</code>, <code>pyyaml</code>, <code>openpyxl</code>, <code>sqlalchemy</code>, <code>cerberus</code>, <code>pyodbc</code>, <code>psycopg2-binary</code>, <code>pymysql</code>, <code>pymssql</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>control</code>   </td><td class="markdownTableBodyLeft"><code>certifi</code>, <code>urllib3</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>core</code>   </td><td class="markdownTableBodyLeft"><code>ply</code>, <code>numpy</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>engine</code>   </td><td class="markdownTableBodyLeft"><code>python_dateutil</code>, <code>urllib3</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>magic</code>   </td><td class="markdownTableBodyLeft"><code>ipython</code>, <code>pandas</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>tools</code>   </td><td class="markdownTableBodyLeft"><code>pandas</code>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>transfer</code>   </td><td class="markdownTableBodyLeft"><code>pandas</code>, <code>scipy</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>all</code>   </td><td class="markdownTableBodyLeft">installs all third-party dependencies for all sub-modules &ndash; a complete install   </td></tr>
+</table>
+<dl class="section attention"><dt>Attention</dt><dd>Users can chain several <code>extras</code> together (separated by commas) in one <code>pip</code> install command to install dependencies from several sub-modules at once.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On certain platforms <code>psycopg2-binary</code> needs to be built from source (e.g. for Python 3.13 on Windows and for Python 3.9 on macOS on ARM64). This requires additional build dependencies that might need to be installed manually.</dd></dl>
+<h1><a class="anchor" id="PY_COMPATIBILITY"></a>
+macOS Compatibility</h1>
+<p>The default shell for macOS 10.15+ (Catalina) is <code>zsh</code>. Users that wish to install the <code>gamsapi</code> will need to modify their install syntax slightly (note the quotations).</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>pip install 'gamsapi[transfer]'==</font><font color=lightskyblue>xx.y.z</font>
+</pre>
+</p>
+<dl class="section note"><dt>Note</dt><dd><code>xx.y.z</code> represents your installed GAMS version number (e.g., 49.6.1)</dd></dl>
+<h2><a class="anchor" id="PY_APPLE_ARM"></a>
+Apple M1/M2</h2>
+<p>Apple users that have a M1/M2 (<code>arm</code>) chipset must be careful to match build architectures (i.e., <code>x86</code> or <code>arm</code>) of both the GAMS system and miniconda (Python). Ideally, M1/M2 users will only install native <code>arm</code> compatible programs. Apple's Rosetta 2 does allow users to install and run <code>x86</code> compiled programs on M1/M2. However, mixed installations (i.e., an <code>arm</code> GAMS system but a <code>x86</code> miniconda or vice versa) will fail because the <code>gamsapi</code> will not be able to properly load the necessary shared libraries.</p>
+<p>The <code>gams audit</code> tool will return the GAMS build architecture (<code>x86</code> or <code>arm</code> will be in the returned string):  
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>gams audit</font>
+<font color=ghostwhite>GAMSX            45.1.0 88bbff72 Oct 14, 2023          DAC arm 64bit/macOS</font>
+</pre>
+</p>
+<p>The build architecture of the Python installation is available with the following command:  
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>python -c "import platform; print(platform.processor())"</font>
+<font color=ghostwhite>arm</font>
+</pre>
+</p>
+<dl class="section attention"><dt>Attention</dt><dd>The user must reinstall either a GAMS or Python system if these two returns do not match.</dd></dl>
+<h1><a class="anchor" id="PY_VERIFY_PIP_INSTALL"></a>
+Verify the GAMS API</h1>
+<p><code>pip</code> provides feedback that suggests that the GAMS API was successfully installed, however, it is still wise to verify this. The best way to test is to actually create a short Python script that imports <code>gams</code>. The following 1 line will run an <code>import</code> operation and, if successful, will output the API version number. The API was not successfully installed if an import error is raised.</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>python -c "import gams; print(f'API OK -- Version {gams.__version__}')"</font>
+<font color=ghostwhite>API OK -- Version 45.2.0</font>
+</pre>
+</p>
+<dl class="section attention"><dt>Attention</dt><dd>Example problems can be found in the <code>[PATH TO GAMS]/api/python/examples</code> folder (organized by sub-module).</dd></dl>
+<h1><a class="anchor" id="PY_TEARDOWN"></a>
+Uninstall the GAMS API</h1>
+<p>Removal of the GAMS API is straightforward with <code>pip</code>:</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>pip uninstall gamsapi</font>
+<font color=ghostwhite>Found existing installation: gamsapi 45.2.0</font>
+<font color=ghostwhite>Uninstalling gamsapi-45.2.0:</font>
+<font color=ghostwhite>  Would remove:</font>
+<font color=ghostwhite>    /Users/gams_user/miniconda3/envs/gams/lib/python3.10/site-packages/gamsapi-45.2.0.dist-info/*</font>
+<font color=ghostwhite>    /Users/gams_user/miniconda3/envs/gams/lib/python3.10/site-packages/gamsapi/*</font>
+<font color=ghostwhite>Proceed (Y/n)? y</font>
+<font color=ghostwhite>  Successfully uninstalled gamsapi-45.2.0</font>
+</pre>
+</p>
+<h1><a class="anchor" id="PY_REMOVE_ENVIRONMENT"></a>
+Remove Conda Environment</h1>
+<p>Removal of the entire <code>conda</code> environment is also straightforward with the following operations:</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>conda deactivate</font>
+<font color=lightgreen>(base)$ </font> <font color=antiquewhite>conda remove --name gams --all</font>
+<font color=ghostwhite>[verbose conda output]</font>
+<font color=ghostwhite>Proceed ([y]/n)? y</font>
+<font color=ghostwhite></font>
+<font color=ghostwhite>Preparing transaction: done</font>
+<font color=ghostwhite>Verifying transaction: done</font>
+<font color=ghostwhite>Executing transaction: done</font>
+<font color=lightgreen>(base)$ </font>
+</pre>
+</p>
+<h1><a class="anchor" id="PY_CONDA_OTHER"></a>
+Other Useful Conda Commands</h1>
+<p>Users are directed to the full <code>conda</code> <a target="_blank" href="https://docs.conda.io/projects/conda/en/stable/">documentation</a> but some useful commands are provided here as a quick reference.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Conda Command   </th><th class="markdownTableHeadLeft">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>conda env list</code>   </td><td class="markdownTableBodyLeft">List all conda environments    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>conda list</code>   </td><td class="markdownTableBodyLeft">List all installed packages in the active environment    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>conda deactivate</code>   </td><td class="markdownTableBodyLeft">Deactivate the current Python environment    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"><code>conda remove --name XXX --all</code>   </td><td class="markdownTableBodyLeft">Remove the <code>XXX</code> environment, must be deactivated first    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"><code>conda install XXX</code>   </td><td class="markdownTableBodyLeft">Install package <code>XXX</code> with the conda system, not all packages can be installed from <code>conda</code> directly   </td></tr>
+</table>
+<h1><a class="anchor" id="PY_VENV"></a>
+Python Virtual Environment (venv)</h1>
+<p>This documentation assumed users will want to use <code>conda</code> to manage their Python environments, but other tools such as <code>venv</code> can be used to manage separate Python environments. The details of the <code>venv</code> setup, activation, deactivation and removal differ from <code>conda</code>, but the <code>pip</code> install commands are the same as in <code>conda</code>. Interested users are referred to the official <a target="_blank" href="https://docs.python.org/3/library/venv.html"><code>venv</code></a> documentation for details on how to create a virtual environment. Users are also directed to additional documentation on: <a target="_blank" href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#"><code>Installing packages using pip and virtual environments</code></a>.</p>
+<h1><a class="anchor" id="PY_MULTIPLE_GAMS_INSTALLATIONS"></a>
+Working with Python and multiple GAMS Installations</h1>
+<p>Some users may want to run multiple versions of GAMS on their system &ndash; we recommend that users create separate Python environments in order to compare the behavior between versions of the Python API.</p>
+<h1><a class="anchor" id="PY_SITE_PACKAGE"></a>
+A note on using Python site package</h1>
+<p>Previous API versions could be used by a Python interpreter if the path to the API directory was included in a <code>sitecustomize.py</code> script that resided in the <code>site-packages</code> directory. This type of installation allows customized packages to be found and used, but not necessarily copied into Python's directory structure. Previous versions of the API benefited from this type of installation, we recommend that users create a separate Python environment and actually install the GAMS API into the environment with <code>pip</code>. Users that were using the <code>sitecustomize.py</code> installation method might experience issues with <code>pip</code> installations if their Python finds an old <code>sitecustomize.py</code> file that includes a path to old GAMS API files (<code>pip</code> might report that the <code>requirement is already satisfied</code>). Users can find out where the <code>USER_SITE</code> directory is located by running the following command:</p>
+<p> 
+<pre class="console">
+<font color=lightgreen>(gams)$ </font> <font color=antiquewhite>python -m site</font>
+</pre>
+</p>
+<p>Once this directory has been found, it is necessary to remove all paths (in the <code>sitecustomize.py</code> file) that point to previous GAMS API folders and reattempt the <code>pip</code> install process. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="./style/jquery.highlight.js"></script>
+<script src="./style/navtree.js"></script>
+<script src="./style/navtreeinfo.js"></script>
+<script src="./style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

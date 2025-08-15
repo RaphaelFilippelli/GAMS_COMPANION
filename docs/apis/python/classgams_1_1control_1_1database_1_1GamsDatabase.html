@@ -1,0 +1,1562 @@
+<!-- HTML header for doxygen 1.12.0-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta name="generator" content="Doxygen"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!--PROJECTNAME GAMS Python API-->
+<title>gams.control.database.GamsDatabase Class Reference</title>
+<link href="../../style/tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../style/jquery.js"></script>
+<script type="text/javascript" src="../../style/dynsections.js"></script>
+<script type="text/javascript" src="../../style/cookie.js"></script>
+<script type="text/javascript" src="../../style/resize.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="../../style/stylesheet.css" rel="stylesheet" type="text/css" id="gamsstylesheet" />
+<link href="../../style/navtree.css" rel="stylesheet" type="text/css" />
+<link href="../../style/icono.min.css" rel="stylesheet"  type="text/css" />
+<link href="../../style/stylesheet-new.css" rel="stylesheet" type="text/css" id="newgamsstylesheet" />
+<script type="text/javascript" src="../../style/toc-highlight.js"></script>
+<script type="text/javascript" src="../../style/doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeDarkModeToggle.init()
+</script>
+<script type="text/javascript" src="../../style/doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192"  href="/img/favicons/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/img/favicons/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png" />
+<link rel="manifest" href="/img/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script defer data-domain="gams.com" src="https://plausible.io/js/script.file-downloads.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<link href="https://www.gams.com/css/website_custom.css" rel="stylesheet" type="text/css" id="customgamsstylesheet" />
+<style>
+.image
+{
+   text-align: left;
+}
+</style>
+</head>
+<body class="doc-page" id="doc-page">
+<header class="topnav" id="menu-area">
+    
+
+
+
+
+
+  <link rel="stylesheet" href="/scss/custom.min.8f1cf34ed4c4a291367186297b3ef5d070fb1783f3414cf1e4c4f2bf5a4bffa2.css" >
+
+  <style>
+    .row {
+      flex-wrap: unset;
+    }
+
+  .modal-backdrop {
+    z-index: 100;
+  }
+
+  </style>
+
+
+<div class="gams-site">
+  <nav id="gams-nav" class="navbar navbar-expand-xl navbar-light bg-white py-2 px-2">
+      
+    <div class="container px-0">
+    
+      <a class="navbar-brand p-0" href="/">
+          <img id="gams-logo" src="/img/gams_logo.svg" alt="" width="250">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+          
+          <ul id="top-buttons" class="navbar-nav flex-row ml-auto">
+            
+            <li  class="nav-item">
+                <a id="navBuyBtn" style="" class="top-button btn btn-gams-light-orange" href="/buy_gams" aria-label="Get a Quote Button">
+                  <strong>GET A QUOTE</strong>
+                </a>
+              </li>
+            
+            
+            <li class="nav-item ">
+              <button id="searchBtn" type="button" class="top-button btn btn-secondary ml-2 " data-toggle="modal" data-target="#uni_searchModal" aria-label="Search Button">
+                  <i width="18px" data-feather="search"></i> 
+                  <strong> SEARCH</strong>
+              </button>
+            </li>
+          
+          </ul>
+          
+          
+          <ul class="navbar-nav ml-auto">
+            
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/products/gams/gams-language"> GAMS - The Modeling Language</a></li>
+                <li><a class="dropdown-item" href="/sales/miro_facts/"> GAMS MIRO</a></li>
+                <li><a class="dropdown-item" href="/sales/engine_facts/"> GAMS Engine</a></li>
+                <li><a class="dropdown-item" href="/sales/gamspy_facts/"> GAMSPy</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/latest/docs/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/index.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/academics">Academics</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/download/"> GAMS</a></li>
+                <li><a class="dropdown-item" href="/miro/download.html"> MIRO</a></li>
+                <li><a class="dropdown-item" href="/engine/installation.html"> Engine</a></li>
+                <li><a class="dropdown-item" href="https://gamspy.readthedocs.io/en/latest/user/installation.html"> GAMSPy<i height='15px' data-feather='external-link'></i></a></li></ul>
+            </li>
+            
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/consulting">Consulting</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/support">Support</a>
+            </li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="https:///www.gams.com/newsletter/signup/?utm_source=website&amp;utm_medium=menu&amp;utm_campaign=newsletter_signup"> Sign-up for our Newsletter</a></li>
+                <li><a class="dropdown-item" href="/stories"> Case Studies</a></li>
+                <li><a class="dropdown-item" href="https://forum.gams.com/"> The GAMS Forum<i height='15px' data-feather='external-link'></i></a></li>
+                <li><a class="dropdown-item" href="/conferences"> Meet us at a Conference</a></li>
+                <li><a class="dropdown-item" href="/blog"> Read our GAMS Blog</a></li>
+                <li><a class="dropdown-item" href="/webinars"> Visit a GAMS Webinar</a></li>
+                <li><a class="dropdown-item" href="/courses"> Take a GAMS Course</a></li></ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/about/company"> Company Information</a></li>
+                <li><a class="dropdown-item" href="/team"> The GAMS team</a></li>
+                
+                <li><a class="dropdown-item dropdown-toggle" href="#">Career</a>
+                  <ul class="submenu submenu-left dropdown-menu"><li><a class="dropdown-item" href="/about/openings">Openings</a></li>
+                    <li><a class="dropdown-item" href="/about/internships">Internships</a></li>
+                    
+                  </ul>
+                </li>
+                
+                <li><a class="dropdown-item" href="/about/advisory"> Advisory Board</a></li>
+                <li><a class="dropdown-item" href="/about/infosec"> Information Security</a></li></ul>
+            </li>
+            
+            </ul>
+        </div>
+      </div> 
+    </nav>
+</div>
+
+
+<div class="gams-site gams-modal-container">
+  <div class="modal fade" id="uni_searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h2 class='modal-title' id="exampleModalLabel">Search</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+
+          <section>
+
+            <div class="input-group mb-3">
+              <input type="text" id="uni_query" class="form-control" placeholder="What are you looking for?" aria-label="SearchQuery" aria-describedby="uni_searchbutton">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="uni_searchbutton">Search</button>
+              </div>
+            </div>
+
+            <div style="display:none;">
+              <input name="case_sensitive" id="case_sensitive" type="checkbox" ><label for="case_senstive">Case sensitive</label>
+              <input name="match_whole_word" id="match_whole_word" type="checkbox"><label for="match_whole_word">Match whole word</label>
+            </div>
+
+
+            
+            <div class="row">
+
+              
+              <div class="col-lg-4">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <a class="nav-link active" id="v-pills-gams-doc-tab" data-toggle="pill" href="#v-pills-gams-doc" role="tab" aria-controls="v-pills-gams-doc" aria-selected="false">GAMS Documentation</a>
+                  <a class="nav-link" id="v-pills-mod-lib-tab" data-toggle="pill" href="#v-pills-mod-lib" role="tab" aria-controls="v-pills-mod-lib" aria-selected="false">Model Library</a>
+                  <a class="nav-link" id="v-pills-miro-doc-tab" data-toggle="pill" href="#v-pills-miro-doc" role="tab" aria-controls="v-pills-miro-doc" aria-selected="false">MIRO Documentation</a>
+                  <a class="nav-link" id="v-pills-engine-doc-tab" data-toggle="pill" href="#v-pills-engine-doc" role="tab" aria-controls="v-pills-engine-doc" aria-selected="false">ENGINE Documentation</a>
+                  <a class="nav-link" id="v-pills-website-tab" data-toggle="pill" href="#v-pills-website" role="tab" aria-controls="v-pills-website" aria-selected="false">Website & Blog</a>
+                </div>
+              </div>
+
+
+              
+              <div class="col-lg-8">
+                <div class="tab-content" id="v-pills-tabContent">
+
+
+                  
+                  
+
+                  
+                  <div class="tab-pane fade show active" id="v-pills-gams-doc" role="tabpanel" aria-labelledby="v-pills-gams-doc-tab">
+
+                    <div id="uni_docsTab" class="mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'allsections')" id="uni_alldocsTab" value="docs/">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'userguides')" id="uni_ugTab" value="docs/"> User's Guide</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'solvers')" id="uni_solverTab" value="docs/">Solvers</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'tools')" id="uni_toolTab" value="docs/">Tools</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apis')" id="uni_apiTab" value="docs/">APIs</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'releasenotes')" id="uni_rnTab" value="docs/">Release Notes</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary"></div>
+                    </div>
+
+                    <div class="uni_searchresults"></div>
+
+                    <div class="uni_navresults"></div>
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade show" id="v-pills-mod-lib" role="tabpanel" aria-labelledby="v-pills-mod-lib-tab">
+
+                    <div id="uni_modlibsTab" class=" mb-3 mt-3 mt-md-0" style="display: flex;">
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks active" onclick="uni_showSection(event, 'all')" id="uni_allmodlibsTab" value="">All</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'gamslib')" id="uni_gamslibTab" value="">Model</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'testlib')" id="uni_testlibTab" value="">Test</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'datalib')" id="uni_datalibTab" value="">Data</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'emplib')" id="uni_emplibTab" value="">EMP</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'apilib')" id="uni_apilibTab" value="">API</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'finlib')" id="uni_finlibTab" value="">FIN</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'noalib')" id="uni_noalibTab" value="">NOA</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary uni_tablinks" onclick="uni_showSection(event, 'psoptlib')" id="uni_psoptlibTab" value="">PSOPT</button>
+                    </div>
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults"></div>
+
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-miro-doc" role="tabpanel" aria-labelledby="v-pills-miro-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+
+                  
+                  <div class="tab-pane fade" id="v-pills-engine-doc" role="tabpanel" aria-labelledby="v-pills-engine-doc-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+
+                  </div>
+                  
+                  <div class="tab-pane fade" id="v-pills-website" role="tabpanel" aria-labelledby="v-pills-website-tab">
+
+                    <div class="uni_inforesults mb-3">
+                      <div class="resultsummary">
+                      </div>
+                    </div>
+
+                    <div class="uni_searchresults">
+                    </div>
+
+                    <div class="uni_navresults">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </section>
+
+          
+          <script src="https://www.gams.com/latest/docs/style/keyword.js"></script>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <div class="versionwrapper">
+      <li id='version' class='right'>
+   <div class='styled-select'>
+   <select id='versionfilter' class='selectbox'>
+     <option id='50' value='/50/docs/index.html'>50 (latest)</option>
+     <option id='49' value='/49/docs/index.html'>49</option>
+     <option id='48' value='/48/docs/index.html'>48</option>
+     <option id='47' value='/47/docs/index.html'>47</option>
+     <option id='46' value='/46/docs/index.html'>46</option>
+     <option id='45' value='/45/docs/index.html'>45</option>
+     <option id='44' value='/44/docs/index.html'>44</option>
+     <option id='43' value='/43/docs/index.html'>43</option>
+     <option id='42' value='/42/docs/index.html'>42</option>
+     <option id='41' value='/41/docs/index.html'>41</option>
+     <option id='40' value='/40/docs/index.html'>40</option>
+     <option id='39' value='/39/docs/index.html'>39</option>
+     <option id='38' value='/38/docs/index.html'>38</option>
+     <option id='37' value='/37/docs/index.html'>37</option>
+     <option id='36' value='/36/docs/index.html'>36</option>
+     <option id='35' value='/35/docs/index.html'>35</option>
+     <option id='34' value='/34/docs/index.html'>34</option>
+     <option id='33' value='/33/docs/index.html'>33</option>
+     <option id='32' value='/32/docs/index.html'>32</option>
+     <option id='31' value='/31/docs/index.html'>31</option>
+     <option id='30' value='/30/docs/index.html'>30</option>
+     <option id='29' value='/29/docs/index.html'>29</option>
+     <option id='28' value='/28/docs/index.html'>28</option>
+     <option id='27' value='/27/docs/index.html'>27</option>
+     <option id='26' value='/26/docs/index.html'>26</option>
+     <option id='25.1' value='/25.1/docs/index.html'>25.1</option>
+   </select>
+   </div>
+</li>
+<li class='right menutext'><div>Version:</div></li>
+
+    </div>
+    <a href="javascript:void(0);" id="hamburger-nav" title="Open Menu" class="hamburger" onclick="toggleResponsive()">
+       <div class="bar1"></div>
+       <div class="bar2"></div>
+       <div class="bar3"></div>
+    </a>
+    <a class="search" href="javascript:void(0);">
+        <div class="searchwrapper">
+           <div class="nav-icon"><i class="icono-search"></i></div>
+           <input id="searchbar" type="text" placeholder="Search..." onkeypress="return handleSearchKeyPress(event);">
+        </div>
+    </a>
+    <div class="nav">
+        <div id="docs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="docs" href="../../index.html" class="menu">Documentation</a>
+        <div class="subnav">
+            <a href="../../Preface.html" class="docsmenu collapsed">Preface</a>
+            <a href="../../RN_MAIN.html" class="docsmenu collapsed">Release Notes</a>
+            <a href="../../UG_MAIN.html#UG_INSTALL" class="docsmenu collapsed">Installation and Licensing</a>
+            <a href="../../UG_MAIN.html#UG_Tutorial_Examples" class="docsmenu collapsed">Tutorials and Examples</a>
+            <a href="../../UG_MAIN.html#UG_Language_Environment" class="docsmenu collapsed">GAMS Language and Environment</a>
+            <a href="../../S_MAIN.html" class="docsmenu collapsed">Solver Manuals</a>
+            <a href="../../T_MAIN.html" class="docsmenu collapsed">Tools Manuals</a>
+            <a href="../../API_MAIN.html" class="docsmenu collapsed">Application Programming Interfaces</a>
+            <a href="../../UG_Glossary.html" class="docsmenu collapsed">Glossary</a>
+            <a href="../../citelist.html" class="docsmenu collapsed">Bibliograhpy</a>
+        </div>  
+        <div id="modlibs-menu-ctrl" title="Expand Submenu" class="submenu-icon collapsed"><i class="icono-caretDown"></i></div>
+        <a id="modlibs" href="../../modlibs.html" class="menu">Model Libraries</a>
+        <div class="subnav">
+            <a href="../../../gamslib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Model Library</a>
+            <a href="../../../testlib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Test Library</a>
+            <a href="../../../datalib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS Data Library</a>
+            <a href="../../../emplib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS EMP Library</a>
+            <a href="../../../apilib_ml/libhtml/index.html" class="modlibsmenu collapsed">GAMS API Library</a>
+            <a href="../../../finlib_ml/libhtml/index.html" class="modlibsmenu collapsed">FIN Library</a>
+            <a href="../../../noalib_ml/libhtml/index.html" class="modlibsmenu collapsed">NOA Library</a>
+            <a href="../../../psoptlib_ml/libhtml/index.html" class="modlibsmenu collapsed">PSOPT Library</a>
+        </div> 
+        <a id="keyword" href="../../keyword.html" class="menu">Index</a>
+        <a id="help" href="../../help.html" class="menu">Help</a>
+    </div>  
+</header>
+<div id="content-area" class="content-page">
+  <div  id="context-sidebar" class="ontop nav-menu">
+    <div id="ctrl-expand-collapse"> 
+        <div id="ctrl-icon" title="Show Table of Contents"><i class="icono-caretLeftCircle"></i></div>
+        <span id="ctrl-toc-item" class="tocitem">Hide Table of Contents</span>
+    </div>
+    <div id="nav-area" class="collapsible-menu">
+        <div id="nav-tree">
+           <div id="nav-tree-contents">
+             <div id="nav-sync" class="sync"></div>
+        </div>
+       </div>
+    </div>
+  </div>
+  <div id="split-bar" class="expanded"></div>
+  <div class="content" id="doc-contents">
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+  <div style="height:20px; padding:10px;">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+  </div>
+</div>
+<!-- end header part -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>gams</b></li><li class="navelem"><b>control</b></li><li class="navelem"><b>database</b></li><li class="navelem"><a class="el" href="classgams_1_1control_1_1database_1_1GamsDatabase.html">GamsDatabase</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#properties">Properties</a> &#124;
+<a href="classgams_1_1control_1_1database_1_1GamsDatabase-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">gams.control.database.GamsDatabase Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>An instance of GamsDatabase communicates data between the Python world and the GAMS world.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2e8556e200e928660cd64c9876b3ee55" id="r_a2e8556e200e928660cd64c9876b3ee55"><td class="memItemLeft" align="right" valign="top"><a id="a2e8556e200e928660cd64c9876b3ee55" name="a2e8556e200e928660cd64c9876b3ee55"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__len__</b> (self)</td></tr>
+<tr class="memdesc:a2e8556e200e928660cd64c9876b3ee55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of symbols in the GamsDatabase. <br /></td></tr>
+<tr class="separator:a2e8556e200e928660cd64c9876b3ee55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3963bfb494140ac016e615702b9bde6a" id="r_a3963bfb494140ac016e615702b9bde6a"><td class="memItemLeft" align="right" valign="top"><a id="a3963bfb494140ac016e615702b9bde6a" name="a3963bfb494140ac016e615702b9bde6a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__del__</b> (self)</td></tr>
+<tr class="memdesc:a3963bfb494140ac016e615702b9bde6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this to explicitly free unmanaged resources associated with this GamsDatabase. <br /></td></tr>
+<tr class="separator:a3963bfb494140ac016e615702b9bde6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b44e4499122d120b91c1032b62b46e" id="r_af9b44e4499122d120b91c1032b62b46e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9b44e4499122d120b91c1032b62b46e">get_symbol</a> (self, symbol_identifier)</td></tr>
+<tr class="memdesc:af9b44e4499122d120b91c1032b62b46e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsSymbol by name.  <br /></td></tr>
+<tr class="separator:af9b44e4499122d120b91c1032b62b46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad893fb8cff0ce5de3ef3649c56fe2342" id="r_ad893fb8cff0ce5de3ef3649c56fe2342"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad893fb8cff0ce5de3ef3649c56fe2342">get_equation</a> (self, equation_identifier)</td></tr>
+<tr class="memdesc:ad893fb8cff0ce5de3ef3649c56fe2342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsEquation by name.  <br /></td></tr>
+<tr class="separator:ad893fb8cff0ce5de3ef3649c56fe2342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dd5d3783422e012d67d0f193904eb24" id="r_a7dd5d3783422e012d67d0f193904eb24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7dd5d3783422e012d67d0f193904eb24">get_parameter</a> (self, parameter_identifier)</td></tr>
+<tr class="memdesc:a7dd5d3783422e012d67d0f193904eb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsParameter by name.  <br /></td></tr>
+<tr class="separator:a7dd5d3783422e012d67d0f193904eb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b269fc631d462fc5a87409c983c3358" id="r_a0b269fc631d462fc5a87409c983c3358"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b269fc631d462fc5a87409c983c3358">get_variable</a> (self, variable_identifier)</td></tr>
+<tr class="memdesc:a0b269fc631d462fc5a87409c983c3358"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsVariable by name.  <br /></td></tr>
+<tr class="separator:a0b269fc631d462fc5a87409c983c3358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac499d5fcac04509ada3c49234a35acd7" id="r_ac499d5fcac04509ada3c49234a35acd7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac499d5fcac04509ada3c49234a35acd7">get_set</a> (self, set_identifier)</td></tr>
+<tr class="memdesc:ac499d5fcac04509ada3c49234a35acd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsSet by name.  <br /></td></tr>
+<tr class="separator:ac499d5fcac04509ada3c49234a35acd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d2dd678753a1fcc1824b156f0e8d3f" id="r_ad7d2dd678753a1fcc1824b156f0e8d3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7d2dd678753a1fcc1824b156f0e8d3f">add_equation</a> (self, identifier, dimension, equtype, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:ad7d2dd678753a1fcc1824b156f0e8d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add equation symbol to database.  <br /></td></tr>
+<tr class="separator:ad7d2dd678753a1fcc1824b156f0e8d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f5d2a7eebbb2ae436d4f651872ae6a" id="r_aa8f5d2a7eebbb2ae436d4f651872ae6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8f5d2a7eebbb2ae436d4f651872ae6a">add_equation_dc</a> (self, identifier, equtype, domains, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:aa8f5d2a7eebbb2ae436d4f651872ae6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add equation symbol to database using domain information.  <br /></td></tr>
+<tr class="separator:aa8f5d2a7eebbb2ae436d4f651872ae6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4f34461197df19eff6345962a309770" id="r_ac4f34461197df19eff6345962a309770"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4f34461197df19eff6345962a309770">add_variable</a> (self, identifier, dimension, vartype, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:ac4f34461197df19eff6345962a309770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add variable symbol to database.  <br /></td></tr>
+<tr class="separator:ac4f34461197df19eff6345962a309770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abecd2d128fcfa20931850b413b0e468c" id="r_abecd2d128fcfa20931850b413b0e468c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abecd2d128fcfa20931850b413b0e468c">add_variable_dc</a> (self, identifier, vartype, domains, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:abecd2d128fcfa20931850b413b0e468c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add variable symbol to database using domain information.  <br /></td></tr>
+<tr class="separator:abecd2d128fcfa20931850b413b0e468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b7298db36f204506a344406fc7e1eb" id="r_a53b7298db36f204506a344406fc7e1eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53b7298db36f204506a344406fc7e1eb">add_set</a> (self, identifier, dimension, explanatory_text=&quot;&quot;, settype=0)</td></tr>
+<tr class="memdesc:a53b7298db36f204506a344406fc7e1eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set symbol to database.  <br /></td></tr>
+<tr class="separator:a53b7298db36f204506a344406fc7e1eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7b7de993225504a59f044dd43ac2f8" id="r_acf7b7de993225504a59f044dd43ac2f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf7b7de993225504a59f044dd43ac2f8">add_set_dc</a> (self, identifier, domains, explanatory_text=&quot;&quot;, settype=0)</td></tr>
+<tr class="memdesc:acf7b7de993225504a59f044dd43ac2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add set symbol to database using domain information.  <br /></td></tr>
+<tr class="separator:acf7b7de993225504a59f044dd43ac2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37244024a3ed21555880735ea0ca0c45" id="r_a37244024a3ed21555880735ea0ca0c45"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37244024a3ed21555880735ea0ca0c45">add_parameter</a> (self, identifier, dimension, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:a37244024a3ed21555880735ea0ca0c45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add parameter symbol to database.  <br /></td></tr>
+<tr class="separator:a37244024a3ed21555880735ea0ca0c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c59d60ec918ecdd88b759dfbe3b751" id="r_a28c59d60ec918ecdd88b759dfbe3b751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28c59d60ec918ecdd88b759dfbe3b751">add_parameter_dc</a> (self, identifier, domains, explanatory_text=&quot;&quot;)</td></tr>
+<tr class="memdesc:a28c59d60ec918ecdd88b759dfbe3b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add parameter symbol to database using domain information.  <br /></td></tr>
+<tr class="separator:a28c59d60ec918ecdd88b759dfbe3b751"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcdc0b7362d02c2586e04c110eacc2b8" id="r_adcdc0b7362d02c2586e04c110eacc2b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcdc0b7362d02c2586e04c110eacc2b8">export</a> (self, file_path=None)</td></tr>
+<tr class="memdesc:adcdc0b7362d02c2586e04c110eacc2b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write database into a GDX file.  <br /></td></tr>
+<tr class="separator:adcdc0b7362d02c2586e04c110eacc2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11fc27327f7b836d563869c6a870200" id="r_af11fc27327f7b836d563869c6a870200"><td class="memItemLeft" align="right" valign="top"><a id="af11fc27327f7b836d563869c6a870200" name="af11fc27327f7b836d563869c6a870200"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> (self)</td></tr>
+<tr class="memdesc:af11fc27327f7b836d563869c6a870200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all symbols in GamsDatabase. <br /></td></tr>
+<tr class="separator:af11fc27327f7b836d563869c6a870200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10a7370a31ad73a20e82994e08431bad" id="r_a10a7370a31ad73a20e82994e08431bad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10a7370a31ad73a20e82994e08431bad">compact</a> (self)</td></tr>
+<tr class="memdesc:a10a7370a31ad73a20e82994e08431bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is obsolete and has no effect anymore.  <br /></td></tr>
+<tr class="separator:a10a7370a31ad73a20e82994e08431bad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa176ab5b5a8fb6f8adb640fb90f42afb" id="r_aa176ab5b5a8fb6f8adb640fb90f42afb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa176ab5b5a8fb6f8adb640fb90f42afb">check_domains</a> (self)</td></tr>
+<tr class="memdesc:aa176ab5b5a8fb6f8adb640fb90f42afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check for all symbols if all records are within the specified domain of the symbol.  <br /></td></tr>
+<tr class="separator:aa176ab5b5a8fb6f8adb640fb90f42afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf2e77e90bc34a41f92b0a6d237828c" id="r_abaf2e77e90bc34a41f92b0a6d237828c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abaf2e77e90bc34a41f92b0a6d237828c">get_database_dvs</a> (self, max_viol=0, max_viol_per_symbol=0)</td></tr>
+<tr class="memdesc:abaf2e77e90bc34a41f92b0a6d237828c"><td class="mdescLeft">&#160;</td><td class="mdescRight">return all GamsDatabaseDomainViolations  <br /></td></tr>
+<tr class="separator:abaf2e77e90bc34a41f92b0a6d237828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a1b85503a557921ab07979f33391a3c21" id="r_a1b85503a557921ab07979f33391a3c21"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b85503a557921ab07979f33391a3c21">number_symbols</a> = property(get_nr_symbols)</td></tr>
+<tr class="memdesc:a1b85503a557921ab07979f33391a3c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the number of symbols in the GamsDatabase.  <br /></td></tr>
+<tr class="separator:a1b85503a557921ab07979f33391a3c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a599428e32d7731198609229e04df7edd" id="r_a599428e32d7731198609229e04df7edd"><td class="memItemLeft" align="right" valign="top"><a id="a599428e32d7731198609229e04df7edd" name="a599428e32d7731198609229e04df7edd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>workspace</b> = property(get_workspace)</td></tr>
+<tr class="memdesc:a599428e32d7731198609229e04df7edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsWorkspace containing GamsDatabase. <br /></td></tr>
+<tr class="separator:a599428e32d7731198609229e04df7edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0877abfa4a9c0e7e90de44f13c5084" id="r_a4d0877abfa4a9c0e7e90de44f13c5084"><td class="memItemLeft" align="right" valign="top"><a id="a4d0877abfa4a9c0e7e90de44f13c5084" name="a4d0877abfa4a9c0e7e90de44f13c5084"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> = property(get_name)</td></tr>
+<tr class="memdesc:a4d0877abfa4a9c0e7e90de44f13c5084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GamsDatabase name. <br /></td></tr>
+<tr class="separator:a4d0877abfa4a9c0e7e90de44f13c5084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a316943628a80de2625b78c94dc44967e" id="r_a316943628a80de2625b78c94dc44967e"><td class="memItemLeft" align="right" valign="top"><a id="a316943628a80de2625b78c94dc44967e" name="a316943628a80de2625b78c94dc44967e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>suppress_auto_domain_checking</b></td></tr>
+<tr class="memdesc:a316943628a80de2625b78c94dc44967e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controls whether domain checking is called in GamsDatabase export. <br /></td></tr>
+<tr class="separator:a316943628a80de2625b78c94dc44967e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An instance of GamsDatabase communicates data between the Python world and the GAMS world. </p>
+<p>A GamsDatabase consists of a collection of symbols (GamsDatabase implements __iter__() and next() to allow iterating conveniently through the symbols in a GamsDatabase). The symbol types available for a GamsDatabase correspond to the symbol types known from the GAMS language: Set, Parameter, Variable, and Equation are represented in Python by a derived class (e.g. GamsSet, GamsParameter, etc). Besides the type, a GamsSymbol has a name (this has to match the name inside the GAMS model), a dimension (currently up to 20 or GMS_MAX_INDEX_DIM) and some explanatory text.</p>
+<p>Variables and equations also have a subtype: e.g. VarType.Binary, VarType.Positive, etc. for variables and e.g. EquType.E, EquType.G etc. for equations</p>
+<p>GamsDatabases can be created empty, or initialized from existing GDX files or from another GamsDatabase (copy). Symbols can be added at any time (e.g. GamsDatabase.add_parameter), but once a symbol is part of a GamsDatabase, it cannot be removed. Only its associated data (GamsSymbolRecord) can be purged (see GamsSymbol.clear()) or individually removed (GamsSymbol.delete_record). Individual data elements are accessed record by record. A record is identified by the keys (a vector of strings). The record data varies by symbol type. For example, a parameter record has a value property, a variable has the properties level, lower, upper, marginal, and scale. Adding a record with keys that already exist results in an exception. Similar, the unsuccessful search for a record also results in an exception.</p>
+<p>GamsSymbol implements __iter__() and next() to conveniently iterate through the records of a symbol. There are also sliced access methods to symbol records that allow to iterate through all records with a fixed index at some positions. GamsDatabases can be exported as GDX files for permanent storage.</p>
+<p>GamsJob.out_db and GamsModelInstance.sync_db provide instances of GamsDatabase to communicate results from a GAMS run or a solve. These databases should only be used in the context of the base object (GamsJob or GamsModelInstance). If a copy of such a database is required GamsWorkspace.add_database can be used to initialize a GamsDatabase from another database by specifying the optional parameter source_database (e.g. newdb = workspace.add_database(GamsJob.out_db)).</p>
+<p>GamsDatabases often provide the input data for a GamsJob. Such GamsDatabases are listed in the GamsJob.run method. Inside the GAMS model source the GamsDatabase is accessible through a GDX file. The GAMS model source requires a particular file name to connect to the proper GDX file (e.g. $GDXIN filename). A GamsDatabase can be created with a given name which can be then used inside the model (e.g. db = workspace.add_database(database_name="SupplyData")) and then inside the GAMS model source: $GDXIN SupplyData) or an automatically generated name can be used. This name can be passed down to the GAMS model by using the defines dictionary of a GamsOptions instance:</p>
+<div class="fragment"><div class="line">db = workspace.add_database()</div>
+<div class="line">opt = workspace.add_options()</div>
+<div class="line">opt.defines[<span class="stringliteral">&quot;SupplyDataFileName&quot;</span>] = db.name</div>
+<div class="line">...</div>
+<div class="line">gamsjob.run(gams_options=opt, databases=db)</div>
+</div><!-- fragment --> <p>Inside the GAMS model source the name is accessed as follows:</p>
+<div class="fragment"><div class="line">$GDXIN %SupplyDataFileName%</div>
+</div><!-- fragment --> <p>One has to act with some caution when it comes to ordered sets which e.g. allow lag and lead. By not enforcing the "domain checking" for the GamsDatabase class we have aggravated the potential problems for ordered sets. For GAMS, the labels of set elements are just strings, so the order of a set is determined by the appearance of its elements. For example, if one has 'set k / 2,3,4,1,5 /', the order of k is exactly given by this sequence. So the lag (k-1) of k=4 is 3 and the lead (k+1) of k=4 is 1.</p>
+<p>GAMS performs arithmetic with an extended number range. GAMS has special values for infinity (+INF, -INF), epsilon (EPS), not available (NA), and undefined (UNDEF). When GAMS evaluates expressions with these special values, the calculating engine ensures the correctness of the result (e.g. 5*eps=eps or 5+eps=5). The GAMS model CRAZY in the GAMS Model Library documents the results of the arithmetic operations with respect to special values.</p>
+<p>In the GAMS Python API we map the IEEE standard values for +/-infinity (float('inf')/float('-inf')) and NA (float('nan')) to the corresponding GAMS values. The special value for UNDEF gets unfiltered through the GAMS Python API. The internal double value of UNDEF is 1.0E300 (or better use the constant SV_UNDEF).</p>
+<p>Special attention needs to be given to the value of 0. Since GAMS is a sparse system it does not store (parameter) records with a true 0. If a record with numerical value of 0 is needed, EPS(SV_EPS) can help. For example:</p>
+<div class="fragment"><div class="line">set j /1*10 /; parameter b(j); b(j) = 1; b(&#39;5&#39;) = 0;</div>
+<div class="line">scalar s,c; s = sum(j, b(j)); c = card(b); display s,c;</div>
+</div><!-- fragment --> <p>will result in</p>
+<div class="fragment"><div class="line">----      3 PARAMETER s                    =        9.000</div>
+<div class="line">            PARAMETER c                    =        9.000</div>
+</div><!-- fragment --> <p>but</p>
+<div class="fragment"><div class="line">b(j) = 1; b(&#39;5&#39;) = EPS;</div>
+</div><!-- fragment --> <p>will result in</p>
+<div class="fragment"><div class="line">----      3 PARAMETER s                    =        9.000</div>
+<div class="line">            PARAMETER c                    =       10.000</div>
+</div><!-- fragment --> <p>What are the consequences for the GAMS Python API? If we read parameter b in case of b('5')=0, the GAMSDatabase will not have a record for b('5'). In case of b('5')=EPS, the GamsDatabase will have a record with value EPS. Unlike the IEEE values (e.g. float("inf")), arithmetic operations in Python will modify EPS (e.g. 5*float("inf")==float("inf") but 5*EPS!=EPS). The same rules apply for preparing input data for GAMS in a GamsDatabase. If a value of EPS is written, GAMS will see the special value EPS. All other small values (including 0) will be communicated unfiltered to GAMS. As mentioned before, zeros will not be entered as data records in GAMS. The compiler control $on/offEPS can help to automatically map zeros to EPS.</p>
+<p>There is one oddity concerning values smaller than 1e-250 on GAMS input. Consider the following example:</p>
+<div class="fragment"><div class="line">b = db.add_parameter(<span class="stringliteral">&quot;b&quot;</span>,1)</div>
+<div class="line"><span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(1,11):</div>
+<div class="line">    b.add_record(str(i)).value = 1</div>
+<div class="line">b.find_record(<span class="stringliteral">&quot;5&quot;</span>).value = 1E-251</div>
+<div class="line">job.run(db)</div>
+</div><!-- fragment --> <div class="fragment"><div class="line">$load j b</div>
+<div class="line">scalar card_b; card_b = card(b); display card_b;</div>
+<div class="line">b(j) = 2*b(j); card_b = card(b); display card_b;</div>
+</div><!-- fragment --> <p>A record with values smaller than 1e-250 exists on input in GAMS, but as soon as the record gets updated by GAMS and is still smaller than 1e-250, the record gets removed.</p>
+<p>The ordering of a set in GAMS can be non-intuitive: Consider "set i /5/, j /1*5/;". Elements '5' gets internal number 1, '1' get 2, '2' gets 3 and so on. The last element of j '5' has already the internal number 1. The sequence of internal numbers in j is not ascending and hence GAMS considers set j as not sorted, i.e. one can't use the ord() function nor the lag or lead (-,&ndash;,+,++) operators. If 'j' would have been defined before 'i' in this example, the "set not ordered" problem would have been avoided.</p>
+<p>Please note that the GamsDatabase actually does not implement a relational model for database management. It should be seen as a data storage or data container.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad7d2dd678753a1fcc1824b156f0e8d3f" name="ad7d2dd678753a1fcc1824b156f0e8d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d2dd678753a1fcc1824b156f0e8d3f">&#9670;&#160;</a></span>add_equation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_equation </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>equtype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add equation symbol to database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Equation name </td></tr>
+    <tr><td class="paramname">dimension</td><td>Equation dimension </td></tr>
+    <tr><td class="paramname">equtype</td><td>Equation subtype (EquType.E: Equal, EquType.G: Greater, EquType.L: Less, EquType.N: No specification, EquType.X: External defined, EquType.C: Conic) </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of equation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsEquation </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_parameter(), add_set(), add_variable() </dd></dl>
+
+</div>
+</div>
+<a id="aa8f5d2a7eebbb2ae436d4f651872ae6a" name="aa8f5d2a7eebbb2ae436d4f651872ae6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f5d2a7eebbb2ae436d4f651872ae6a">&#9670;&#160;</a></span>add_equation_dc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_equation_dc </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>equtype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>domains</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add equation symbol to database using domain information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Equation name </td></tr>
+    <tr><td class="paramname">equtype</td><td>Equation subtype (EquType.E: Equal, EquType.G: Greater, EquType.L: Less, EquType.N: No specification, EquType.X: External defined, EquType.C: Conic) </td></tr>
+    <tr><td class="paramname">domains</td><td>A list containing GamsSet objects and strings for domain information. The length of the list specifies the dimension. </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of equation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsEquation </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_parameter_dc(), add_set_dc(), add_variable_dc() </dd></dl>
+
+</div>
+</div>
+<a id="a37244024a3ed21555880735ea0ca0c45" name="a37244024a3ed21555880735ea0ca0c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37244024a3ed21555880735ea0ca0c45">&#9670;&#160;</a></span>add_parameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_parameter </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add parameter symbol to database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Parameter name </td></tr>
+    <tr><td class="paramname">dimension</td><td>Parameter dimension </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsParameter </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation(), add_set(), add_variable() </dd></dl>
+
+</div>
+</div>
+<a id="a28c59d60ec918ecdd88b759dfbe3b751" name="a28c59d60ec918ecdd88b759dfbe3b751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c59d60ec918ecdd88b759dfbe3b751">&#9670;&#160;</a></span>add_parameter_dc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_parameter_dc </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>domains</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add parameter symbol to database using domain information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Parameter name </td></tr>
+    <tr><td class="paramname">domains</td><td>A list containing GamsSet objects and strings for domain information. The length of the list specifies the dimension. </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsParameter </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation_dc(), add_set_dc(), add_variable_dc() </dd></dl>
+
+</div>
+</div>
+<a id="a53b7298db36f204506a344406fc7e1eb" name="a53b7298db36f204506a344406fc7e1eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b7298db36f204506a344406fc7e1eb">&#9670;&#160;</a></span>add_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_set </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>settype</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add set symbol to database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Set name </td></tr>
+    <tr><td class="paramname">dimension</td><td>Set dimension </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of set </td></tr>
+    <tr><td class="paramname">settype</td><td>Set subtype (SetType.Multi, SetType.Singleton) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsSet </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation(), add_parameter(), add_variable() </dd></dl>
+
+</div>
+</div>
+<a id="acf7b7de993225504a59f044dd43ac2f8" name="acf7b7de993225504a59f044dd43ac2f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7b7de993225504a59f044dd43ac2f8">&#9670;&#160;</a></span>add_set_dc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_set_dc </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>domains</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>settype</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add set symbol to database using domain information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Set name </td></tr>
+    <tr><td class="paramname">domains</td><td>A list containing GamsSet objects and strings for domain information. The length of the list specifies the dimension. </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text of set </td></tr>
+    <tr><td class="paramname">settype</td><td>Set subtype (SetType.Multi, SetType.Singleton) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsSet </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation_dc(), add_parameter_dc(), add_variable_dc() </dd></dl>
+
+</div>
+</div>
+<a id="ac4f34461197df19eff6345962a309770" name="ac4f34461197df19eff6345962a309770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f34461197df19eff6345962a309770">&#9670;&#160;</a></span>add_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_variable </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dimension</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>vartype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add variable symbol to database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Variable name </td></tr>
+    <tr><td class="paramname">dimension</td><td>Variable dimension </td></tr>
+    <tr><td class="paramname">vartype</td><td>Variable subtype (VarType.Binary, VarType.Integer, VarType.Positive, VarType.Negative, VarType.Free, VarType.SOS1, VarType.SOS2, VarType.SemiCont, VarType.SemiInt) </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text to variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsVariable </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation(), add_parameter(), add_set() </dd></dl>
+
+</div>
+</div>
+<a id="abecd2d128fcfa20931850b413b0e468c" name="abecd2d128fcfa20931850b413b0e468c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abecd2d128fcfa20931850b413b0e468c">&#9670;&#160;</a></span>add_variable_dc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.add_variable_dc </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>identifier</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>vartype</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>domains</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>explanatory_text</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add variable symbol to database using domain information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>Variable name </td></tr>
+    <tr><td class="paramname">vartype</td><td>Variable subtype (VarType.Binary, VarType.Integer, VarType.Positive, VarType.Negative, VarType.Free, VarType.SOS1, VarType.SOS2, VarType.SemiCont, VarType.SemiInt) </td></tr>
+    <tr><td class="paramname">domains</td><td>A list containing GamsSet objects and strings for domain information. The length of the list specifies the dimension. </td></tr>
+    <tr><td class="paramname">explanatory_text</td><td>Explanatory text to variable </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsVariable </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>add_equation_dc(), add_parameter_dc(), add_set_dc() </dd></dl>
+
+</div>
+</div>
+<a id="aa176ab5b5a8fb6f8adb640fb90f42afb" name="aa176ab5b5a8fb6f8adb640fb90f42afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa176ab5b5a8fb6f8adb640fb90f42afb">&#9670;&#160;</a></span>check_domains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.check_domains </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check for all symbols if all records are within the specified domain of the symbol. </p>
+<dl class="section return"><dt>Returns</dt><dd>True: Everything is correct, False: There is a domain violation </dd></dl>
+
+</div>
+</div>
+<a id="a10a7370a31ad73a20e82994e08431bad" name="a10a7370a31ad73a20e82994e08431bad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10a7370a31ad73a20e82994e08431bad">&#9670;&#160;</a></span>compact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.compact </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is obsolete and has no effect anymore. </p>
+<p>It will be removed in the future </p>
+
+</div>
+</div>
+<a id="adcdc0b7362d02c2586e04c110eacc2b8" name="adcdc0b7362d02c2586e04c110eacc2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcdc0b7362d02c2586e04c110eacc2b8">&#9670;&#160;</a></span>export()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.export </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>file_path</em></span><span class="paramdefsep"> = </span><span class="paramdefval">None</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write database into a GDX file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file_path</td><td>The path used to write the GDX file. A relative path is relative to the GAMS working directory. If not present, the file is written to the working directory using the name of the database. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abaf2e77e90bc34a41f92b0a6d237828c" name="abaf2e77e90bc34a41f92b0a6d237828c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf2e77e90bc34a41f92b0a6d237828c">&#9670;&#160;</a></span>get_database_dvs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_database_dvs </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_viol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>max_viol_per_symbol</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>return all GamsDatabaseDomainViolations </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max_viol</td><td>The maximum number of domain violations which should be stored (0 for no limit) </td></tr>
+    <tr><td class="paramname">max_viol_per_symbol</td><td>The maximum number of domain violations which should be stored per Symbol (0 for no limit) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List containing GamsDatabaseDomainViolation objects </dd></dl>
+
+</div>
+</div>
+<a id="ad893fb8cff0ce5de3ef3649c56fe2342" name="ad893fb8cff0ce5de3ef3649c56fe2342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad893fb8cff0ce5de3ef3649c56fe2342">&#9670;&#160;</a></span>get_equation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_equation </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>equation_identifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GamsEquation by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">equation_identifier</td><td>Name of the equation to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsEquation </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>get_symbol(), get_parameter(), get_set(), get_variable() </dd></dl>
+
+</div>
+</div>
+<a id="a7dd5d3783422e012d67d0f193904eb24" name="a7dd5d3783422e012d67d0f193904eb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dd5d3783422e012d67d0f193904eb24">&#9670;&#160;</a></span>get_parameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_parameter </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>parameter_identifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GamsParameter by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parameter_identifier</td><td>Name of the parameter to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsParameter </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>get_symbol(), get_set(), get_variable(), get_equation() </dd></dl>
+
+</div>
+</div>
+<a id="ac499d5fcac04509ada3c49234a35acd7" name="ac499d5fcac04509ada3c49234a35acd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac499d5fcac04509ada3c49234a35acd7">&#9670;&#160;</a></span>get_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_set </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>set_identifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GamsSet by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set_identifier</td><td>Name of the set to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsSet </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>get_symbol(), get_parameter(), get_variable(), get_equation() </dd></dl>
+
+</div>
+</div>
+<a id="af9b44e4499122d120b91c1032b62b46e" name="af9b44e4499122d120b91c1032b62b46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b44e4499122d120b91c1032b62b46e">&#9670;&#160;</a></span>get_symbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_symbol </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>symbol_identifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GamsSymbol by name. </p>
+<div class="fragment"><div class="line">symbol = database.get_symbol(<span class="stringliteral">&quot;a&quot;</span>)</div>
+<div class="line"><span class="keywordflow">if</span> isinstance(symbol, GamsParameter):</div>
+<div class="line">    print(<span class="stringliteral">&quot;symbol is a GamsParameter&quot;</span>)</div>
+<div class="line"><span class="keywordflow">if</span> isinstance(symbol, GamsSet):</div>
+<div class="line">    print(<span class="stringliteral">&quot;symbol is a GamsSet&quot;</span>)</div>
+<div class="line"><span class="keywordflow">if</span> isinstance(symbol, GamsVariable):</div>
+<div class="line">    print(<span class="stringliteral">&quot;symbol is a GamsVariable&quot;</span>)</div>
+<div class="line"><span class="keywordflow">if</span> isinstance(symbol, GamsEquation):</div>
+<div class="line">    print(<span class="stringliteral">&quot;symbol is a GamsEquation&quot;</span>)</div>
+</div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol_identifier</td><td>Name of the symbol to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of _GamsSymbol </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>get_parameter(), get_set(). get_variable(), get_equation() </dd></dl>
+
+</div>
+</div>
+<a id="a0b269fc631d462fc5a87409c983c3358" name="a0b269fc631d462fc5a87409c983c3358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b269fc631d462fc5a87409c983c3358">&#9670;&#160;</a></span>get_variable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.get_variable </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>variable_identifier</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GamsVariable by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variable_identifier</td><td>Name of the variable to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Instance of GamsVariable </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>get_symbol(), get_parameter(), get_set(), get_equation() </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a1b85503a557921ab07979f33391a3c21" name="a1b85503a557921ab07979f33391a3c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b85503a557921ab07979f33391a3c21">&#9670;&#160;</a></span>number_symbols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">gams.control.database.GamsDatabase.number_symbols = property(get_nr_symbols)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the number of symbols in the GamsDatabase. </p>
+<dl class="section note"><dt>Note</dt><dd>This is the same as calling len(database) </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- modified HTML footer for doxygen 1.12.0-->
+<!-- start footer part -->
+</div><!-- doc-content -->    
+</div><!-- doc-contents -->
+</div><!-- content-area -->
+  <footer id="footer-area" class="bottomnav"> 
+       <a id="print" class="printbtn left">Printer-friendly version </a> 
+       <div class="right"> Copyright &copy; <a target="_blank" href="https://www.gams.com/">GAMS Development Corporation</a> </div>
+  </footer>
+<script src="../../style/jquery.highlight.js"></script>
+<script src="../../style/navtree.js"></script>
+<script src="../../style/navtreeinfo.js"></script>
+<script src="../../style/navtreeindex.js"></script>
+<script>
+if (recallStatus("toc") == "hidden" || recallStatus("layout") == "collapsed") {
+    $('#context-sidebar').hide();
+    $('#split-bar').hide();
+}
+$(document).ready(function(){
+   initTOCPage();
+   var gamsversion = "49";
+   $('#versionfilter').val('/'+gamsversion+'/docs/index.html');
+$('#versionfilter').on('change', function () {
+   var url = $(this).val(); 
+   if (url) { 
+      window.location = url; 
+   }
+   return false;
+});
+
+});
+</script>
+<div id="gamsfooter">
+  
+
+
+
+
+<div class="gams-site">
+  <footer id="gams-site-footer" class="d-print-none">
+
+    <div class="container">
+      <div class="row">
+
+      <div class="col-md-3 col-sm-4 mb-3">
+        <strong>GAMS Development Corp.</strong><br>
+        <strong>GAMS Software GmbH</strong><br>
+        <br>
+        <a class="mr-1" href="https://www.youtube.com/channel/UCfTAizXPo4vN54CC-Zs9TTg"><i data-feather="youtube" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://twitter.com/gamssoftware"><i data-feather="twitter" stroke="white" stroke-width="1" ></i></a>
+        <a class="mr-1" href="https://www.linkedin.com/company/gams-development-corporation/"><i data-feather="linkedin" stroke="white" stroke-width="1" ></i></a>
+        <p class="mt-2">
+          <a class="font-weight-bolder" href="https://www.gams.com/newsletter/signup/?utm_source=website&utm_medium=footer&utm_campaign=newsletter_signup">Newsletter</a>
+        </p>
+      </div>
+
+      <div class="col-md-3 col-sm-4 mb-3">
+          <strong>General Information and Sales</strong><br>
+          <div class="mt-2">
+            U.S.  (+1) 202 342-0180 <br>
+            Europe: (+49) 221 949-9170
+          </div>
+          <a href="mailto:sales@gams.com?subject=Inquiry" class="mt-2 pl-4 pr-4 btn btn-gams-orange">
+            <strong>SALES@GAMS.COM</strong>
+          </a>
+      </div>
+
+      <div class="col-md-3 d-none d-md-block">
+      </div>
+
+
+    <div class="col-md-3 col-sm-4 mb-3">
+        <ul class="list-unstyled ">
+            <li><a  href="https://status.gams.com">Service status</a></li>
+            <li><a  href="/about/privacy">Privacy policy</a></li>
+            <li><a  href="/impressum">Impressum / Legal</a></li>
+            <li><a  target="_blank" href="/GAMS_EULA.pdf">License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Cloud_License_Agreement.pdf">Cloud License Agreement</a></li>
+            <li><a  target="_blank" href="/GAMS_Code_of_Conduct.pdf">Code of Conduct</a></li>
+            <li><a  target="_blank" href="/GAMS_Open_Source_Strategy.pdf">Open Source Strategy</a></li>
+            <li><a href="/archives" >Archives</a></li>
+            <li><a  href="/contact">Contact Us</a></li>
+      </ul>
+      </div>
+
+  </div>
+
+  GAMS is a registered trademark of GAMS Software GmbH in the European Union
+
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/bundle.js"></script>
+
+
+
+
+<script src="/js/gamsSearch.js"></script>
+
+
+
+<script src="/js/lightbox.js"></script>
+
+
+
+
+<script>
+
+
+  $(document).ready(function() {
+
+    $(document).on('click', '.dropdown-menu', function(e) {
+      e.stopPropagation();
+    });
+
+    
+    if ($(window).width() < 992) {
+      $('.dropdown-menu a').click(function(e) {
+
+
+        
+        if ($(this).next('.submenu').length) {
+          e.preventDefault();
+          $(this).next('.submenu').toggle();
+        }
+
+        
+        $('.dropdown').on('hide.bs.dropdown', function() {
+          $(this).find('.submenu').hide();
+        })
+      });
+    }
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+
+
+    function fixModal(m) {
+      
+      console.log(m);
+        $(m).on('shown.bs.modal', function () {
+        var mobd = $('.modal-backdrop');
+        var cont = $('.gams-modal-container');
+        cont.append(mobd);
+        $('body').css('overflow','hidden');
+        })
+        
+        $(m).on('hide.bs.modal', function () {
+          if ($(".modal-backdrop").length > 1) {  
+            $(".modal-backdrop").remove();        
+          }
+          $('body').css('overflow','');
+        })  
+    }
+
+    var modals = ['#uni_searchModal','#galleryModal', '#navTryModal'];
+    modals.forEach(fixModal);
+
+
+  })
+</script>
+
+<script>
+
+$('#navTryModal').modal(options)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    feather.replace()
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> 
+</body>
+</html>

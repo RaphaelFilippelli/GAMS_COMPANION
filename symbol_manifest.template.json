@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "generated_at": "2025-08-12T21:51:44.458149Z",
+  "description": "Template manifest describing editable symbols and their metadata. Update as your model evolves.",
+  "gdx_template_hint": "results.gdx",
+  "symbols": [
+    {
+      "name": "Cap",
+      "kind": "scalar",
+      "dim": 0,
+      "unit": "units",
+      "editable": true,
+      "notes": "Capacity limit for total activity."
+    },
+    {
+      "name": "CostByCatchment",
+      "kind": "parameter",
+      "dim": 1,
+      "keys": [
+        "i"
+      ],
+      "unit": "DKK/unit",
+      "editable": true,
+      "notes": "Unit cost per catchment."
+    },
+    {
+      "name": "Benefit",
+      "kind": "parameter",
+      "dim": 1,
+      "keys": [
+        "i"
+      ],
+      "unit": "DKK/unit",
+      "editable": true,
+      "notes": "Unit benefit per catchment."
+    },
+    {
+      "name": "ActiveCatchments",
+      "kind": "set",
+      "dim": 1,
+      "keys": [
+        "i"
+      ],
+      "editable": true,
+      "notes": "Subset of i allowed to take activity."
+    },
+    {
+      "name": "x",
+      "kind": "variable",
+      "dim": 1,
+      "keys": [
+        "i"
+      ],
+      "editable": false,
+      "notes": "Decision variable (activity)."
+    },
+    {
+      "name": "z",
+      "kind": "variable",
+      "dim": 0,
+      "editable": false,
+      "notes": "Objective (profit)."
+    },
+    {
+      "name": "obj",
+      "kind": "equation",
+      "dim": 0,
+      "editable": false,
+      "notes": "Objective definition."
+    },
+    {
+      "name": "cap",
+      "kind": "equation",
+      "dim": 0,
+      "editable": false,
+      "notes": "Capacity constraint."
+    }
+  ]
+}

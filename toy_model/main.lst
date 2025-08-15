@@ -1,0 +1,86 @@
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:19:53 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+      Toy GAMS model for CI/integration tests.
+      Maximize net benefit subject to a capacity constraint.
+      Supports patching via `patch.gdx` and optional equation includes.
+   6   
+  10   
+  11  Sets
+  12      i   "catchments" / A, B /;
+  13   
+  14  Alias (i,ip);
+  15   
+  16  Scalar
+  17      CapacityLimit "capacity limit" / 10 /;
+  18   
+  19  Set
+  20      ActiveCatchments(i) / A, B /;
+  21   
+  22  Parameters
+  23      CostByCatchment(i)  "unit cost by catchment" / A 10, B 20 /
+  24      Benefit(i)          "unit benefit by catchment" / A 15, B 18 /;
+  25   
+  26  Variables
+  27      z   "objective (profit)"
+  28      x(i) "activity level in catchment i";
+  29   
+  30  Positive Variable x;
+  31   
+  32  Equations
+  33      obj "objective function"
+  34      cap "capacity constraint";
+  35   
+  36  obj.. z =e= sum(i, Benefit(i)*x(i)) - sum(i, CostByCatchment(i)*x(i));
+  37   
+  38  cap.. sum(i$ActiveCatchments(i), x(i)) =l= CapacityLimit;
+  39   
+INCLUDE    C:\Users\prd705\GAMS_GPT5\toy_model\equation_patches\new_constraint.inc
+  41  * Example patch: limit activity in A to ≤ 3
+  42  limitA.. x('A') =l= 3;
+****       $140
+**** LINE      2 INCLUDE     C:\Users\prd705\GAMS_GPT5\toy_model\equation_patches\new_constraint.inc
+**** LINE     40 INPUT       C:\Users\prd705\GAMS_GPT5\toy_model\main.gms
+**** 140  Unknown symbol
+  43   
+  44  Model toy /all/;
+  45  Solve toy using lp maximizing z;
+****                                 $257
+**** LINE     43 INPUT       C:\Users\prd705\GAMS_GPT5\toy_model\main.gms
+**** 257  Solve statement not checked because of previous errors
+  46   
+  47  * Export to GDX
+  48  execute_unload 'results.gdx', i, ActiveCatchments, CostByCatchment, Benefit, x, z, obj.m, cap.m, CapacityLimit;
+
+**** 2 ERROR(S)   0 WARNING(S)
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:19:53 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\prd705\GAMS_GPT5\toy_model\main.gms
+     2        7 IF EXIST       1       7  C:\Users\prd705\GAMS_GPT5\toy_model\patch.gdx
+     3        8 IF EXIST       1       8  C:\Users\prd705\GAMS_GPT5\toy_model\patch.gdx
+     4        9 IF EXIST       1       9  C:\Users\prd705\GAMS_GPT5\toy_model\patch.gdx
+     5       40 IF EXIST       1      40  C:\Users\prd705\GAMS_GPT5\toy_model\equation_patches\new_constraint.inc
+     6       40 INCLUDE        1      40  .C:\Users\prd705\GAMS_GPT5\toy_model\equation_patches\new_constraint.inc
+
+
+COMPILATION TIME     =        0.047 SECONDS      3 MB  49.6.1 55d34574 WEX-WEI
+
+
+USER: Medium MUD - 10 User License                   S241216|0002AP-WIN
+      University of Copenhagen, Institute of Food and Resource EcDC2546
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\prd705\GAMS_GPT5\toy_model\main.gms
+Output     C:\Users\prd705\GAMS_GPT5\toy_model\main.lst
+
+**** USER ERROR(S) ENCOUNTERED
