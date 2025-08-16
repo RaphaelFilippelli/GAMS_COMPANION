@@ -7,7 +7,7 @@
 | T‑002 | 🔴 | Streamlit: async run + live log + Results page | Claude | DONE |
 | T‑003 | 🟠 | gdx_io: add `units` + `to_duckdb()` + marginals | Claude | DONE |
 | T‑004 | 🟠 | Provenance JSON + embed meta in Excel | Claude | DONE |
-| T‑005 | 🟢 | Symbol indexer (fallback to GDX dictionary) | Claude | OPEN |
+| T‑005 | 🟢 | Symbol indexer (fallback to GDX dictionary) | Claude | DONE |
 
 **Definition of Done**
 1) Code + tests merged to `main`, 2) CI green, 3) docs updated.
