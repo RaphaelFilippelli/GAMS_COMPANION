@@ -6,7 +6,7 @@ import tempfile
 from pathlib import Path
 import pandas as pd
 
-from src.core.gdx_io_fixed import (
+from src.core.gdx_io_merg import (
     read_gdx_transfer_full, 
     export_excel, 
     to_duckdb

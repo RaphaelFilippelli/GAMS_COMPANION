@@ -1,6 +1,6 @@
 from pathlib import Path
 import pandas as pd
-from src.core.gdx_io import export_excel
+from src.core.gdx_io_merg import export_excel
 
 def test_export_excel_with_meta_and_units(tmp_path: Path):
     values = {

@@ -32,7 +32,13 @@
       "Bash(.venv/Scripts/pip.exe:*)",
       "Bash(pip uninstall:*)",
       "Bash(where python)",
-      "Bash(del debug_options.py)"
+      "Bash(del debug_options.py)",
+      "Bash(PYTHONPATH=. pytest tests/test_export_excel_meta.py -v)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" main.gms lo=2)",
+      "Bash(git add:*)",
+      "Bash(git push:*)",
+      "Bash(streamlit run:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": [],

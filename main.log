@@ -1,13 +1,13 @@
---- Job main.gms Start 08/14/25 15:38:04 49.6.1 55d34574 WEX-WEI x86 64bit/MS Windows
+--- Job main.gms Start 08/16/25 18:57:49 49.6.1 55d34574 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\49\gmsprmNT.txt
     C:\Users\prd705\OneDrive - University of Copenhagen\Documents\GAMS\gamsconfig.yaml
 --- GAMS Parameters defined
     Input C:\Users\prd705\GAMS_GPT5\toy_model\main.gms
-    Action C
     ScrDir C:\Users\prd705\GAMS_GPT5\225a\
     SysDir C:\GAMS\49\
     LogOption 2
+    GDX C:\Users\prd705\GAMS_GPT5\toy_model\test_results.gdx
 Licensee: Medium MUD - 10 User License                   S241216|0002AP-WIN
           University of Copenhagen, Institute of Food and Resource EcDC2546
           C:\Users\prd705\OneDrive - University of Copenhagen\Documents\GAMS\gamslice.txt
@@ -17,5 +17,47 @@ System information: 24 physical cores and 64 Gb memory detected
 GAMS 49.6.1   Copyright (C) 1987-2025 GAMS Development. All rights reserved
 --- Starting compilation
 --- main.gms(46) 3 Mb
+--- Starting execution: elapsed 0:00:00.011
+--- Generating LP model toy
+--- main.gms(43) 4 Mb
+---   2 rows  3 columns  5 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+01, 1.000E+01] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.000E+00, 5.000E+00]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.017
+
+IBM ILOG CPLEX   49.6.1 55d34574 May 28, 2025          WEI x86 64bit/MS Window
+
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.2.0 | 2024-11-25 | 0edbb82fd
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Tried aggregator 1 time.
+LP Presolve eliminated 1 rows and 3 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.00 ticks)
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.00 ticks)
+
+
+Optimal solution found
+Objective:           50.000000
+
+--- Reading solution for model toy
+--- Executing after solve: elapsed 0:00:00.267
+--- main.gms(46) 4 Mb
+--- GDX File (execute_unload) C:\Users\prd705\GAMS_GPT5\results.gdx
+--- GDX File C:\Users\prd705\GAMS_GPT5\toy_model\test_results.gdx
 *** Status: Normal completion
---- Job main.gms Stop 08/14/25 15:38:04 elapsed 0:00:00.013
+--- Job main.gms Stop 08/16/25 18:57:49 elapsed 0:00:00.269

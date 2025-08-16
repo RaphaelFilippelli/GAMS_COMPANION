@@ -1,4 +1,4 @@
-GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:38:04 Page 1
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -43,7 +43,7 @@ C o m p i l a t i o n
   44   
   45  * Export to GDX
   46  execute_unload 'results.gdx', i, ActiveCatchments, CostByCatchment, Benefit, x, z, obj.m, cap.m, CapacityLimit;
-GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/14/25 15:38:04 Page 2
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -58,6 +58,132 @@ Include File Summary
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  49.6.1 55d34574 WEX-WEI
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE toy Using LP From line 43
+
+
+---- obj  =E=  objective function
+
+obj..  z - 5*x(A) + 2*x(B) =E= 0 ; (LHS = 0)
+     
+
+---- cap  =L=  capacity constraint
+
+cap..  x(A) + x(B) =L= 10 ; (LHS = 0)
+     
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE toy Using LP From line 43
+
+
+---- z  objective (profit)
+
+z
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       obj
+
+
+---- x  activity level in catchment i
+
+x(A)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -5       obj
+        1       cap
+
+x(B)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        2       obj
+        1       cap
+
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE toy Using LP From line 43
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+01, 1.000E+01] - Zero values observed as well
+Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 5.000E+00]
+
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE toy Using LP From line 43
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           2     SINGLE EQUATIONS            2
+BLOCKS OF VARIABLES           2     SINGLE VARIABLES            3
+NON ZERO ELEMENTS             5
+
+
+GENERATION TIME      =        0.016 SECONDS      4 MB  49.6.1 55d34574 WEX-WEI
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 7
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE toy Using LP From line 43
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   toy                 OBJECTIVE  z
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  43
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE               50.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.2.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.00 ticks)
+
+
+Optimal solution found
+Objective:           50.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU obj                 .              .              .             1.0000      
+---- EQU cap               -INF           10.0000        10.0000         5.0000      
+
+  obj  objective function
+  cap  capacity constraint
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR z                 -INF           50.0000        +INF             .          
+
+  z  objective (profit)
+
+---- VAR x  activity level in catchment i
+
+         LOWER          LEVEL          UPPER         MARGINAL
+
+A          .            10.0000        +INF             .          
+B          .              .            +INF           -7.0000      
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+GAMS 49.6.1  55d34574 May 28, 2025          WEX-WEI x86 64bit/MS Windows - 08/16/25 18:57:49 Page 8
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =        0.266 SECONDS      4 MB  49.6.1 55d34574 WEX-WEI
 
 
 USER: Medium MUD - 10 User License                   S241216|0002AP-WIN

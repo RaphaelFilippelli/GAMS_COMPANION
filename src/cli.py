@@ -7,8 +7,8 @@ from rich import print
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 
-from .core.model_runner import run_gams
-from .core.gdx_io import read_gdx, export_excel
+from .core.model_runner_merg import run_gams
+from .core.gdx_io_merg import read_gdx, export_excel
 from .core.patch_builder import build_patch_gdx, get_patch_info
 from .core.equation_injector import inject_equation_includes
 from .core.provenance import generate_run_id, create_run_json, write_run_json

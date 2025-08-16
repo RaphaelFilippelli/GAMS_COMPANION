@@ -6,8 +6,8 @@ import time
 from datetime import datetime
 sys.path.append(str(Path(__file__).parent.parent))
 
-from core.model_runner import run_gams
-from core.gdx_io_fixed import read_gdx_transfer, read_gdx_transfer_full, export_excel
+from core.model_runner_merg import run_gams
+from core.gdx_io_merg import read_gdx_transfer, read_gdx_transfer_full, export_excel
 from core.async_runner import start_async_run, get_run_status, get_run_logs
 from core.provenance_integration import load_provenance_from_run_dir, create_excel_metadata
 
@@ -413,7 +413,7 @@ def show_results_page():
                 if st.button("🗃️ Export to DuckDB"):
                     with st.spinner("Exporting to DuckDB..."):
                         try:
-                            from core.gdx_io_fixed import to_duckdb
+                            from core.gdx_io_merg import to_duckdb
                             db_path = status.output_gdx.with_suffix(".duckdb")
                             # Pass all required parameters to avoid MemoryView errors
                             to_duckdb(

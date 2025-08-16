@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 import duckdb
-from src.core.gdx_io import to_duckdb
+from src.core.gdx_io_merg import to_duckdb
 
 def test_to_duckdb_schema(tmp_path: Path):
     values = {"Foo": pd.DataFrame([{"key1":"A","value":1.0},{"key1":"B","value":2.0}])}

@@ -9,7 +9,7 @@ import re
 import json
 
 try:
-    from .gdx_io_fixed import read_gdx_transfer_full
+    from .gdx_io_merg import read_gdx_transfer_full
 except ImportError:
     # Fallback for testing
     def read_gdx_transfer_full(*args, **kwargs):

@@ -14,7 +14,7 @@ from src.core.provenance_integration import (
     get_provenance_summary,
     create_provenance_for_sync_run
 )
-from src.core.gdx_io_fixed import export_excel
+from src.core.gdx_io_merg import export_excel
 import pandas as pd
 
 

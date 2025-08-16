@@ -13,7 +13,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional, Callable, AsyncGenerator
 
-from .model_runner_v49 import run_gams_v49, get_run_log_txt
+from .model_runner_merg import run_gams_v49, get_run_log_txt
 
 
 @dataclass
