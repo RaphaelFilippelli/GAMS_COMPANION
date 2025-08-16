@@ -22,48 +22,161 @@ def _import_transfer():
 def _tidy_df_from_symbol(sym) -> Tuple[pd.DataFrame, Optional[pd.DataFrame], str]:
     dim = sym.dimension
     key_cols = [f"key{i+1}" for i in range(dim)]
-    def keys_dict(rec):
-        return {f"key{i+1}": rec.keys[i] for i in range(dim)}
-    rows_val = []
-    rows_marg = []
     cls_name = sym.__class__.__name__.lower()
+    
+    # Get records DataFrame from GAMS Transfer API
+    try:
+        records_df = sym.records
+        if records_df is None or records_df.empty:
+            # Return empty DataFrames with appropriate structure
+            if "parameter" in cls_name:
+                cols = key_cols + ["value"]
+                if hasattr(sym, 'records') and not sym.records.empty and 'element_text' in sym.records.columns:
+                    cols.append("text")
+                return pd.DataFrame(columns=cols), None, "parameter"
+            elif "set" in cls_name:
+                return pd.DataFrame(columns=key_cols + ["value"]), None, "set"
+            elif "variable" in cls_name:
+                df_val = pd.DataFrame(columns=key_cols + ["value"])
+                df_marg = pd.DataFrame(columns=key_cols + ["marginal"])
+                return df_val, df_marg, "variable"
+            elif "equation" in cls_name:
+                df_val = pd.DataFrame(columns=key_cols + ["value"])
+                df_marg = pd.DataFrame(columns=key_cols + ["marginal"])
+                return df_val, df_marg, "equation"
+            else:
+                return pd.DataFrame(columns=key_cols + ["value"]), None, "unknown"
+    except Exception:
+        # Fallback to empty DataFrames if we can't access records
+        if "parameter" in cls_name:
+            return pd.DataFrame(columns=key_cols + ["value"]), None, "parameter"
+        elif "set" in cls_name:
+            return pd.DataFrame(columns=key_cols + ["value"]), None, "set"
+        elif "variable" in cls_name:
+            df_val = pd.DataFrame(columns=key_cols + ["value"])
+            df_marg = pd.DataFrame(columns=key_cols + ["marginal"])
+            return df_val, df_marg, "variable"
+        elif "equation" in cls_name:
+            df_val = pd.DataFrame(columns=key_cols + ["value"])
+            df_marg = pd.DataFrame(columns=key_cols + ["marginal"])
+            return df_val, df_marg, "equation"
+        else:
+            return pd.DataFrame(columns=key_cols + ["value"]), None, "unknown"
+    
+    # Process the records DataFrame based on symbol type
     if "parameter" in cls_name:
         kind = "parameter"
-        has_text = hasattr(next(iter(sym)), "text") if len(sym) else False
-        for rec in sym:
-            d = keys_dict(rec); d["value"] = getattr(rec, "value", None)
-            if has_text: d["text"] = getattr(rec, "text", None)
-            rows_val.append(d)
-        df_val = pd.DataFrame(rows_val) if rows_val else pd.DataFrame(columns=key_cols + ["value"] + (["text"] if has_text else []))
+        df_val = records_df.copy()
+        
+        # Rename dimension columns to key1, key2, etc.
+        dim_cols = [col for col in df_val.columns if col not in ['value', 'element_text']]
+        for i, col in enumerate(dim_cols[:dim]):
+            if col != f"key{i+1}":
+                df_val.rename(columns={col: f"key{i+1}"}, inplace=True)
+        
+        # Add missing key columns
+        for i in range(len(dim_cols), dim):
+            df_val[f"key{i+1}"] = None
+            
+        # Rename element_text to text if it exists
+        if 'element_text' in df_val.columns:
+            df_val.rename(columns={'element_text': 'text'}, inplace=True)
+            
         return df_val, None, kind
-    if "set" in cls_name:
+        
+    elif "set" in cls_name:
         kind = "set"
-        for rec in sym:
-            d = keys_dict(rec); d["value"] = 1.0
-            rows_val.append(d)
-        df_val = pd.DataFrame(rows_val) if rows_val else pd.DataFrame(columns=key_cols + ["value"])
+        df_val = records_df.copy()
+        
+        # For sets, we need to add a value column (sets are binary - 1 means element is in set)
+        df_val['value'] = 1.0
+        
+        # Rename dimension columns to key1, key2, etc.
+        dim_cols = [col for col in df_val.columns if col not in ['value', 'element_text']]
+        for i, col in enumerate(dim_cols[:dim]):
+            if col != f"key{i+1}":
+                df_val.rename(columns={col: f"key{i+1}"}, inplace=True)
+                
+        # Add missing key columns
+        for i in range(len(dim_cols), dim):
+            df_val[f"key{i+1}"] = None
+            
         return df_val, None, kind
-    if "variable" in cls_name:
+        
+    elif "variable" in cls_name:
         kind = "variable"
-        for rec in sym:
-            d = keys_dict(rec); d["value"] = getattr(rec, "level", None); rows_val.append(d)
-            rows_marg.append({**d, "marginal": getattr(rec, "marginal", None)})
-        df_val = pd.DataFrame(rows_val) if rows_val else pd.DataFrame(columns=key_cols + ["value"])
-        df_marg = pd.DataFrame(rows_marg) if rows_marg else None
+        df = records_df.copy()
+        
+        # Rename dimension columns to key1, key2, etc.
+        dim_cols = [col for col in df.columns if col not in ['level', 'marginal', 'lower', 'upper', 'scale']]
+        for i, col in enumerate(dim_cols[:dim]):
+            if col != f"key{i+1}":
+                df.rename(columns={col: f"key{i+1}"}, inplace=True)
+                
+        # Add missing key columns
+        for i in range(len(dim_cols), dim):
+            df[f"key{i+1}"] = None
+        
+        # Create value DataFrame (level values)
+        df_val = df.copy()
+        df_val['value'] = df_val.get('level', None)
+        value_cols = [f"key{i+1}" for i in range(dim)] + ['value']
+        df_val = df_val[value_cols]
+        
+        # Create marginal DataFrame
+        df_marg = df.copy()
+        marg_cols = [f"key{i+1}" for i in range(dim)] + ['marginal']
+        df_marg = df_marg[marg_cols] if 'marginal' in df_marg.columns else None
+        
         return df_val, df_marg, kind
-    if "equation" in cls_name:
+        
+    elif "equation" in cls_name:
         kind = "equation"
-        for rec in sym:
-            d = keys_dict(rec); d["value"] = getattr(rec, "level", None); rows_val.append(d)
-            rows_marg.append({**d, "marginal": getattr(rec, "marginal", None)})
-        df_val = pd.DataFrame(rows_val) if rows_val else pd.DataFrame(columns=key_cols + ["value"])
-        df_marg = pd.DataFrame(rows_marg) if rows_marg else None
+        df = records_df.copy()
+        
+        # Rename dimension columns to key1, key2, etc.
+        dim_cols = [col for col in df.columns if col not in ['level', 'marginal', 'lower', 'upper', 'scale']]
+        for i, col in enumerate(dim_cols[:dim]):
+            if col != f"key{i+1}":
+                df.rename(columns={col: f"key{i+1}"}, inplace=True)
+                
+        # Add missing key columns
+        for i in range(len(dim_cols), dim):
+            df[f"key{i+1}"] = None
+        
+        # Create value DataFrame (level values)
+        df_val = df.copy()
+        df_val['value'] = df_val.get('level', None)
+        value_cols = [f"key{i+1}" for i in range(dim)] + ['value']
+        df_val = df_val[value_cols]
+        
+        # Create marginal DataFrame
+        df_marg = df.copy()
+        marg_cols = [f"key{i+1}" for i in range(dim)] + ['marginal']
+        df_marg = df_marg[marg_cols] if 'marginal' in df_marg.columns else None
+        
         return df_val, df_marg, kind
-    kind = "unknown"
-    for rec in sym:
-        d = keys_dict(rec); d["value"] = getattr(rec, "value", None); rows_val.append(d)
-    df_val = pd.DataFrame(rows_val) if rows_val else pd.DataFrame(columns=key_cols + ["value"])
-    return df_val, None, kind
+        
+    else:
+        # Unknown type - try to extract value column
+        kind = "unknown"
+        df_val = records_df.copy()
+        
+        # Rename dimension columns
+        dim_cols = [col for col in df_val.columns if col != 'value']
+        for i, col in enumerate(dim_cols[:dim]):
+            if col != f"key{i+1}":
+                df_val.rename(columns={col: f"key{i+1}"}, inplace=True)
+                
+        # Add missing key columns
+        for i in range(len(dim_cols), dim):
+            df_val[f"key{i+1}"] = None
+            
+        # Ensure value column exists
+        if 'value' not in df_val.columns:
+            df_val['value'] = None
+            
+        return df_val, None, kind
 
 def read_gdx(gdx_path: str | Path, symbols: Optional[List[str]] = None) -> Dict[str, pd.DataFrame]:
     vals, _, _ = read_gdx_full(gdx_path, symbols)
@@ -107,8 +220,23 @@ def read_gdx_full(gdx_path: str | Path, symbols: Optional[List[str]] = None) -> 
 
 def export_excel(symbol_data: Dict[str, pd.DataFrame], xlsx_out: str | Path, units: Optional[Dict[str, str]] = None, meta: Optional[Dict[str, str]] = None) -> Path:
     import openpyxl  # type: ignore
+    import datetime
     xlsx_out = Path(xlsx_out); units = units or {}
     with pd.ExcelWriter(xlsx_out, engine="openpyxl") as writer:
+        # Ensure at least one sheet is created to avoid openpyxl error
+        if not symbol_data and not meta:
+            # Create a default info sheet when no data is available
+            info_df = pd.DataFrame([
+                ["export_time", datetime.datetime.now().isoformat()],
+                ["status", "No symbol data available"],
+                ["file", str(xlsx_out)]
+            ], columns=["key", "value"])
+            info_df.to_excel(writer, sheet_name="info", index=False)
+            ws = writer.sheets["info"]; ws.freeze_panes = "A2"
+            for col in ws.columns:
+                maxlen = max(len(str(c.value)) if c.value is not None else 0 for c in col)
+                ws.column_dimensions[col[0].column_letter].width = min(max(12, maxlen + 2), 60)
+        
         if meta:
             meta_df = pd.DataFrame(list(meta.items()), columns=["key", "value"])
             meta_df.to_excel(writer, sheet_name="meta", index=False)

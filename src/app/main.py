@@ -29,11 +29,21 @@ if st.button("Run GAMS"):
 if "last_gdx" in st.session_state:
     gdx = st.session_state["last_gdx"]
     if st.button("Export Excel"):
-        data = read_gdx(gdx)
-        xlsx = Path(gdx).with_suffix(".xlsx")
-        export_excel(data, xlsx)
-        st.success("Excel exported.")
-        with open(xlsx, "rb") as f:
-            st.download_button("Download Excel", data=f, file_name=xlsx.name)
+        with st.spinner("Reading GDX and exporting to Excel..."):
+            data = read_gdx(gdx)
+            xlsx = Path(gdx).with_suffix(".xlsx")
+            export_excel(data, xlsx)
+            
+            # Count symbols with actual data
+            total_symbols = len(data)
+            symbols_with_data = sum(1 for df in data.values() if len(df) > 0)
+            
+            if symbols_with_data > 0:
+                st.success(f"Excel exported with {symbols_with_data}/{total_symbols} symbols containing data.")
+            else:
+                st.warning(f"Excel exported, but all {total_symbols} symbols are empty. This may be because the model was compiled but not solved, or the symbols contain no data.")
+            
+            with open(xlsx, "rb") as f:
+                st.download_button("Download Excel", data=f, file_name=xlsx.name)
 
 st.caption("Tip: use the bundled toy model to validate your setup.")
