@@ -219,11 +219,13 @@ class GamsJobRunner:
             for key, value in options_dict.items():
                 try:
                     # Use proper documented option setting
+                    # Convert value to string as GAMS options expect string values
+                    str_value = str(value)
                     if hasattr(gams_options, key):
-                        setattr(gams_options, key, value)
+                        setattr(gams_options, key, str_value)
                     elif hasattr(gams_options, 'defines') and isinstance(gams_options.defines, dict):
                         # For define variables, use defines dictionary
-                        gams_options.defines[key] = value
+                        gams_options.defines[key] = str_value
                     else:
                         logger.warning(f"Unknown GAMS option: {key}")
                 except Exception as e:

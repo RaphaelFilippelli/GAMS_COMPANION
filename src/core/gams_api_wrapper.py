@@ -116,8 +116,10 @@ class GamsApiWrapper:
             for key, value in options_dict.items():
                 try:
                     # Use proper option setting instead of setattr
+                    # Convert value to string as GAMS options expect string values
+                    str_value = str(value)
                     if hasattr(gams_options, key):
-                        setattr(gams_options, key, value)
+                        setattr(gams_options, key, str_value)
                     else:
                         logger.warning(f"Unknown GAMS option: {key}")
                 except Exception as e:
