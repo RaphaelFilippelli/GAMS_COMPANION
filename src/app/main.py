@@ -6,7 +6,7 @@ import time
 sys.path.append(str(Path(__file__).parent.parent))
 
 from core.model_runner import run_gams
-from core.gdx_io_fixed import read_gdx_transfer, export_excel
+from core.gdx_io_fixed import read_gdx_transfer, read_gdx_transfer_full, export_excel
 from core.async_runner import start_async_run, get_run_status, get_run_logs
 
 st.set_page_config(page_title="GAMS Companion", layout="wide")
@@ -247,7 +247,8 @@ def show_results_page():
     st.subheader("Symbol Data")
     try:
         with st.spinner("Loading GDX data..."):
-            data = read_gdx_transfer(str(status.output_gdx))
+            # Load full data including kinds and marginals for proper export
+            data, marginals, kinds = read_gdx_transfer_full(str(status.output_gdx))
             
         if data:
             # Summary stats
@@ -287,10 +288,22 @@ def show_results_page():
             with col2:
                 if st.button("🗃️ Export to DuckDB"):
                     with st.spinner("Exporting to DuckDB..."):
-                        from core.gdx_io_fixed import to_duckdb
-                        db_path = status.output_gdx.with_suffix(".duckdb")
-                        to_duckdb(data, db_path)
-                        st.success(f"Data exported to {db_path}")
+                        try:
+                            from core.gdx_io_fixed import to_duckdb
+                            db_path = status.output_gdx.with_suffix(".duckdb")
+                            # Pass all required parameters to avoid MemoryView errors
+                            to_duckdb(
+                                symbol_values=data, 
+                                db_path=db_path,
+                                symbol_marginals=marginals,
+                                kinds=kinds,
+                                run_meta={"run_id": run_id, "timestamp": status.start_time.isoformat() if status.start_time else None}
+                            )
+                            st.success(f"Data exported to {db_path}")
+                        except Exception as e:
+                            st.error(f"DuckDB export failed: {e}")
+                            # Provide fallback information
+                            st.info("This may be due to pandas/numpy version compatibility. Try upgrading: pip install 'pandas>=2.0' 'numpy>=1.24'")
             
             # Show data preview
             st.subheader("Data Preview")

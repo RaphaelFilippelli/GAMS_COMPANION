@@ -348,8 +348,22 @@ def export_excel(symbol_data: Dict[str, pd.DataFrame], xlsx_out: str | Path, uni
 
 def _register_df(conn: duckdb.DuckDBPyConnection, df: pd.DataFrame) -> str:
     view = f"_df_{uuid.uuid4().hex}"
-    conn.register(view, df)
-    return view
+    try:
+        conn.register(view, df)
+        return view
+    except Exception as e:
+        # Handle MemoryView compatibility issues
+        if "memoryview" in str(e).lower() or "buffer" in str(e).lower():
+            # Fallback: create a copy with compatible dtypes
+            df_copy = df.copy()
+            # Convert object columns to string to avoid memory view issues
+            for col in df_copy.columns:
+                if df_copy[col].dtype == 'object':
+                    df_copy[col] = df_copy[col].astype(str)
+            conn.register(view, df_copy)
+            return view
+        else:
+            raise
 
 
 def to_duckdb(symbol_values: Dict[str, pd.DataFrame], db_path: str | Path, *, symbol_marginals: Optional[Dict[str, pd.DataFrame]] = None, kinds: Optional[Dict[str, str]] = None, run_meta: Optional[Dict[str, str]] = None) -> Path:
