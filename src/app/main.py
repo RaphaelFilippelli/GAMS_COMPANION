@@ -109,23 +109,62 @@ def show_run_page():
     if "last_gdx" in st.session_state:
         st.subheader("Export Results (Sync Run)")
         gdx = st.session_state["last_gdx"]
-        if st.button("Export Excel"):
-            with st.spinner("Reading GDX and exporting to Excel..."):
-                data = read_gdx_transfer(gdx)
-                xlsx = Path(gdx).with_suffix(".xlsx")
-                export_excel(data, xlsx)
-                
-                # Count symbols with actual data
-                total_symbols = len(data)
-                symbols_with_data = sum(1 for df in data.values() if len(df) > 0)
-                
-                if symbols_with_data > 0:
-                    st.success(f"Excel exported with {symbols_with_data}/{total_symbols} symbols containing data.")
-                else:
-                    st.warning(f"Excel exported, but all {total_symbols} symbols are empty. This may be because the model was compiled but not solved, or the symbols contain no data.")
-                
-                with open(xlsx, "rb") as f:
-                    st.download_button("Download Excel", data=f, file_name=xlsx.name)
+        
+        # Load data for units configuration
+        try:
+            sync_data = read_gdx_transfer(gdx)
+            sync_numeric_symbols = [name for name, df in sync_data.items() if len(df) > 0 and 'value' in df.columns]
+            
+            # Units input for sync run
+            sync_units = {}
+            if sync_numeric_symbols:
+                with st.expander("Configure Units for Sync Export", expanded=False):
+                    for symbol in sync_numeric_symbols[:3]:  # Limit to 3 for sync
+                        unit_input = st.text_input(
+                            f"Units for '{symbol}':",
+                            placeholder="e.g., MW, $/MWh",
+                            key=f"sync_unit_{symbol}"
+                        )
+                        if unit_input.strip():
+                            sync_units[symbol] = unit_input.strip()
+            
+            if st.button("Export Excel"):
+                with st.spinner("Reading GDX and exporting to Excel..."):
+                    xlsx = Path(gdx).with_suffix(".xlsx")
+                    export_excel(
+                        symbol_data=sync_data, 
+                        xlsx_out=xlsx,
+                        units=sync_units if sync_units else None,
+                        meta={"export_type": "sync_run", "source_gdx": Path(gdx).name}
+                    )
+                    
+                    # Count symbols with actual data
+                    total_symbols = len(sync_data)
+                    symbols_with_data = sum(1 for df in sync_data.values() if len(df) > 0)
+                    
+                    success_msg = f"Excel exported with {symbols_with_data}/{total_symbols} symbols containing data."
+                    if sync_units:
+                        success_msg += f" Units applied to: {', '.join(sync_units.keys())}"
+                    
+                    if symbols_with_data > 0:
+                        st.success(success_msg)
+                    else:
+                        st.warning(f"Excel exported, but all {total_symbols} symbols are empty. This may be because the model was compiled but not solved, or the symbols contain no data.")
+                    
+                    with open(xlsx, "rb") as f:
+                        st.download_button("Download Excel", data=f, file_name=xlsx.name)
+        
+        except Exception as e:
+            st.error(f"Failed to load GDX data: {e}")
+            if st.button("Export Excel (Fallback)"):
+                # Fallback without units
+                with st.spinner("Exporting without units..."):
+                    data = read_gdx_transfer(gdx)
+                    xlsx = Path(gdx).with_suffix(".xlsx")
+                    export_excel(data, xlsx)
+                    
+                    with open(xlsx, "rb") as f:
+                        st.download_button("Download Excel", data=f, file_name=xlsx.name)
 
 
 def show_log_page():
@@ -267,10 +306,49 @@ def show_results_page():
             col1, col2 = st.columns(2)
             
             with col1:
+                # Units configuration
+                st.subheader("Excel Export Options")
+                
+                # Get symbols that could have units
+                numeric_symbols = [name for name, df in data.items() if len(df) > 0 and 'value' in df.columns]
+                
+                if numeric_symbols:
+                    with st.expander("Configure Units (Optional)", expanded=False):
+                        st.write("Add units to value columns in Excel export:")
+                        units = {}
+                        
+                        # Create unit inputs for up to 5 symbols (to avoid UI clutter)
+                        for symbol in numeric_symbols[:5]:
+                            unit_input = st.text_input(
+                                f"Units for '{symbol}':",
+                                placeholder="e.g., MW, $/MWh, kg/day",
+                                key=f"unit_{symbol}"
+                            )
+                            if unit_input.strip():
+                                units[symbol] = unit_input.strip()
+                        
+                        if len(numeric_symbols) > 5:
+                            st.info(f"Showing first 5 symbols. {len(numeric_symbols) - 5} more symbols available.")
+                else:
+                    units = {}
+                
                 if st.button("📊 Export to Excel"):
                     with st.spinner("Exporting to Excel..."):
                         xlsx = status.output_gdx.with_suffix(".xlsx")
-                        export_excel(data, xlsx)
+                        
+                        # Export with units and metadata
+                        export_excel(
+                            symbol_data=data, 
+                            xlsx_out=xlsx,
+                            units=units if units else None,
+                            meta={
+                                "run_id": run_id,
+                                "timestamp": status.start_time.isoformat() if status.start_time else None,
+                                "duration": f"{(status.end_time - status.start_time).total_seconds():.1f}s" if status.end_time and status.start_time else None,
+                                "gdx_file": status.output_gdx.name,
+                                "units_applied": ", ".join(f"{k}={v}" for k, v in units.items()) if units else "None"
+                            }
+                        )
                         
                         with open(xlsx, "rb") as f:
                             st.download_button(
@@ -280,8 +358,12 @@ def show_results_page():
                                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                             )
                         
+                        success_msg = f"Excel exported with {symbols_with_data}/{total_symbols} symbols containing data."
+                        if units:
+                            success_msg += f" Units applied to: {', '.join(units.keys())}"
+                        
                         if symbols_with_data > 0:
-                            st.success(f"Excel exported with {symbols_with_data}/{total_symbols} symbols containing data.")
+                            st.success(success_msg)
                         else:
                             st.warning(f"Excel exported, but all {total_symbols} symbols are empty.")
             
