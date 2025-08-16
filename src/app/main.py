@@ -3,11 +3,13 @@ import streamlit as st
 from pathlib import Path
 import sys
 import time
+from datetime import datetime
 sys.path.append(str(Path(__file__).parent.parent))
 
 from core.model_runner import run_gams
 from core.gdx_io_fixed import read_gdx_transfer, read_gdx_transfer_full, export_excel
 from core.async_runner import start_async_run, get_run_status, get_run_logs
+from core.provenance_integration import load_provenance_from_run_dir, create_excel_metadata
 
 st.set_page_config(page_title="GAMS Companion", layout="wide")
 
@@ -131,11 +133,21 @@ def show_run_page():
             if st.button("Export Excel"):
                 with st.spinner("Reading GDX and exporting to Excel..."):
                     xlsx = Path(gdx).with_suffix(".xlsx")
+                    # Create comprehensive metadata for sync run
+                    sync_meta = {
+                        "export_type": "sync_run",
+                        "source_gdx": Path(gdx).name,
+                        "export_timestamp": datetime.now().isoformat(),
+                        "units_applied": ", ".join(f"{k}={v}" for k, v in sync_units.items()) if sync_units else "None",
+                        "symbols_count": len(sync_data),
+                        "symbols_with_data": sum(1 for df in sync_data.values() if len(df) > 0)
+                    }
+                    
                     export_excel(
                         symbol_data=sync_data, 
                         xlsx_out=xlsx,
                         units=sync_units if sync_units else None,
-                        meta={"export_type": "sync_run", "source_gdx": Path(gdx).name}
+                        meta=sync_meta
                     )
                     
                     # Count symbols with actual data
@@ -282,6 +294,28 @@ def show_results_page():
     with col3:
         st.metric("Output GDX", status.output_gdx.name)
     
+    # Provenance information
+    if status.run_dir:
+        from core.provenance_integration import get_provenance_summary
+        provenance_info = get_provenance_summary(status.run_dir)
+        
+        if "status" not in provenance_info:  # Has valid provenance data
+            with st.expander("📋 Provenance Information", expanded=False):
+                st.write("**Model Reproducibility Information:**")
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    for key in ["Run ID", "Timestamp", "Main File"]:
+                        if key in provenance_info:
+                            st.write(f"**{key}:** {provenance_info[key]}")
+                
+                with col2:
+                    for key in ["Model Hash", "Options", "Scenario"]:
+                        if key in provenance_info:
+                            st.write(f"**{key}:** {provenance_info[key]}")
+                
+                st.info("💡 This provenance data is automatically included in Excel exports for full reproducibility.")
+    
     # Load and display data
     st.subheader("Symbol Data")
     try:
@@ -336,18 +370,26 @@ def show_results_page():
                     with st.spinner("Exporting to Excel..."):
                         xlsx = status.output_gdx.with_suffix(".xlsx")
                         
-                        # Export with units and metadata
+                        # Load provenance data and create comprehensive metadata
+                        provenance_data = load_provenance_from_run_dir(status.run_dir) if status.run_dir else None
+                        duration = (status.end_time - status.start_time).total_seconds() if status.end_time and status.start_time else None
+                        
+                        full_meta = create_excel_metadata(
+                            provenance_data=provenance_data,
+                            run_id=run_id,
+                            gdx_file=status.output_gdx.name,
+                            units=units,
+                            symbols_count=len(data),
+                            symbols_with_data=symbols_with_data,
+                            duration_seconds=duration
+                        )
+                        
+                        # Export with comprehensive metadata
                         export_excel(
                             symbol_data=data, 
                             xlsx_out=xlsx,
                             units=units if units else None,
-                            meta={
-                                "run_id": run_id,
-                                "timestamp": status.start_time.isoformat() if status.start_time else None,
-                                "duration": f"{(status.end_time - status.start_time).total_seconds():.1f}s" if status.end_time and status.start_time else None,
-                                "gdx_file": status.output_gdx.name,
-                                "units_applied": ", ".join(f"{k}={v}" for k, v in units.items()) if units else "None"
-                            }
+                            meta=full_meta
                         )
                         
                         with open(xlsx, "rb") as f:
