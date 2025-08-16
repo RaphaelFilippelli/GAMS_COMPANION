@@ -1,0 +1,50 @@
+name: Update Auto Status
+
+on:
+  push:
+    branches: [ main ]
+    # Avoid infinite loop: don't run when only this file changes
+    paths-ignore:
+      - 'docs/AUTO_STATUS.md'
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Build status markdown
+        run: |
+          ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          sha=$(git rev-parse --short HEAD)
+          author=$(git log -1 --pretty=format:'%an')
+          subject=$(git log -1 --pretty=format:'%s')
+          body=$(git log -1 --pretty=%b)
+          changed=$(git diff --name-status HEAD~1 HEAD || true)
+          {
+            echo "# AUTO_STATUS"
+            echo ""
+            echo "- Timestamp (UTC): $ts"
+            echo "- HEAD: $sha — $subject"
+            echo "- Author: $author"
+            echo ""
+            echo "## Changed files"
+            if [ -z "$changed" ]; then echo "_(first commit)_"; else echo '```'; echo "$changed"; echo '```'; fi
+            echo ""
+            echo "## Body"
+            if [ -z "$body" ]; then echo "_(none)_"; else echo '```'; echo "$body"; echo '```'; fi
+          } > docs/AUTO_STATUS.md
+      - name: Commit status file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/AUTO_STATUS.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(status): update AUTO_STATUS.md [skip ci]"
+            git push
+          fi
