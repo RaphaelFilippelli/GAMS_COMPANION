@@ -1,0 +1,21 @@
+id: TestScenarioB
+description: Second test scenario for batch runs
+edits:
+  scalars:
+    - name: CapacityLimit
+      value: 20.0
+  parameters:
+    - name: CostByCatchment
+      updates:
+        - key: [A]
+          value: 10.0
+        - key: [B]
+          value: 30.0
+  sets:
+    - name: ActiveCatchments
+      add: [A, B, C]
+      remove: []
+  equations:
+    includes: []
+meta:
+  author: Claude

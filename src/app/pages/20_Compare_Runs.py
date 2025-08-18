@@ -29,12 +29,28 @@ st.title("🔍 Compare Runs")
 
 runs_root = Path("runs")
 run_dirs = sorted([p for p in runs_root.glob("*") if p.is_dir()], key=lambda p: p.name, reverse=True)
+run_names = [d.name for d in run_dirs]
+
+# Check for pre-selected runs from batch scenarios page
+default_run_a_index = 0
+default_run_b_index = 1 if len(run_dirs) > 1 else 0
+
+if "compare_run_a" in st.session_state and st.session_state["compare_run_a"] in run_names:
+    default_run_a_index = run_names.index(st.session_state["compare_run_a"]) + 1  # +1 for "(select)" option
+if "compare_run_b" in st.session_state and st.session_state["compare_run_b"] in run_names:
+    default_run_b_index = run_names.index(st.session_state["compare_run_b"]) + 1  # +1 for "(select)" option
 
 col1, col2 = st.columns(2)
 with col1:
-    run_a = st.selectbox("Run A", ["(select)"] + [d.name for d in run_dirs], index=0)
+    run_a = st.selectbox("Run A", ["(select)"] + run_names, index=default_run_a_index)
 with col2:
-    run_b = st.selectbox("Run B", ["(select)"] + [d.name for d in run_dirs], index=1 if len(run_dirs) > 1 else 0)
+    run_b = st.selectbox("Run B", ["(select)"] + run_names, index=default_run_b_index)
+
+# Clear session state after using the pre-selected values
+if "compare_run_a" in st.session_state:
+    del st.session_state["compare_run_a"]
+if "compare_run_b" in st.session_state:
+    del st.session_state["compare_run_b"]
 
 join_type = st.selectbox("Join type", ["inner", "outer"], index=0)
 st.caption("Inner = only matching keys. Outer = keep non-overlapping rows (NaN where missing).")
