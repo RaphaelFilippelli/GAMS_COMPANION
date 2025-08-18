@@ -1,0 +1,21 @@
+id: BaselineA
+description: Small tweak example
+edits:
+  scalars:
+    - name: CapacityLimit
+      value: 15.0
+  parameters:
+    - name: CostByCatchment
+      updates:
+        - key: [A]
+          value: 8.0
+        - key: [B]
+          value: 25.0
+  sets:
+    - name: ActiveCatchments
+      add: [A, B]
+      remove: []
+  equations:
+    includes: []
+meta:
+  author: Rapha

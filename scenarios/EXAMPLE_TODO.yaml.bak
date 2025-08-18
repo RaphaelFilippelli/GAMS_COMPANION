@@ -1,0 +1,20 @@
+# Replace 'cap' and 'demand' with actual symbol names in your model if different.
+id: EXAMPLE_TODO
+description: Template — edit symbol names/keys first
+edits:
+  scalars:
+    - name: cap
+      value: 3.0
+  parameters:
+    - name: demand
+      updates:
+        - key: [A, 2025]
+          value: 120.0
+  sets:
+    - name: Tech
+      add: [B2]
+      remove: []
+  equations:
+    includes: []
+meta:
+  author: Rapha

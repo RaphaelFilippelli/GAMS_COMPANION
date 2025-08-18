@@ -38,7 +38,10 @@
       "Bash(git add:*)",
       "Bash(git push:*)",
       "Bash(streamlit run:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" -c \"\n$gdxin patch.gdx\n$load CapacityLimit, CostByCatchment, ActiveCatchments\nexecute_unload ''debug.gdx'';\n\" lo=2)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" test_load.gms lo=2)",
+      "Bash(\"C:\\GAMS\\49\\gams.exe\" test_load2.gms lo=2)"
     ],
     "deny": [],
     "ask": [],

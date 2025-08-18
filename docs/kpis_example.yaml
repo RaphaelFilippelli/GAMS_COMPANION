@@ -1,0 +1,21 @@
+_help: |
+  Edit the 'symbol' names and key filters to match your model.
+  You can discover symbol names with:
+    python -m tools.inspect_symbols runs/<your-run-stamp>
+
+kpis:
+  - name: TotalObjective
+    symbol: obj
+    agg: sum
+
+  - name: Demand_2025
+    symbol: demand
+    where:
+      key2: "2025"
+    agg: sum
+
+  - name: Capacity_NodeA
+    symbol: cap
+    where:
+      key1: "A"
+    agg: sum

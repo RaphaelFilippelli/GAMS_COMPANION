@@ -86,30 +86,34 @@ def build_patch_gdx(out_dir: str | Path, scen: Scenario) -> Path:
     \"\"\"Create patch.gdx with symbols declared in the scenario.\"\"\"
     _ensure_transfer()
     out = Path(out_dir); out.mkdir(parents=True, exist_ok=True)
-    ws = gt.Workspace()
-    db = ws.add_database()
+    db = gt.Container()
     # scalars
     for s in scen.edits.scalars:
-        p = db.add_parameter_dc(s["name"], [], s.get("description",""))
-        p.add_record().value = float(s["value"])
+        p = gt.Parameter(db, s["name"])
+        p.setRecords([s["value"]])
     # parameters
     for p in scen.edits.parameters:
         name = p["name"]; updates = p["updates"]
-        # infer dimension from the first update's key length
-        dim = len(updates[0]["key"]) if updates else 0
-        par = db.add_parameter_dc(name, [f"k{i+1}" for i in range(dim)], p.get("description",""))
-        for u in updates:
-            key = [str(x) for x in u["key"]]
-            rec = par.add_record(key); rec.value = float(u["value"])
+        if updates:
+            # Infer dimension from first key
+            dim = len(updates[0]["key"])
+            domain = [f"*" for _ in range(dim)]  # Use universal domain
+            par = gt.Parameter(db, name, domain)
+            records_data = []
+            for u in updates:
+                key = [str(x) for x in u["key"]]
+                records_data.append(key + [u["value"]])
+            par.setRecords(records_data)
     # sets
     for s in scen.edits.sets:
         name = s["name"]; to_add = s.get("add") or []; to_remove = set(s.get("remove") or [])
-        st = db.add_set_dc(name, ["k1"], s.get("description",""))
-        for el in to_add:
-            if el in to_remove: continue
-            st.add_record([str(el)])
+        if to_add:
+            st = gt.Set(db, name)
+            filtered_add = [str(el) for el in to_add if el not in to_remove]
+            if filtered_add:
+                st.setRecords(filtered_add)
     patch = out / "patch.gdx"
-    db.export(str(patch))
+    db.write(str(patch))
     return patch
 
 def ensure_autoload_include(temp_main_gms: str | Path, symbols: List[str]) -> Path:

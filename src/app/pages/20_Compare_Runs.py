@@ -1,30 +1,30 @@
+
 import sys
 from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-# --- Robust import path setup ---
-import sys
-from pathlib import Path
+# Ensure repo root on sys.path
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-THIS = Path(__file__).resolve()
-REPO_ROOT = THIS.parents[3]   # <repo>/  (pages -> app -> src -> <repo>)
-SRC_ROOT  = REPO_ROOT / "src"
-
-for p in (REPO_ROOT, SRC_ROOT):
-    if str(p) not in sys.path:
-        sys.path.insert(0, str(p))
-
+# Prefer duckdb if available
 try:
-    from src.core.gdx_io_merg import read_gdx_full  # preferred (package import)
-except ModuleNotFoundError:
-    # fallback if 'src' isn't treated as a package
-    from core.gdx_io_merg import read_gdx_full
-# --- end path setup ---
+    import duckdb  # type: ignore
+except Exception:
+    duckdb = None
 
+# Optional fallback GDX reader
+def _read_gdx(run_dir: Path):
+    try:
+        from core.gdx_io_merg import read_gdx_transfer_full  # project-specific
+        vals, marg, kinds = read_gdx_transfer_full(str(run_dir / "raw.gdx"))
+        return vals or {}, marg or {}, kinds or {}
+    except Exception:
+        return {}, {}, {}
 
-st.set_page_config(page_title="Compare Runs", layout="wide")
-
+st.set_page_config(page_title="Compare Runs v1.1", layout="wide")
 st.title("🔍 Compare Runs")
 
 runs_root = Path("runs")
@@ -36,58 +36,71 @@ with col1:
 with col2:
     run_b = st.selectbox("Run B", ["(select)"] + [d.name for d in run_dirs], index=1 if len(run_dirs) > 1 else 0)
 
-def _load_values(run_dir: Path) -> tuple[dict[str, pd.DataFrame], dict[str, pd.DataFrame]]:
-    # Prefer DuckDB if present (fast), else fallback to reading raw.gdx
+join_type = st.selectbox("Join type", ["inner", "outer"], index=0)
+st.caption("Inner = only matching keys. Outer = keep non-overlapping rows (NaN where missing).")
+
+def _load_values(run_dir: Path) -> dict[str, pd.DataFrame]:
     db = run_dir / "results.duckdb"
-    if db.exists():
+    if duckdb and db.exists():
         con = duckdb.connect(str(db))
         df_vals = con.execute("SELECT * FROM symbol_values").fetchdf()
+        con.close()
         sym_to_df = {}
         for name, df in df_vals.groupby("symbol"):
             # rebuild per-symbol tidy frames
             cols = [f"key{i}" for i in range(1, 8)] + ["value"]
             cols = [c for c in df.columns if c in cols]
             sym_to_df[name] = df[cols].copy()
-        con.close()
-        return sym_to_df, {}
-    # fallback: read raw.gdx
-    gdx = run_dir / "raw.gdx"
-    vals, marg, _ = read_gdx_full(gdx) if gdx.exists() else ({}, {}, {})
-    return vals, marg
-
-def _symbol_list(vals_a: dict[str, pd.DataFrame], vals_b: dict[str, pd.DataFrame]) -> list[str]:
-    names = sorted(set(vals_a.keys()) & set(vals_b.keys()))
-    return names
+        return sym_to_df
+    # fallback to GDX
+    vals, _, _ = _read_gdx(run_dir)
+    return vals
 
 def _norm7(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     for i in range(1, 8):
-        col = f"key{i}"
-        if col not in df.columns:
-            df[col] = None
+        c = f"key{i}"
+        if c not in df.columns:
+            df[c] = None
     cols = [f"key{i}" for i in range(1, 8)] + ([c for c in df.columns if c == "value"])
     return df[cols]
 
 if run_a and run_a != "(select)" and run_b and run_b != "(select)":
-    vals_a, _ = _load_values(runs_root / run_a)
-    vals_b, _ = _load_values(runs_root / run_b)
-    syms = _symbol_list(vals_a, vals_b)
+    vals_a = _load_values(runs_root / run_a)
+    vals_b = _load_values(runs_root / run_b)
+    syms = sorted(set(vals_a.keys()) & set(vals_b.keys()))
     pick = st.selectbox("Symbol", ["(select)"] + syms, index=0)
     if pick and pick != "(select)":
-        df_a = _norm7(vals_a[pick])
-        df_b = _norm7(vals_b[pick])
-        merged = pd.merge(df_a, df_b, on=[f"key{i}" for i in range(1,8)], how="inner", suffixes=("_A", "_B"))
+        df_a = _norm7(vals_a[pick]).rename(columns={"value":"value_A"})
+        df_b = _norm7(vals_b[pick]).rename(columns={"value":"value_B"})
+        merged = pd.merge(df_a, df_b, on=[f"key{i}" for i in range(1,8)], how=join_type)
         if "value_A" in merged.columns and "value_B" in merged.columns:
             merged["delta"] = merged["value_B"] - merged["value_A"]
             with pd.option_context('mode.use_inf_as_na', True):
                 merged["pct_delta"] = merged["delta"] / merged["value_A"]
         st.write(f"Rows: {len(merged):,}")
         st.dataframe(merged, use_container_width=True)
+
+        # CSV export
         st.download_button(
             "Download CSV",
             data=merged.to_csv(index=False).encode("utf-8"),
-            file_name=f"compare_{pick}_{run_a}_vs_{run_b}.csv",
+            file_name=f"compare_{pick}_{run_a}_vs_{run_b}_{join_type}.csv",
             mime="text/csv"
         )
+
+        # XLSX export (always create at least one visible sheet)
+        def _safe_write_xlsx(df: pd.DataFrame, out_path: Path):
+            if df.empty:
+                df = pd.DataFrame({"info": ["No rows for this selection"]})
+            with pd.ExcelWriter(out_path, engine="openpyxl") as w:
+                df.to_excel(w, sheet_name="diff", index=False)
+
+        xlsx_name = f"compare_{pick}_{run_a}_vs_{run_b}_{join_type}.xlsx"
+        xlsx_path = runs_root / xlsx_name
+        if st.button("Download XLSX"):
+            _safe_write_xlsx(merged, xlsx_path)
+            st.success(f"Saved {xlsx_path}")
+            st.download_button("Click to download XLSX", data=xlsx_path.read_bytes(), file_name=xlsx_name, mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
 else:
     st.info("Select two runs to compare.")
